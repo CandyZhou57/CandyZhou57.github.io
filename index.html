@@ -71,6 +71,110 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-mysql参数问题lower-case-table-names" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/09/mysql%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98lower-case-table-names/" class="article-date">
+  <time class="dt-published" datetime="2021-09-09T11:19:29.000Z" itemprop="datePublished">2021-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/09/mysql%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98lower-case-table-names/">mysql参数问题lower_case_table_names</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="1、参数含义："><a href="#1、参数含义：" class="headerlink" title="1、参数含义："></a>1、参数含义：</h4><p>lower_case_table_names： 此参数不可以动态修改，必须重启数据库<br>lower_case_table_names = 1  表名存储在磁盘是小写的，但是比较的时候是不区分大小写<br>lower_case_table_names=0  表名存储为给定的大小和比较是区分大小写的<br>lower_case_table_names=2, 表名存储为给定的大小写但是比较的时候是小写的</p>
+<h4 id="2、修改-参数lower-case-table-names-产生的问题"><a href="#2、修改-参数lower-case-table-names-产生的问题" class="headerlink" title="2、修改  参数lower_case_table_names 产生的问题"></a>2、修改  参数lower_case_table_names 产生的问题</h4><p>mysql&gt; show variables like ‘lower_case_table_names’;<br>+————————+——-+<br>| Variable_name          | Value |<br>+————————+——-+<br>| lower_case_table_names | 0     |<br>+————————+——-+<br>1 row in set (0.00 sec)</p>
+<p>在mysql系统中原来的参数是lower_case_table_names=0 ，就是存储的时候区分大小写，创建了表Tt  tT </p>
+<p>mysql&gt;  create table Tt(id int);<br>Query OK, 0 rows affected (0.10 sec)</p>
+<p>mysql&gt;  create table tT(id int);<br>Query OK, 0 rows affected (0.03 sec)</p>
+<p>mysql&gt; show tables;<br>+—————-+<br>| Tables_in_test |<br>+—————-+<br>| Tt             |<br>| tT             |<br>+—————-+<br>2 rows in set (0.00 sec)</p>
+<p>修改参数 /etc/my.cnf 中设置 lower_case_table_names = 1</p>
+<p>mysql&gt; show  variables like ‘lower_case_table_names’;<br>+————————+——-+<br>| Variable_name          | Value |<br>+————————+——-+<br>| lower_case_table_names | 1     |<br>+————————+——-+<br>1 row in set (0.00 sec)</p>
+<p>重启数据库<br>然后查看数据库</p>
+<p>mysql&gt; select * From tT;<br>ERROR 1146 (42S02): Table ‘test.tt’ doesn’t exist</p>
+<p>mysql&gt; select * From tT;<br>ERROR 1146 (42S02): Table ‘test.tt’ doesn’t exist</p>
+<p>你可以发现当修改lower_case_table_names = 1后，之前创建的表名都不识别了</p>
+<p>—创建表后，你可以发现表名不区分大小写<br>mysql&gt; create table Tt(id int);<br>Query OK, 0 rows affected (0.23 sec)</p>
+<p>mysql&gt; show tables;<br>+————-+<br>| Tables_in_t |<br>+————-+<br>| tt          |<br>+————-+<br>1 row in set (0.00 sec)<br>从此可以看出lower_case_table_names = 1，创建表名，不区分大小写</p>
+<p>结论：不能随意修改数据库的大小写，否则表名会认不出来<br>lower_case_table_names 参数的修改是非动态的，必须重启数据库</p>
+<h4 id="3、如何修改大小写格式"><a href="#3、如何修改大小写格式" class="headerlink" title="3、如何修改大小写格式"></a>3、如何修改大小写格式</h4><p>如果原来所建立库及表都是对大小写敏感的，想要转换为对大小写不敏感，主要需要进行如下3步：<br>    1.将数据库数据通过mysqldump导出;<br>    2.在my.cnf中更改lower_case_tables_name = 1，并重启mysql数据库。<br>    3.将导出的数据导入mysql数据库中。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/09/mysql%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98lower-case-table-names/" data-id="cktcudhxk0002i4ud89elhweu" data-title="mysql参数问题lower_case_table_names" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-跨域问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2021-09-09T11:16:21.000Z" itemprop="datePublished">2021-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">跨域问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>跨域指的是</strong>：协议+域名+ip+端口</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><p>使用ajax的jsonp</p>
+</li>
+<li><p>使用jQuery的jsonp插件</p>
+</li>
+<li><p>使用cors：仅在后端代码中添加部分处理代码</p>
+</li>
+<li><p>cors高级使用：springmvc中配置拦截器</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" data-id="cktcudhxl0003i4udf4yh8qnt" data-title="跨域问题" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-工具使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="article-date">
@@ -328,7 +432,7 @@
 <p>系统配置：Git\etc\gitconfig ：git安装目录下的gitconfig   –system系统级</p>
 <p>用户配置：c:\user\thinkbook\.gitconfig</p>
 <p><strong>安装git后必须设置global配置，否则代码无法提交成功</strong></p>
-<p>eg：user.name “dan.zhou”；user.emal “<a href="mailto:&#122;&#x68;&#111;&#117;&#100;&#x61;&#110;&#x40;&#49;&#x36;&#x33;&#46;&#99;&#111;&#109;">&#122;&#x68;&#111;&#117;&#100;&#x61;&#110;&#x40;&#49;&#x36;&#x33;&#46;&#99;&#111;&#109;</a>“</p>
+<p>eg：user.name “dan.zhou”；user.emal “<a href="mailto:&#122;&#104;&#111;&#x75;&#100;&#x61;&#x6e;&#64;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;">&#122;&#104;&#111;&#x75;&#100;&#x61;&#x6e;&#64;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;</a>“</p>
 <p><strong>git是否需要配置环境变量？</strong></p>
 <p>配置环境变量的目的是为了全局使用git，目前右键可实现此目的，因此不配置也可以。安装时git会自动默认配置环境变量。</p>
 <h1 id="四-maven"><a href="#四-maven" class="headerlink" title="四.maven"></a>四.maven</h1><p>Maven：一个项目管理工具，包含了一个项目对象模型（pom）、一组标准集合、一个项目生命周期、一个依赖管理系统</p>
@@ -885,7 +989,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" data-id="cktcsd6iv0002n8ud7d2w5527" data-title="工具使用" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" data-id="cktcudhxs0004i4ud22vk6k8n" data-title="工具使用" class="article-share-link">Share</a>
       
       
       
@@ -929,7 +1033,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/09/%E5%B7%A5%E5%85%B7/" data-id="cktcsd6ih0001n8udhoys1m3r" data-title="工具" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/09/%E5%B7%A5%E5%85%B7/" data-id="cktcudhxi0001i4ud8kl8cvf1" data-title="工具" class="article-share-link">Share</a>
       
       
       
@@ -965,7 +1069,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/09/hello-world/" data-id="cktcsd6ib0000n8udhcq986a1" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/09/hello-world/" data-id="cktcudhxc0000i4ud8ge40w9s" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -1006,6 +1110,14 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/09/09/mysql%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98lower-case-table-names/">mysql参数问题lower_case_table_names</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">跨域问题</a>
+          </li>
         
           <li>
             <a href="/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">工具使用</a>
