@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Nosql | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="nosql1.传统架构：app—dal—mysql2.传统架构的数据存储瓶颈：1.数据量的总大小，一个机器内存放不下 2.数据的索引（B+Tree），一个机器内存放不下 3.访问量（读写混合）一个实例不能承受 3.数据库进化史1.单机mysql 2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql 3.mysql主从复制读写分离—–app–dal–cac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nosql">
+<meta property="og:url" content="http://example.com/2021/09/13/Nosql/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="nosql1.传统架构：app—dal—mysql2.传统架构的数据存储瓶颈：1.数据量的总大小，一个机器内存放不下 2.数据的索引（B+Tree），一个机器内存放不下 3.访问量（读写混合）一个实例不能承受 3.数据库进化史1.单机mysql 2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql 3.mysql主从复制读写分离—–app–dal–cac">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-13T07:12:18.000Z">
+<meta property="article:modified_time" content="2021-09-13T07:20:22.088Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Nosql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Nosql/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:12:18.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Nosql
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="nosql"><a href="#nosql" class="headerlink" title="nosql"></a>nosql</h1><h5 id="1-传统架构：app—dal—mysql"><a href="#1-传统架构：app—dal—mysql" class="headerlink" title="1.传统架构：app—dal—mysql"></a>1.传统架构：app—dal—mysql</h5><h5 id="2-传统架构的数据存储瓶颈："><a href="#2-传统架构的数据存储瓶颈：" class="headerlink" title="2.传统架构的数据存储瓶颈："></a>2.传统架构的数据存储瓶颈：</h5><p>1.数据量的总大小，一个机器内存放不下</p>
+<p>2.数据的索引（B+Tree），一个机器内存放不下</p>
+<p>3.访问量（读写混合）一个实例不能承受</p>
+<h5 id="3-数据库进化史"><a href="#3-数据库进化史" class="headerlink" title="3.数据库进化史"></a>3.数据库进化史</h5><p>1.单机mysql</p>
+<p>2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql</p>
+<p>3.mysql主从复制读写分离—–app–dal–cache–（m（write）–s（read））</p>
+<p>4.分表分库+水平拆分+mysql集群—-app–dal–cache–（多个ms–集群）</p>
+<p>5.mysql的扩展性瓶颈—客户–linux–nginx（负载均衡、反向代理）–tomcat集群–mysql集群–缓存集群–图片视频类资源</p>
+<h5 id="3-nosql–not-only-sql–非关系型数据库"><a href="#3-nosql–not-only-sql–非关系型数据库" class="headerlink" title="3.nosql–not only sql–非关系型数据库"></a>3.nosql–not only sql–非关系型数据库</h5><p>这些类型的数据存储不需要固定的模式，无需多于操作久可横向扩展</p>
+<p>KV、Cache、Persistance</p>
+<p>大数据时代的3V：海量：volume；多样：variety；实时：velocity</p>
+<p>互联网需求的3高：高并发、高可靠、高性能</p>
+<h5 id="4-实例分析：淘宝网站商品相关信息"><a href="#4-实例分析：淘宝网站商品相关信息" class="headerlink" title="4.实例分析：淘宝网站商品相关信息"></a>4.实例分析：淘宝网站商品相关信息</h5><p>1.商品基本信息–mysql/oracle</p>
+<p>2.商品描述、详情、评价信息（多文字类的）–mongodb</p>
+<p>3.商品的图片–其他（分布式系统文件：例如：google：GFS；淘宝：TFS）</p>
+<p>4.商品的关键字–搜索引擎（Isearch）</p>
+<p>5.商品的波段性的热点高频信息–内存数据库（Tair、Redis、Memcache）</p>
+<p>6.商品的交易、价格计算、积分累计–第三方（支付宝之类）</p>
+<p>针对数据类型多样性及多数据源等一系列问题，阿里提供了一套统一数据源</p>
+<h5 id="5-Nosql数据库的四大分类"><a href="#5-Nosql数据库的四大分类" class="headerlink" title="5.Nosql数据库的四大分类"></a>5.Nosql数据库的四大分类</h5><ul>
+<li>KV键值对–redis</li>
+<li>文档型数据库（bson格式较多）–mongodb</li>
+<li>列存储数据库–（分布式文件系统）cassandra、hbase</li>
+<li>图关系数据库–（放的不是图形而是构建关系图谱，如社交网络）Neo4J、InfoGrid</li>
+</ul>
+<h5 id="6-Nosql数据库中的CAP原理CAP-BASE"><a href="#6-Nosql数据库中的CAP原理CAP-BASE" class="headerlink" title="6.Nosql数据库中的CAP原理CAP+BASE"></a>6.Nosql数据库中的CAP原理CAP+BASE</h5><p>1.传统的ACID</p>
+<p>Atomicity:原子性；Consisitency：一致性；Isolation：独立性；Durability：持久性</p>
+<p>2.Nosql的CAP</p>
+<p>Consistency：强一致性；Availability：可用性；Partition tolerance：分区容错性</p>
+<p>CAP理论就是说在分布式系统中，最多只能实现两点，由于网络硬件会出现延迟丢包等一些列问题，因此分区容忍性是一定要实现的，所以只能在一致性和可用性之间进行权衡</p>
+<p>CA：传统的Oracle数据库</p>
+<p>AP：大多数网站架构的选择（Cassandra）</p>
+<p>CP：Redis、Mongodb</p>
+<p>BASE就是为了解决关系数据库强一致性引起的问题而引起可用性降低而提出的解决方案</p>
+<p>Base：基本可用（Basically Available）软状态（Soft state）最终一致（Eventually consistent）</p>
+<p>其思想是让系统放松对某一时刻数据一致性的要求来换取系统整体伸缩性和性能上的改观。</p>
+<h5 id="7-redis："><a href="#7-redis：" class="headerlink" title="7.redis："></a>7.redis：</h5><ul>
+<li>Redis：remote dictionary server（远程字典服务）</li>
+<li>三个特点：支持数据持久化；支持数据备份（master-slave）；支持五种数据类型（String、list、set、map、zset）</li>
+</ul>
+<p>Dos下redis五种数据类型的操作</p>
+<p><strong>String</strong></p>
+<p>set name “value”</p>
+<p>get name</p>
+<p>mset name1 “value1” name2 “value2”</p>
+<p>mget name1 name2</p>
+<p>del name</p>
+<p><strong>hash</strong></p>
+<p>hset hash1 key1 “value1”</p>
+<p>hmset hash2 key2 “value2” key3 “value3”</p>
+<p>hget hash1 key1</p>
+<p>hmget hash2 key2 key3</p>
+<p>hgetall hash2</p>
+<p><strong>list</strong></p>
+<p> lpush mylist aaaa    //头插法（左插）</p>
+<p> rpush mylist bbbb    //尾插法（右插）</p>
+<p> lrange mylist 0 10    //查询0到10的值</p>
+<p><strong>set（无序set）</strong></p>
+<p> sadd myset aaaa bbbb cccc </p>
+<p>smembers myset</p>
+<p>#如果插入信息为重复信息则第二次插入无效</p>
+<p><strong>Zset（有序set，按照score数值从小到大排序）</strong></p>
+<p>  zadd Zset名称 score数值（用于排序） 添加元素<br>例：zadd zset 0 aaaa<br>    zadd zset 1 bbbb<br>    zadd zset 2 cccc<br>或：zadd zset 0 aaaa 1 bbbb 2 cccc  // 可以同时设多个不同元素信息，其中的score数值可以重复</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zrangebyscore zset 0 100  //查询score数值0~100含100的所有元素数据</span><br></pre></td></tr></table></figure>
+
+<p>注：zrange zset 0 100  //查询的是按照下标从0到100含100的所有元素数据</p>
+<p><strong>通用操作</strong>：<br>del key名称   //删除key的值,可以同时删除多个Key<br>keys *   //查询redis中所有的key名称信息<br>keys my*   //查询以my开头的key名称信息<br>type key名称    //查询Key的数据类型</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Nosql/" data-id="cktibll3z0006r0udgumnczim" data-title="Nosql" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/09/13/mysql%E7%9A%84%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mysql的默认排序规则
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java8新特性</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/09/13/Mybatis%E4%B8%ADexample%E7%9A%84%E7%94%A8%E6%B3%95/">Mybatis中example的用法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/13/Java%E4%B8%AD%E6%97%A5%E5%BF%97%E7%9A%84%E4%BD%BF%E7%94%A8/">Java中日志的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/13/JumpServer/">JumpServer</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/13/mysql%E7%9A%84%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99/">mysql的默认排序规则</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/13/Nosql/">Nosql</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

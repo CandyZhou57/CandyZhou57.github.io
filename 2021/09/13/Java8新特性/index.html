@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Java8新特性 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="java8新特性 lambda表达式–函数式编程 StreamAPI–流–主要用来对集合进行各种便利的聚合操作或者批量数据操作   流的创建  集合创建流 12List &lt;String&gt; list &#x3D; Arrays.asList(&quot;hello&quot;,&quot;word&quot;,&quot;la&quot;);list.stream(); 数组创建流 12Strin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java8新特性">
+<meta property="og:url" content="http://example.com/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="java8新特性 lambda表达式–函数式编程 StreamAPI–流–主要用来对集合进行各种便利的聚合操作或者批量数据操作   流的创建  集合创建流 12List &lt;String&gt; list &#x3D; Arrays.asList(&quot;hello&quot;,&quot;word&quot;,&quot;la&quot;);list.stream(); 数组创建流 12Strin">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-13T07:11:55.000Z">
+<meta property="article:modified_time" content="2021-09-13T07:18:55.877Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Java8新特性" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:11:55.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Java8新特性
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="java8新特性"><a href="#java8新特性" class="headerlink" title="java8新特性"></a>java8新特性</h1><ol>
+<li>lambda表达式–函数式编程</li>
+<li>StreamAPI–流–主要用来对集合进行各种便利的聚合操作或者批量数据操作</li>
+</ol>
+<ul>
+<li><p>流的创建</p>
+<ul>
+<li><p>集合创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List &lt;String&gt; list = Arrays.asList(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>);</span><br><span class="line">list.stream();</span><br></pre></td></tr></table></figure></li>
+<li><p>数组创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String [] strArray = <span class="keyword">new</span> String[]&#123;<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>&#125;;</span><br><span class="line">Stream.of(strArray);</span><br></pre></td></tr></table></figure></li>
+<li><p>可变参数创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream.of(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>根据范围创建数值流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>,<span class="number">100</span>);<span class="comment">//不包含最后一个数</span></span><br><span class="line">IntStream.rangeClosed(<span class="number">0</span>,<span class="number">99</span>);<span class="comment">//包含最后一个数</span></span><br></pre></td></tr></table></figure></li>
+<li><p>BufferReader.lines()创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">new</span> File(<span class="string">&quot;&quot;</span>);</span><br><span class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(file)));</span><br><span class="line">br.lines().forEach(System.out::println);</span><br><span class="line">br.close();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>流操作（两种操作：intermediate、terminal）</p>
+<ul>
+<li>intermediate：一个流可以后面跟随零个或多个 intermediate 操作。其目的主要是打开流，做出某种程度的数据映射/过滤，然后返回一个新的流，交给下一个操作使用。这类操作都是惰性化的（lazy），就是说，仅仅调用到这类方法，并没有真正开始流的遍历。</li>
+<li>terminal：一个流只能有一个 terminal 操作，当这个操作执行后，流就被使用“光”了，无法再被操作。所以这必定是流的最后一个操作。Terminal 操作的执行，才会真正开始流的遍历，并且会生成一个结果，或者一个 side effect。</li>
+<li>除此以外，还有一种叫做short-circuiting的操作<ul>
+<li>对于一个 intermediate 操作，如果它接受的是一个无限大（infinite/unbounded）的 Stream，但返回一个有限的新 Stream。</li>
+<li>对于一个 terminal 操作，如果它接受的是一个无限大的 Stream，但能在有限的时间计算出结果。</li>
+</ul>
+</li>
+<li>常见流操作的归类<ul>
+<li>intermidiate：map(mapToInt、flatMap等)、filter、distinct、sorted、peek、limit、skip、parallel、sequential、unordered</li>
+<li>terminal：forEach、forEachOrderd、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator</li>
+<li>Short-circuiting：anyMatch、allMatch、noneMatch、findFirst、findAny、limit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>常见流操作详解</p>
+<ul>
+<li><p>forEach：forEach就是遍历并执行某个操作，甚至对于List等实现了Collection接口的类可以不创建stream而直接使用forEach。</p>
+</li>
+<li><p>map：用来将一个集合映射为另一个集合。还有一个叫做flatMap的操作，这个操作在映射的基础上又做了一层扁平化处理。</p>
+</li>
+<li><p>filter：实现了过滤的功能</p>
+</li>
+<li><p>sorted：表示排序</p>
+</li>
+<li><p>distinct：表示去重</p>
+</li>
+<li><p>collect：在流操作中，我们往往需求是从一个List得到另一个List，而不是直接通过forEach来打印。那么这个时候就需要使用到collect了</p>
+</li>
+<li><p>并行流：除了普通的stream之外还有parallelStream，区别比较直观，就是stream是单线程执行，parallelStream为多线程执行。parallelStream的创建及使用基本与stream类似，不过由于是并行执行，parallelStream并不保证结果顺序，同样由于这个特性，如果能使用findAny就尽量不要使用findFirst。</p>
+<p>使用parallelStream时需要注意的一点是，多个parallelStream之间默认使用的是同一个线程池，所以IO操作尽量不要放进parallelStream中，否则会阻塞其他parallelStream</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>optional—optional的引入是为了解决空指针异常的问题</li>
+</ol>
+<ul>
+<li><p>Optional的基本操作</p>
+<ul>
+<li><p>创建Optional</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Optional.empty();<span class="comment">//创建一个空Optional</span></span><br><span class="line">Optional.of(T value);<span class="comment">//不接受null，会报NullPointerException异常</span></span><br><span class="line">Optional.ofNullable(T value);<span class="comment">//可以接受null</span></span><br></pre></td></tr></table></figure></li>
+<li><p>获取结果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">get();<span class="comment">//返回里面的值，如果值为null，则抛出异常</span></span><br><span class="line">orElse(T other);<span class="comment">//有则返回值，null则返回other</span></span><br><span class="line">orElseGet(Supplier other);<span class="comment">//有则返回值，null则由提供的lambda表达式生成值</span></span><br><span class="line">orElseThrow(Supplier exceptionSupplier);<span class="comment">//有则返回值，null则抛出异常</span></span><br></pre></td></tr></table></figure></li>
+<li><p>判断是否为空</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isPresent();<span class="comment">//判断是否为空</span></span><br></pre></td></tr></table></figure></li>
+<li><p>链式方法</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>4.Supplier</p>
+<p>supplier接口是配合lambda表达式和函数式接口编程(FunctionInterface,以下简称FI)组合使用的一个接口，对外表现为双冒号”::”,顺便说下”-&gt;”符号对应的是Function接口中的Reply方法例如;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Supplier&lt;Person&gt; personSupplier = Person::<span class="keyword">new</span>;</span><br><span class="line">personSupplier.get();<span class="comment">//调用构造方法</span></span><br><span class="line">personSupplier.get();<span class="comment">//每次返回的都是不同的对象</span></span><br><span class="line">Arrays.asList(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>).forEach(e-&gt;System.out.println(e));</span><br></pre></td></tr></table></figure>
+
+<p>Supplier<T>就是用来创建对象的，相当于new。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/" data-id="cktibll3y0004r0udd0g0dfz4" data-title="Java8新特性" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/09/13/Nosql/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Nosql
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/13/Spring%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Spring注解使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/09/13/Mybatis%E4%B8%ADexample%E7%9A%84%E7%94%A8%E6%B3%95/">Mybatis中example的用法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/13/Java%E4%B8%AD%E6%97%A5%E5%BF%97%E7%9A%84%E4%BD%BF%E7%94%A8/">Java中日志的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/13/JumpServer/">JumpServer</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/13/mysql%E7%9A%84%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99/">mysql的默认排序规则</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/13/Nosql/">Nosql</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
