@@ -6,15 +6,15 @@
   
   <title>Nosql | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="nosql1.传统架构：app—dal—mysql2.传统架构的数据存储瓶颈：1.数据量的总大小，一个机器内存放不下 2.数据的索引（B+Tree），一个机器内存放不下 3.访问量（读写混合）一个实例不能承受 3.数据库进化史1.单机mysql 2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql 3.mysql主从复制读写分离—–app–dal–cac">
+  <meta name="description" content="1.传统架构app—dal—mysql 2.传统架构的数据存储瓶颈：1.数据量的总大小，一个机器内存放不下 2.数据的索引（B+Tree），一个机器内存放不下 3.访问量（读写混合）一个实例不能承受 3.数据库进化史1.单机mysql 2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql 3.mysql主从复制读写分离—–app–dal–cache–（m">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nosql">
 <meta property="og:url" content="http://example.com/2021/09/13/Nosql/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="nosql1.传统架构：app—dal—mysql2.传统架构的数据存储瓶颈：1.数据量的总大小，一个机器内存放不下 2.数据的索引（B+Tree），一个机器内存放不下 3.访问量（读写混合）一个实例不能承受 3.数据库进化史1.单机mysql 2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql 3.mysql主从复制读写分离—–app–dal–cac">
+<meta property="og:description" content="1.传统架构app—dal—mysql 2.传统架构的数据存储瓶颈：1.数据量的总大小，一个机器内存放不下 2.数据的索引（B+Tree），一个机器内存放不下 3.访问量（读写混合）一个实例不能承受 3.数据库进化史1.单机mysql 2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql 3.mysql主从复制读写分离—–app–dal–cache–（m">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-13T07:12:18.000Z">
-<meta property="article:modified_time" content="2021-09-13T07:20:22.088Z">
+<meta property="article:modified_time" content="2021-09-15T06:03:46.523Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -95,7 +95,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="nosql"><a href="#nosql" class="headerlink" title="nosql"></a>nosql</h1><h5 id="1-传统架构：app—dal—mysql"><a href="#1-传统架构：app—dal—mysql" class="headerlink" title="1.传统架构：app—dal—mysql"></a>1.传统架构：app—dal—mysql</h5><h5 id="2-传统架构的数据存储瓶颈："><a href="#2-传统架构的数据存储瓶颈：" class="headerlink" title="2.传统架构的数据存储瓶颈："></a>2.传统架构的数据存储瓶颈：</h5><p>1.数据量的总大小，一个机器内存放不下</p>
+        <h5 id="1-传统架构"><a href="#1-传统架构" class="headerlink" title="1.传统架构"></a>1.传统架构</h5><p>app—dal—mysql</p>
+<h5 id="2-传统架构的数据存储瓶颈："><a href="#2-传统架构的数据存储瓶颈：" class="headerlink" title="2.传统架构的数据存储瓶颈："></a>2.传统架构的数据存储瓶颈：</h5><p>1.数据量的总大小，一个机器内存放不下</p>
 <p>2.数据的索引（B+Tree），一个机器内存放不下</p>
 <p>3.访问量（读写混合）一个实例不能承受</p>
 <h5 id="3-数据库进化史"><a href="#3-数据库进化史" class="headerlink" title="3.数据库进化史"></a>3.数据库进化史</h5><p>1.单机mysql</p>
@@ -103,7 +104,7 @@
 <p>3.mysql主从复制读写分离—–app–dal–cache–（m（write）–s（read））</p>
 <p>4.分表分库+水平拆分+mysql集群—-app–dal–cache–（多个ms–集群）</p>
 <p>5.mysql的扩展性瓶颈—客户–linux–nginx（负载均衡、反向代理）–tomcat集群–mysql集群–缓存集群–图片视频类资源</p>
-<h5 id="3-nosql–not-only-sql–非关系型数据库"><a href="#3-nosql–not-only-sql–非关系型数据库" class="headerlink" title="3.nosql–not only sql–非关系型数据库"></a>3.nosql–not only sql–非关系型数据库</h5><p>这些类型的数据存储不需要固定的模式，无需多于操作久可横向扩展</p>
+<h5 id="3-nosql"><a href="#3-nosql" class="headerlink" title="3.nosql"></a>3.nosql</h5><h6 id="not-only-sql–非关系型数据库"><a href="#not-only-sql–非关系型数据库" class="headerlink" title="not only sql–非关系型数据库"></a>not only sql–非关系型数据库</h6><p>这些类型的数据存储不需要固定的模式，无需多于操作久可横向扩展</p>
 <p>KV、Cache、Persistance</p>
 <p>大数据时代的3V：海量：volume；多样：variety；实时：velocity</p>
 <p>互联网需求的3高：高并发、高可靠、高性能</p>
@@ -135,38 +136,73 @@
 <li>Redis：remote dictionary server（远程字典服务）</li>
 <li>三个特点：支持数据持久化；支持数据备份（master-slave）；支持五种数据类型（String、list、set、map、zset）</li>
 </ul>
-<p>Dos下redis五种数据类型的操作</p>
-<p><strong>String</strong></p>
-<p>set name “value”</p>
-<p>get name</p>
-<p>mset name1 “value1” name2 “value2”</p>
-<p>mget name1 name2</p>
-<p>del name</p>
-<p><strong>hash</strong></p>
-<p>hset hash1 key1 “value1”</p>
-<p>hmset hash2 key2 “value2” key3 “value3”</p>
-<p>hget hash1 key1</p>
-<p>hmget hash2 key2 key3</p>
-<p>hgetall hash2</p>
-<p><strong>list</strong></p>
-<p> lpush mylist aaaa    //头插法（左插）</p>
-<p> rpush mylist bbbb    //尾插法（右插）</p>
-<p> lrange mylist 0 10    //查询0到10的值</p>
-<p><strong>set（无序set）</strong></p>
-<p> sadd myset aaaa bbbb cccc </p>
-<p>smembers myset</p>
-<p>#如果插入信息为重复信息则第二次插入无效</p>
-<p><strong>Zset（有序set，按照score数值从小到大排序）</strong></p>
-<p>  zadd Zset名称 score数值（用于排序） 添加元素<br>例：zadd zset 0 aaaa<br>    zadd zset 1 bbbb<br>    zadd zset 2 cccc<br>或：zadd zset 0 aaaa 1 bbbb 2 cccc  // 可以同时设多个不同元素信息，其中的score数值可以重复</p>
+<h5 id="8-redis五种数据类型的操作"><a href="#8-redis五种数据类型的操作" class="headerlink" title="8.redis五种数据类型的操作"></a>8.redis五种数据类型的操作</h5><ul>
+<li><p>String</p>
+<ul>
+<li><p>set name “value”</p>
+</li>
+<li><p>get name</p>
+</li>
+<li><p>mset name1 “value1” name2 “value2”</p>
+</li>
+<li><p>mget name1 name2</p>
+</li>
+<li><p>del name</p>
+</li>
+</ul>
+</li>
+<li><p>hash</p>
+<ul>
+<li><p>hset hash1 key1 “value1”</p>
+</li>
+<li><p>hmset hash2 key2 “value2” key3 “value3”</p>
+</li>
+<li><p>hget hash1 key1</p>
+</li>
+<li><p>hmget hash2 key2 key3</p>
+</li>
+<li><p>hgetall hash2</p>
+</li>
+</ul>
+</li>
+<li><p>list</p>
+<ul>
+<li><p>lpush mylist aaaa    //头插法（左插）</p>
+</li>
+<li><p> rpush mylist bbbb    //尾插法（右插）</p>
+</li>
+<li><p> lrange mylist 0 10    //查询0到10的值</p>
+</li>
+</ul>
+</li>
+<li><p>set（无序set）</p>
+<ul>
+<li><p> sadd myset aaaa bbbb cccc </p>
+</li>
+<li><p>smembers myset</p>
+</li>
+<li><p>如果插入信息为重复信息则第二次插入无效</p>
+</li>
+</ul>
+</li>
+<li><p>Zset（有序set，按照score数值从小到大排序）</p>
+<ul>
+<li>zadd Zset名称 score数值（用于排序） 添加元素<br>例：zadd zset 0 aaaa</li>
+<li>zadd zset 1 bbbb</li>
+<li>zadd zset 2 cccc或：zadd zset 0 aaaa 1 bbbb 2 cccc  // 可以同时设多个不同元素信息，其中的score数值可以重复</li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zrangebyscore zset 0 100  //查询score数值0~100含100的所有元素数据</span><br></pre></td></tr></table></figure>
 
 <p>注：zrange zset 0 100  //查询的是按照下标从0到100含100的所有元素数据</p>
-<p><strong>通用操作</strong>：<br>del key名称   //删除key的值,可以同时删除多个Key<br>keys *   //查询redis中所有的key名称信息<br>keys my*   //查询以my开头的key名称信息<br>type key名称    //查询Key的数据类型</p>
+</li>
+<li><p>通用操作：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">del key名称   <span class="comment">//删除key的值,可以同时删除多个Key</span></span><br><span class="line">keys *   <span class="comment">//查询redis中所有的key名称信息</span></span><br><span class="line">keys my*   <span class="comment">//查询以my开头的key名称信息</span></span><br><span class="line">type key名称    <span class="comment">//查询Key的数据类型</span></span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/13/Nosql/" data-id="cktkwnoxk000c3kudb4a47m2p" data-title="Nosql" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/13/Nosql/" data-id="cktl5989q0008k4ud9onkfkql" data-title="Nosql" class="article-share-link">Share</a>
       
       
       
@@ -234,15 +270,15 @@
           </li>
         
           <li>
-            <a href="/2021/09/15/Git/">Git</a>
-          </li>
-        
-          <li>
             <a href="/2021/09/15/Maven/">Maven</a>
           </li>
         
           <li>
             <a href="/2021/09/15/kuboard/">kuboard</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Zookeeper/">Zookeeper</a>
           </li>
         
       </ul>

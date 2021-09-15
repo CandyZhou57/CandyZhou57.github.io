@@ -6,15 +6,15 @@
   
   <title>项目中遇到的问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="项目中的settings.xml文件、maven中的settings.xml文件、本地的local repository是否需要保持一致。   项目中的.idea文件   项目中的.m2文件   使用idea启动项目，后台报：outofmemoryerror：Java heap space  通过在idea中设置相关参数 1.run-》edit configurations-》vm option">
+  <meta name="description" content="使用idea启动项目，后台报：outofmemoryerror：Java heap space通过在idea中设置相关参数 1.run-》edit configurations-》vm options 2.file-》settings-》heap Error:java: OutOfMemoryError: insufficient memoryfile-&gt;invalidate caches">
 <meta property="og:type" content="article">
 <meta property="og:title" content="项目中遇到的问题">
 <meta property="og:url" content="http://example.com/2021/09/15/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="项目中的settings.xml文件、maven中的settings.xml文件、本地的local repository是否需要保持一致。   项目中的.idea文件   项目中的.m2文件   使用idea启动项目，后台报：outofmemoryerror：Java heap space  通过在idea中设置相关参数 1.run-》edit configurations-》vm option">
+<meta property="og:description" content="使用idea启动项目，后台报：outofmemoryerror：Java heap space通过在idea中设置相关参数 1.run-》edit configurations-》vm options 2.file-》settings-》heap Error:java: OutOfMemoryError: insufficient memoryfile-&gt;invalidate caches">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-15T02:32:16.000Z">
-<meta property="article:modified_time" content="2021-09-15T02:40:31.679Z">
+<meta property="article:modified_time" content="2021-09-15T06:44:55.161Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -95,58 +95,29 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>项目中的settings.xml文件、maven中的settings.xml文件、本地的local repository是否需要保持一致。</p>
-</blockquote>
-<blockquote>
-<p>项目中的.idea文件</p>
-</blockquote>
-<blockquote>
-<p>项目中的.m2文件</p>
-</blockquote>
-<blockquote>
-<p>使用idea启动项目，后台报：outofmemoryerror：Java heap space</p>
-</blockquote>
-<p>通过在idea中设置相关参数</p>
+        <h6 id="使用idea启动项目，后台报：outofmemoryerror：Java-heap-space"><a href="#使用idea启动项目，后台报：outofmemoryerror：Java-heap-space" class="headerlink" title="使用idea启动项目，后台报：outofmemoryerror：Java heap space"></a>使用idea启动项目，后台报：outofmemoryerror：Java heap space</h6><p>通过在idea中设置相关参数</p>
 <p>1.run-》edit configurations-》vm options</p>
 <p>2.file-》settings-》heap</p>
-<blockquote>
-<p>Error:java: OutOfMemoryError: insufficient memory</p>
-</blockquote>
-<p>file-&gt;invalidate caches</p>
-<blockquote>
-<p>Error running ‘App’: Command line is too long. Shorten command line for App or also for Spring Boot default configuration.</p>
-</blockquote>
-<p>找到.idea文件下的workspace.xml文件，在component标签下添加</p>
+<h6 id="Error-java-OutOfMemoryError-insufficient-memory"><a href="#Error-java-OutOfMemoryError-insufficient-memory" class="headerlink" title="Error:java: OutOfMemoryError: insufficient memory"></a>Error:java: OutOfMemoryError: insufficient memory</h6><p>file-&gt;invalidate caches</p>
+<h6 id="Error-running-‘App’-Command-line-is-too-long-Shorten-command-line-for-App-or-also-for-Spring-Boot-default-configuration"><a href="#Error-running-‘App’-Command-line-is-too-long-Shorten-command-line-for-App-or-also-for-Spring-Boot-default-configuration" class="headerlink" title="Error running ‘App’: Command line is too long. Shorten command line for App or also for Spring Boot default configuration."></a>Error running ‘App’: Command line is too long. Shorten command line for App or also for Spring Boot default configuration.</h6><p>找到.idea文件下的workspace.xml文件，在component标签下添加</p>
 <property name="dynamic.classpath" value="true" />
 
-<blockquote>
-<p>Error:java: Compilation failed: internal java compiler error</p>
-</blockquote>
-<p>导致这个错误的原因主要是因为jdk版本问题，此处有两个原因，一个是编译版本不匹配，一个是当前项目jdk版本不支持</p>
+<h6 id="Error-java-Compilation-failed-internal-java-compiler-error"><a href="#Error-java-Compilation-failed-internal-java-compiler-error" class="headerlink" title="Error:java: Compilation failed: internal java compiler error"></a>Error:java: Compilation failed: internal java compiler error</h6><p>导致这个错误的原因主要是因为jdk版本问题，此处有两个原因，一个是编译版本不匹配，一个是当前项目jdk版本不支持</p>
 <p>File -&gt;Project Structure-&gt;Project Settings -&gt;Project或使用快捷键Ctrl+Alt+shift+S打开项目的jdk配置：</p>
 <p>查看此两处是否与目标jdk一致。</p>
-<blockquote>
-<p>Error starting ApplicationContext. To display the conditions report re-run your application with ‘debug’ enabled.</p>
-</blockquote>
-<blockquote>
-<p>Invocation of init method failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool</p>
-</blockquote>
-<p>1.properties文件中的jedis配置有问题</p>
+<h6 id="Error-starting-ApplicationContext-To-display-the-conditions-report-re-run-your-application-with-‘debug’-enabled"><a href="#Error-starting-ApplicationContext-To-display-the-conditions-report-re-run-your-application-with-‘debug’-enabled" class="headerlink" title="Error starting ApplicationContext. To display the conditions report re-run your application with ‘debug’ enabled."></a>Error starting ApplicationContext. To display the conditions report re-run your application with ‘debug’ enabled.</h6><h6 id="Invocation-of-init-method-failed-nested-exception-is-redis-clients-jedis-exceptions-JedisConnectionException-Could-not-get-a-resource-from-the-pool"><a href="#Invocation-of-init-method-failed-nested-exception-is-redis-clients-jedis-exceptions-JedisConnectionException-Could-not-get-a-resource-from-the-pool" class="headerlink" title="Invocation of init method failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool"></a>Invocation of init method failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool</h6><p>1.properties文件中的jedis配置有问题</p>
 <p>2.未开启redis服务器</p>
-<blockquote>
-<p>java.net.ConnectException: Connection refused: no further information</p>
-</blockquote>
-<p>zookeeper连接不到导致</p>
+<h6 id="java-net-ConnectException-Connection-refused-no-further-information"><a href="#java-net-ConnectException-Connection-refused-no-further-information" class="headerlink" title="java.net.ConnectException: Connection refused: no further information"></a>java.net.ConnectException: Connection refused: no further information</h6><p>zookeeper连接不到导致</p>
 <p>1.排查本地配置是否写的远程配置</p>
 <p>2.核查本地zookeeper配置文件配置是否正确</p>
 <p>3.核查是否为springboot集成redis–核查redis的配置文件</p>
-<blockquote>
-<p>Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection timed out: connect</p>
-</blockquote>
-<p>原因：防火墙未开启指定端口导致</p>
-<p>目标ip可能ping不通</p>
-<p>redis连接超时</p>
+<h6 id="Caused-by-redis-clients-jedis-exceptions-JedisConnectionException-java-net-ConnectException-Connection-timed-out-connect"><a href="#Caused-by-redis-clients-jedis-exceptions-JedisConnectionException-java-net-ConnectException-Connection-timed-out-connect" class="headerlink" title="Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection timed out: connect"></a>Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection timed out: connect</h6><p>原因：防火墙未开启指定端口导致</p>
+<ul>
+<li><p>目标ip可能ping不通</p>
+</li>
+<li><p>redis连接超时</p>
+</li>
+</ul>
 <p>首先确保自己的server真正运行起来了</p>
 <p>然后关闭防火墙，再重启服务</p>
 <p>1.查看配置host和port</p>
@@ -159,7 +130,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="cktkwnoxz000s3kuddpfrg1nx" data-title="项目中遇到的问题" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="cktl5989z000lk4ud0uda88eb" data-title="项目中遇到的问题" class="article-share-link">Share</a>
       
       
       
@@ -227,15 +198,15 @@
           </li>
         
           <li>
-            <a href="/2021/09/15/Git/">Git</a>
-          </li>
-        
-          <li>
             <a href="/2021/09/15/Maven/">Maven</a>
           </li>
         
           <li>
             <a href="/2021/09/15/kuboard/">kuboard</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Zookeeper/">Zookeeper</a>
           </li>
         
       </ul>

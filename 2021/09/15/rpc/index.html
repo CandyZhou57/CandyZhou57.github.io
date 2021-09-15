@@ -6,15 +6,15 @@
   
   <title>rpc | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="remote procedure call 远程过程调用 Apache POI是什么？Apache POI是Apache软件基金会的开放源码函式库，POI提供API给Java程序对Microsoft Office格式档案读和写的功能。 基本功能HSSF提供读写Microsoft Excel格式档案的功能。XSSF提供读写Microsoft Excel OOXML格式档案的功能。HWPF提供读写Mi">
+  <meta name="description" content="1、简介remote procedure call 远程过程调用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rpc">
 <meta property="og:url" content="http://example.com/2021/09/15/rpc/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="remote procedure call 远程过程调用 Apache POI是什么？Apache POI是Apache软件基金会的开放源码函式库，POI提供API给Java程序对Microsoft Office格式档案读和写的功能。 基本功能HSSF提供读写Microsoft Excel格式档案的功能。XSSF提供读写Microsoft Excel OOXML格式档案的功能。HWPF提供读写Mi">
+<meta property="og:description" content="1、简介remote procedure call 远程过程调用">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-15T02:31:54.000Z">
-<meta property="article:modified_time" content="2021-09-15T02:40:52.299Z">
+<meta property="article:modified_time" content="2021-09-15T06:11:44.282Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -95,17 +95,12 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>remote procedure call 远程过程调用</p>
-<p>Apache POI是什么？<br>Apache POI是Apache软件基金会的开放源码函式库，POI提供API给Java程序对Microsoft Office格式档案读和写的功能。</p>
-<p>基本功能<br>HSSF<br>提供读写Microsoft Excel格式档案的功能。<br>XSSF<br>提供读写Microsoft Excel OOXML格式档案的功能。<br>HWPF<br>提供读写Microsoft Word格式档案的功能。<br>HSLF<br>提供读写Microsoft PowerPoint格式档案的功能。<br>HDGF<br>提供读写Microsoft Visio格式档案的功能。</p>
-<p>演示范例<br>读取Word文档</p>
-<p>import java.io. * ;<br>import org.apache.poi.hwpf.extractor.WordExtractor;<br>import org.apache.poi.hssf.usermodel.HSSFWorkbook;<br>import org.apache.poi.hssf.usermodel.HSSFSheet;<br>import org.apache.poi.hssf.usermodel.HSSFRow;<br>import org.apache.poi.hssf.usermodel.HSSFCell;<br>public class TestPoi {<br>    public TestPoi() {}<br>    public static void main(String args[])throws Exception{<br>        FileInputStream in = new FileInputStream(“D:\a.doc”);<br>        WordExtractor extractor = new WordExtractor();<br>        String str = extractor.extractText(in);<br>        //System.out.println(“the result length is”+str.length());<br>        System.out.println(str);<br>    }<br>}<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>读取Excel文档</p>
-<p>import org.apache.poi.hssf.usermodel.HSSFWorkbook;<br>import org.apache.poi.hssf.usermodel.HSSFSheet;<br>import org.apache.poi.hssf.usermodel.HSSFRow;<br>import org.apache.poi.hssf.usermodel.HSSFCell;<br>import java.io.FileInputStream;<br>public class ReadXL {<br>    /** Excel文件的存放位置。注意是反斜线*/<br>    public static String fileToBeRead = “D:\test1.xls”;<br>    public static void main(String argv[]) {<br>        try {<br>            // 创建对Excel工作簿文件的引用<br>            HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(fileToBeRead));<br>            // 创建对工作表的引用。<br>            // 本例是按名引用（让我们假定那张表有着缺省名”Sheet1”）<br>            HSSFSheet sheet = workbook.getSheet(“Sheet1”);<br>            // 也可用getSheetAt(int index)按索引引用，<br>            // 在Excel文档中，第一张工作表的缺省索引是0，<br>            // 其语句为：HSSFSheet sheet = workbook.getSheetAt(0);<br>            // 读取左上端单元<br>            HSSFRow row = sheet.getRow(0);<br>            HSSFCell cell = row.getCell((short)0);<br>            // 输出单元内容，cell.getStringCellValue()就是取所在单元的值<br>            System.out.println(“左上端单元是： “ + cell.getStringCellValue());<br>        } catch (Exception e) {<br>            System.out.println(“已运行xlRead() : “ + e);<br>        }<br>    }<br>}<br>————————————————<br>版权声明：本文为CSDN博主「wunianisme」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29645505/article/details/90050519">https://blog.csdn.net/qq_29645505/article/details/90050519</a></p>
+        <h5 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h5><p>remote procedure call 远程过程调用</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/rpc/" data-id="cktkwnoxu000r3kudfzdkf92c" data-title="rpc" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/rpc/" data-id="cktl5989x000hk4udatc79oh1" data-title="rpc" class="article-share-link">Share</a>
       
       
       
@@ -125,9 +120,9 @@
     </a>
   
   
-    <a href="/2021/09/15/hikaricp/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">hikaricp</div>
+      <div class="article-nav-title">hosts文件的作用</div>
     </a>
   
 </nav>
@@ -173,15 +168,15 @@
           </li>
         
           <li>
-            <a href="/2021/09/15/Git/">Git</a>
-          </li>
-        
-          <li>
             <a href="/2021/09/15/Maven/">Maven</a>
           </li>
         
           <li>
             <a href="/2021/09/15/kuboard/">kuboard</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Zookeeper/">Zookeeper</a>
           </li>
         
       </ul>

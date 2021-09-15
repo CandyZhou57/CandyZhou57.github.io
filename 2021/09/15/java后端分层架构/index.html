@@ -6,13 +6,15 @@
   
   <title>java后端分层架构 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="article">
+  <meta name="description" content="三层架构：controller、service、dao  domain–JavaBean–通常与数据库表一一对应  model–javaBean   实体类po、vo、entity、dto  PO主要是用于实现持久层的数据存储。 VO则主要用于逻辑层和表示层之间数据处理封装。  PO字段跟数据库的表的列之间一一对应，而VO则根据业务需求，封装特定字段信息。PO对象跟VO对象可以是多对多关系。 en">
+<meta property="og:type" content="article">
 <meta property="og:title" content="java后端分层架构">
 <meta property="og:url" content="http://example.com/2021/09/15/java%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="三层架构：controller、service、dao  domain–JavaBean–通常与数据库表一一对应  model–javaBean   实体类po、vo、entity、dto  PO主要是用于实现持久层的数据存储。 VO则主要用于逻辑层和表示层之间数据处理封装。  PO字段跟数据库的表的列之间一一对应，而VO则根据业务需求，封装特定字段信息。PO对象跟VO对象可以是多对多关系。 en">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-15T02:29:56.000Z">
-<meta property="article:modified_time" content="2021-09-15T02:29:56.929Z">
+<meta property="article:modified_time" content="2021-09-15T06:45:46.197Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -93,11 +95,28 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p>三层架构：controller、service、dao</p>
+<ul>
+<li><p>domain–JavaBean–通常与数据库表一一对应</p>
+</li>
+<li><p>model–javaBean</p>
+</li>
+</ul>
+<p>实体类po、vo、entity、dto</p>
+<ul>
+<li>PO主要是用于实现持久层的数据存储。</li>
+<li>VO则主要用于逻辑层和表示层之间数据处理封装。</li>
+</ul>
+<p>PO字段跟数据库的表的列之间一一对应，而VO则根据业务需求，封装特定字段信息。<br>PO对象跟VO对象可以是多对多关系。</p>
+<p>entity中每个字段与数据库相对应</p>
+<p>dto中的每个字段与前台页面相对应</p>
+<p>vo类似与桥梁，在entity和dto之间进行转换</p>
+<p>PO对象跟VO对象之间的数据传递主要在逻辑层进行。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/java%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/" data-id="cktkwnoxq000l3kud6ct23n7t" data-title="java后端分层架构" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/java%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/" data-id="cktl5989v000dk4ud3fpq2bmc" data-title="java后端分层架构" class="article-share-link">Share</a>
       
       
       
@@ -165,15 +184,15 @@
           </li>
         
           <li>
-            <a href="/2021/09/15/Git/">Git</a>
-          </li>
-        
-          <li>
             <a href="/2021/09/15/Maven/">Maven</a>
           </li>
         
           <li>
             <a href="/2021/09/15/kuboard/">kuboard</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Zookeeper/">Zookeeper</a>
           </li>
         
       </ul>

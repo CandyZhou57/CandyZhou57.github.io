@@ -143,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/Typora/" data-id="cktkwnoxn000g3kud3suvby0n" data-title="Typora" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/Typora/" data-id="cktl5989u000ck4ud9ueh31zc" data-title="Typora" class="article-share-link">Share</a>
       
       
       
@@ -225,10 +225,6 @@
 <td>折叠代码</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>ctrl+j</td>
 <td>自动生成代码模板</td>
 </tr>
@@ -283,135 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/Idea%E5%BF%AB%E6%8D%B7%E9%94%AE/" data-id="cktkwnoxf00043kud1a1gblj9" data-title="Idea快捷键" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Git" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/09/15/Git/" class="article-date">
-  <time class="dt-published" datetime="2021-09-15T02:34:57.000Z" itemprop="datePublished">2021-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/15/Git/">Git</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h6 id="1-版本控制：管理对文件、目录或工程等内容的修改历史（版本迭代）。"><a href="#1-版本控制：管理对文件、目录或工程等内容的修改历史（版本迭代）。" class="headerlink" title="1.版本控制：管理对文件、目录或工程等内容的修改历史（版本迭代）。"></a>1.版本控制：管理对文件、目录或工程等内容的修改历史（版本迭代）。</h6><h6 id="2-常见的版本控制工具：git、svn、cvs等。"><a href="#2-常见的版本控制工具：git、svn、cvs等。" class="headerlink" title="2.常见的版本控制工具：git、svn、cvs等。"></a>2.常见的版本控制工具：git、svn、cvs等。</h6><h6 id="3-版本控制分类"><a href="#3-版本控制分类" class="headerlink" title="3.版本控制分类"></a>3.版本控制分类</h6><blockquote>
-<p>本地版本控制</p>
-</blockquote>
-<p>记录文件的每次更新,可以对每个版本做一个快照,或是记录补丁文件,适合个人用.</p>
-<blockquote>
-<p>集中版本控制-svn(中央服务器挂了怎么办-单点故障)</p>
-</blockquote>
-<p>所有的版本数据都保存在服务器上,协同开发者从服务器上同步更新或上传自己的修改.</p>
-<p>用户本地只有自己以前同步的版本,如果不联网,用户看不见历史版本,也无法切换版本验证问题.若服务器损坏,就会丢失所有的数据,可以定期备份.</p>
-<blockquote>
-<p>分布式版本控制-git</p>
-</blockquote>
-<p>所有版本信息仓库全部同步到本地的每个用户,这样就可以在本地查看所有历史版本,可以离线在本地提交,只需要在联网时push到相应的服务器或其他用户哪里.由于每个用户那里保存的都是所有版本的数据,只要有一个用户的设备没有问题,就可以恢复所有的数据,但是这增加了本地存储空间的占用.</p>
-<p>每个人都拥有的全部的代码!–&gt;安全隐患!</p>
-<p>不会因为服务器损坏或者网络的问题,造成不可工作的情况!</p>
-<h6 id="4-git-vs-svn"><a href="#4-git-vs-svn" class="headerlink" title="4.git vs svn"></a>4.git vs svn</h6><p>svn是集中式版本控制系统,版本库是集中放在中央服务器的,而工作的时候用的都是自己的电脑,所以首先要求从中央服务器得到最新的版本,然后工作,完成工作,再把自己的工作推送到中央服务器,集中式版本控制系统是必须联网才能工作,对网络带宽要求较高.</p>
-<p>git是分布式版本控制系统,没有中央服务器,每个人的电脑就是一个完整的版本库,工作的时候不需要联网了,因为版本都在自己的电脑上.协同方法是这样的,a和b同时更改了e文件,只需把各自的修改推送给对方,就可以互相看到对方的修改了.git可以直接看到更新了那些代码和文件!</p>
-<blockquote>
-<p>git是目前世界上最先进的分布式版本控制系统.</p>
-</blockquote>
-<h6 id="5-git下载安装及环境配置"><a href="#5-git下载安装及环境配置" class="headerlink" title="5.git下载安装及环境配置"></a>5.git下载安装及环境配置</h6><p>所有东西下载慢的话就找镜像下载</p>
-<p>镜像地址:淘宝镜像下载!<a target="_blank" rel="noopener" href="http://npm.taobao.org/mirrors/git-for-windows/">http://npm.taobao.org/mirrors/git-for-windows/</a></p>
-<blockquote>
-<p>先卸载–直接反安装即可</p>
-</blockquote>
-<p>先删除git相关环境变量配置（path）</p>
-<p>直接卸载git相关</p>
-<blockquote>
-<p>下载git–无脑安装下一步就好</p>
-</blockquote>
-<ul>
-<li>安装路径自己选择</li>
-<li>所有均选择默认值</li>
-<li>默认文本编辑器根据自己的软件选择</li>
-<li>安装完毕之后就可以直接使用</li>
-</ul>
-<blockquote>
-<p>启动git</p>
-</blockquote>
-<p>安装成功后，菜单中会有git选项，任意文件夹右击也可以看到git选项</p>
-<ul>
-<li>Git Bash：Unix与Linux风格的命令行，使用最多，推荐最多。eg：clear</li>
-<li>Git CMD：windows风格的命令行。eg：cls</li>
-<li>Git GUI：图形界面的git，不建议初学者使用，尽量先熟悉常用命令。</li>
-</ul>
-<h6 id="6-基本常用Linux命令"><a href="#6-基本常用Linux命令" class="headerlink" title="6.基本常用Linux命令"></a>6.基本常用Linux命令</h6><ul>
-<li><p>cd：改变目录</p>
-</li>
-<li><p>cd..：退回到上一级目录</p>
-</li>
-<li><p>pwd：显示当前所在的目录路径</p>
-</li>
-<li><p>ll/ls：列出当前目录中的所有文件</p>
-</li>
-<li><p>touch：新建一个文件，eg：touch index.js</p>
-</li>
-<li><p>rm：删除一个文件，eg：rm index.js</p>
-</li>
-<li><p>mkdir：创建一个目录，就是创建一个文件夹</p>
-</li>
-<li><p>rm -r：删除一个文件夹，eg：rm -r src 删除src目录</p>
-<p><strong>rm -rf /：格式化系统，切勿在linux系统中进行尝试，linux中一切皆文件，此操作会删除电脑中的全部文件！</strong></p>
-</li>
-<li><p>mv：移动文件，eg：mv index.html src,src是目标文件夹，index.html是目标文件</p>
-</li>
-<li><p>reset：重新初始化终端/清屏</p>
-</li>
-<li><p>clear：清屏</p>
-</li>
-<li><p>history：查看历史命令</p>
-</li>
-<li><p>help：帮助</p>
-</li>
-<li><p>exit：推出</p>
-</li>
-<li><p>#：表示注释</p>
-</li>
-</ul>
-<h6 id="7-git配置"><a href="#7-git配置" class="headerlink" title="7.git配置"></a>7.git配置</h6><p>所有的配置文件其实都保存在本地！</p>
-<ul>
-<li>查看配置 git config -l</li>
-<li>查看系统配置 git config –system –list</li>
-<li>查看本地配置 git config –global –list</li>
-</ul>
-<p>系统配置：Git\etc\gitconfig ：git安装目录下的gitconfig   –system系统级</p>
-<p>用户配置：c:\user\thinkbook\.gitconfig</p>
-<p><strong>安装git后必须设置global配置，否则代码无法提交成功</strong></p>
-<p>eg：user.name “dan.zhou”；user.emal “<a href="mailto:&#x7a;&#104;&#x6f;&#117;&#100;&#97;&#110;&#x40;&#x31;&#54;&#x33;&#46;&#99;&#x6f;&#109;">&#x7a;&#104;&#x6f;&#117;&#100;&#97;&#110;&#x40;&#x31;&#54;&#x33;&#46;&#99;&#x6f;&#109;</a>“</p>
-<p><strong>git是否需要配置环境变量？</strong></p>
-<p>配置环境变量的目的是为了全局使用git，目前右键可实现此目的，因此不配置也可以。安装时git会自动默认配置环境变量。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/Git/" data-id="cktkwnox700003kud1x0n6fpu" data-title="Git" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/Idea%E5%BF%AB%E6%8D%B7%E9%94%AE/" data-id="cktl598920000k4udb87rftl8" data-title="Idea快捷键" class="article-share-link">Share</a>
       
       
       
@@ -446,14 +314,14 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>Maven：一个项目管理工具，包含了一个项目对象模型（pom）、一组标准集合、一个项目生命周期、一个依赖管理系统</p>
-<p>​       管理项目的构建、报告和文档的项目管理工具软件</p>
-<p>Maven标准构建文件：project.xml和maven.xml</p>
+<p>管理项目的构建、报告和文档的项目管理工具软件</p>
+<p>Maven标准构建文件：project.xml和maven.xml </p>
 <p>Maven生命周期：运行mvn install 执行一系列有序步骤，</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/Maven/" data-id="cktkwnoxh00083kud47nkha9v" data-title="Maven" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/Maven/" data-id="cktl5989p0007k4ud18wt9r6n" data-title="Maven" class="article-share-link">Share</a>
       
       
       
@@ -493,51 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/kuboard/" data-id="cktkwnoxq000m3kuda61n9hl7" data-title="kuboard" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Jenkins" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/09/15/Jenkins/" class="article-date">
-  <time class="dt-published" datetime="2021-09-15T02:33:23.000Z" itemprop="datePublished">2021-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/15/Jenkins/">Jenkins</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>jenkins用于监控持续重复的工作</p>
-<p>Jenkins是一个开源的、提供友好操作界面的持续集成(CI)工具</p>
-<p>Jenkins是一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6/8105369">开源软件</a>项目，是基于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Java/85979">Java</a>开发的一种<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/6250744">持续集成</a>工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件项目可以进行持续集成 </p>
-<h4 id="CI-CD是什么？"><a href="#CI-CD是什么？" class="headerlink" title="CI/CD是什么？"></a>CI/CD是什么？</h4><p> CI(Continuous integration，中文意思是持续集成)是一种软件开发时间。持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。根据测试结果，我们可以确定新代码和原有代码能否正确地集成在一起。借用网络图片对CI加以理解。</p>
-<p><img src="C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\1628216893856.png" alt="1628216893856"></p>
-<p>  CD(Continuous Delivery， 中文意思持续交付)是在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境(类生产环境)中。比如，我们完成单元测试后，可以把代码部署到连接数据库的Staging环境中更多的测试。如果代码没有问题，可以继续手动部署到生产环境。下图反应的是CI/CD 的大概工作模式。<br><img src="C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\1628216918680.png" alt="1628216918680"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/Jenkins/" data-id="cktkwnoxg00073kudbo0ghcwb" data-title="Jenkins" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/kuboard/" data-id="cktl5989w000gk4ud2o0v31d6" data-title="kuboard" class="article-share-link">Share</a>
       
       
       
@@ -571,33 +395,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>zookeeper下载（下载后解压即可）：</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 编译后的包，应下载使用编译后的包，否则会报错，找不到或无法加载主类 </span><br><span class="line">apache-zookeeper-<span class="number">3.6</span><span class="number">.3</span>-bin.tar.gz</span><br><span class="line"> -- 未经编译的包</span><br><span class="line"> apache-zookeeper-<span class="number">3.6</span><span class="number">.3</span>.tar.gz </span><br></pre></td></tr></table></figure>
+        <h5 id="zookeeper下载（下载后解压即可）："><a href="#zookeeper下载（下载后解压即可）：" class="headerlink" title="zookeeper下载（下载后解压即可）："></a>zookeeper下载（下载后解压即可）：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 编译后的包，应下载使用编译后的包，否则会报错，找不到或无法加载主类 </span><br><span class="line">apache-zookeeper-<span class="number">3.6</span><span class="number">.3</span>-bin.tar.gz</span><br><span class="line"> -- 未经编译的包</span><br><span class="line"> apache-zookeeper-<span class="number">3.6</span><span class="number">.3</span>.tar.gz </span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>zookeeper的配置：</p>
-</blockquote>
-<p>将conf中的zoo_sample.cfg复制一份，重命名为zoo.cfg,添加如下配置</p>
+<h5 id="zookeeper的配置："><a href="#zookeeper的配置：" class="headerlink" title="zookeeper的配置："></a>zookeeper的配置：</h5><p>将conf中的zoo_sample.cfg复制一份，重命名为zoo.cfg,添加如下配置</p>
 <p>dataDir=E:/apache-zookeeper-3.6.3-bin/data<br>dataLogData=E:/apache-zookeeper-3.6.3-bin/log</p>
-<blockquote>
-<p>如果启动zookeeper出现闪退</p>
-</blockquote>
-<p>编辑zkServer.cmd,最后一行添加pause</p>
-<blockquote>
-<p>如果启动zookeeper出现ZooKeeper audit is disabled</p>
-</blockquote>
-<p>编辑zkServer.cmd,再call中添加 “-Dzookeeper.audit.enable=true”</p>
-<blockquote>
-<p>安装Zookeeper时出现unable to start adminserver,existing abnormally</p>
-</blockquote>
-<p>可能是由于8080端口被占用，在zoo.cfg中添加admin.serverPort=”未被占用的端口号”；或者重新启动；</p>
+<h5 id="如果启动zookeeper出现闪退"><a href="#如果启动zookeeper出现闪退" class="headerlink" title="如果启动zookeeper出现闪退"></a>如果启动zookeeper出现闪退</h5><p>编辑zkServer.cmd,最后一行添加pause</p>
+<h5 id="如果启动zookeeper出现ZooKeeper-audit-is-disabled"><a href="#如果启动zookeeper出现ZooKeeper-audit-is-disabled" class="headerlink" title="如果启动zookeeper出现ZooKeeper audit is disabled"></a>如果启动zookeeper出现ZooKeeper audit is disabled</h5><p>编辑zkServer.cmd,再call中添加 “-Dzookeeper.audit.enable=true”</p>
+<h5 id="安装Zookeeper时出现unable-to-start-adminserver-existing-abnormally"><a href="#安装Zookeeper时出现unable-to-start-adminserver-existing-abnormally" class="headerlink" title="安装Zookeeper时出现unable to start adminserver,existing abnormally"></a>安装Zookeeper时出现unable to start adminserver,existing abnormally</h5><p>可能是由于8080端口被占用，在zoo.cfg中添加admin.serverPort=”未被占用的端口号”；或者重新启动；</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/Zookeeper/" data-id="cktkwnoxn000h3kudg7xrhxq3" data-title="Zookeeper" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/Zookeeper/" data-id="cktl5989t000bk4udfd14fwty" data-title="Zookeeper" class="article-share-link">Share</a>
       
       
       
@@ -646,7 +455,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/Jedis/" data-id="cktkwnoxe00033kud1jua0esx" data-title="Jedis" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/Jedis/" data-id="cktl5989m0002k4udber608hp" data-title="Jedis" class="article-share-link">Share</a>
       
       
       
@@ -680,58 +489,29 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>项目中的settings.xml文件、maven中的settings.xml文件、本地的local repository是否需要保持一致。</p>
-</blockquote>
-<blockquote>
-<p>项目中的.idea文件</p>
-</blockquote>
-<blockquote>
-<p>项目中的.m2文件</p>
-</blockquote>
-<blockquote>
-<p>使用idea启动项目，后台报：outofmemoryerror：Java heap space</p>
-</blockquote>
-<p>通过在idea中设置相关参数</p>
+        <h6 id="使用idea启动项目，后台报：outofmemoryerror：Java-heap-space"><a href="#使用idea启动项目，后台报：outofmemoryerror：Java-heap-space" class="headerlink" title="使用idea启动项目，后台报：outofmemoryerror：Java heap space"></a>使用idea启动项目，后台报：outofmemoryerror：Java heap space</h6><p>通过在idea中设置相关参数</p>
 <p>1.run-》edit configurations-》vm options</p>
 <p>2.file-》settings-》heap</p>
-<blockquote>
-<p>Error:java: OutOfMemoryError: insufficient memory</p>
-</blockquote>
-<p>file-&gt;invalidate caches</p>
-<blockquote>
-<p>Error running ‘App’: Command line is too long. Shorten command line for App or also for Spring Boot default configuration.</p>
-</blockquote>
-<p>找到.idea文件下的workspace.xml文件，在component标签下添加</p>
+<h6 id="Error-java-OutOfMemoryError-insufficient-memory"><a href="#Error-java-OutOfMemoryError-insufficient-memory" class="headerlink" title="Error:java: OutOfMemoryError: insufficient memory"></a>Error:java: OutOfMemoryError: insufficient memory</h6><p>file-&gt;invalidate caches</p>
+<h6 id="Error-running-‘App’-Command-line-is-too-long-Shorten-command-line-for-App-or-also-for-Spring-Boot-default-configuration"><a href="#Error-running-‘App’-Command-line-is-too-long-Shorten-command-line-for-App-or-also-for-Spring-Boot-default-configuration" class="headerlink" title="Error running ‘App’: Command line is too long. Shorten command line for App or also for Spring Boot default configuration."></a>Error running ‘App’: Command line is too long. Shorten command line for App or also for Spring Boot default configuration.</h6><p>找到.idea文件下的workspace.xml文件，在component标签下添加</p>
 <property name="dynamic.classpath" value="true" />
 
-<blockquote>
-<p>Error:java: Compilation failed: internal java compiler error</p>
-</blockquote>
-<p>导致这个错误的原因主要是因为jdk版本问题，此处有两个原因，一个是编译版本不匹配，一个是当前项目jdk版本不支持</p>
+<h6 id="Error-java-Compilation-failed-internal-java-compiler-error"><a href="#Error-java-Compilation-failed-internal-java-compiler-error" class="headerlink" title="Error:java: Compilation failed: internal java compiler error"></a>Error:java: Compilation failed: internal java compiler error</h6><p>导致这个错误的原因主要是因为jdk版本问题，此处有两个原因，一个是编译版本不匹配，一个是当前项目jdk版本不支持</p>
 <p>File -&gt;Project Structure-&gt;Project Settings -&gt;Project或使用快捷键Ctrl+Alt+shift+S打开项目的jdk配置：</p>
 <p>查看此两处是否与目标jdk一致。</p>
-<blockquote>
-<p>Error starting ApplicationContext. To display the conditions report re-run your application with ‘debug’ enabled.</p>
-</blockquote>
-<blockquote>
-<p>Invocation of init method failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool</p>
-</blockquote>
-<p>1.properties文件中的jedis配置有问题</p>
+<h6 id="Error-starting-ApplicationContext-To-display-the-conditions-report-re-run-your-application-with-‘debug’-enabled"><a href="#Error-starting-ApplicationContext-To-display-the-conditions-report-re-run-your-application-with-‘debug’-enabled" class="headerlink" title="Error starting ApplicationContext. To display the conditions report re-run your application with ‘debug’ enabled."></a>Error starting ApplicationContext. To display the conditions report re-run your application with ‘debug’ enabled.</h6><h6 id="Invocation-of-init-method-failed-nested-exception-is-redis-clients-jedis-exceptions-JedisConnectionException-Could-not-get-a-resource-from-the-pool"><a href="#Invocation-of-init-method-failed-nested-exception-is-redis-clients-jedis-exceptions-JedisConnectionException-Could-not-get-a-resource-from-the-pool" class="headerlink" title="Invocation of init method failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool"></a>Invocation of init method failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool</h6><p>1.properties文件中的jedis配置有问题</p>
 <p>2.未开启redis服务器</p>
-<blockquote>
-<p>java.net.ConnectException: Connection refused: no further information</p>
-</blockquote>
-<p>zookeeper连接不到导致</p>
+<h6 id="java-net-ConnectException-Connection-refused-no-further-information"><a href="#java-net-ConnectException-Connection-refused-no-further-information" class="headerlink" title="java.net.ConnectException: Connection refused: no further information"></a>java.net.ConnectException: Connection refused: no further information</h6><p>zookeeper连接不到导致</p>
 <p>1.排查本地配置是否写的远程配置</p>
 <p>2.核查本地zookeeper配置文件配置是否正确</p>
 <p>3.核查是否为springboot集成redis–核查redis的配置文件</p>
-<blockquote>
-<p>Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection timed out: connect</p>
-</blockquote>
-<p>原因：防火墙未开启指定端口导致</p>
-<p>目标ip可能ping不通</p>
-<p>redis连接超时</p>
+<h6 id="Caused-by-redis-clients-jedis-exceptions-JedisConnectionException-java-net-ConnectException-Connection-timed-out-connect"><a href="#Caused-by-redis-clients-jedis-exceptions-JedisConnectionException-java-net-ConnectException-Connection-timed-out-connect" class="headerlink" title="Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection timed out: connect"></a>Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection timed out: connect</h6><p>原因：防火墙未开启指定端口导致</p>
+<ul>
+<li><p>目标ip可能ping不通</p>
+</li>
+<li><p>redis连接超时</p>
+</li>
+</ul>
 <p>首先确保自己的server真正运行起来了</p>
 <p>然后关闭防火墙，再重启服务</p>
 <p>1.查看配置host和port</p>
@@ -744,7 +524,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="cktkwnoxz000s3kuddpfrg1nx" data-title="项目中遇到的问题" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="cktl5989z000lk4ud0uda88eb" data-title="项目中遇到的问题" class="article-share-link">Share</a>
       
       
       
@@ -778,17 +558,140 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>remote procedure call 远程过程调用</p>
-<p>Apache POI是什么？<br>Apache POI是Apache软件基金会的开放源码函式库，POI提供API给Java程序对Microsoft Office格式档案读和写的功能。</p>
-<p>基本功能<br>HSSF<br>提供读写Microsoft Excel格式档案的功能。<br>XSSF<br>提供读写Microsoft Excel OOXML格式档案的功能。<br>HWPF<br>提供读写Microsoft Word格式档案的功能。<br>HSLF<br>提供读写Microsoft PowerPoint格式档案的功能。<br>HDGF<br>提供读写Microsoft Visio格式档案的功能。</p>
-<p>演示范例<br>读取Word文档</p>
-<p>import java.io. * ;<br>import org.apache.poi.hwpf.extractor.WordExtractor;<br>import org.apache.poi.hssf.usermodel.HSSFWorkbook;<br>import org.apache.poi.hssf.usermodel.HSSFSheet;<br>import org.apache.poi.hssf.usermodel.HSSFRow;<br>import org.apache.poi.hssf.usermodel.HSSFCell;<br>public class TestPoi {<br>    public TestPoi() {}<br>    public static void main(String args[])throws Exception{<br>        FileInputStream in = new FileInputStream(“D:\a.doc”);<br>        WordExtractor extractor = new WordExtractor();<br>        String str = extractor.extractText(in);<br>        //System.out.println(“the result length is”+str.length());<br>        System.out.println(str);<br>    }<br>}<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>读取Excel文档</p>
-<p>import org.apache.poi.hssf.usermodel.HSSFWorkbook;<br>import org.apache.poi.hssf.usermodel.HSSFSheet;<br>import org.apache.poi.hssf.usermodel.HSSFRow;<br>import org.apache.poi.hssf.usermodel.HSSFCell;<br>import java.io.FileInputStream;<br>public class ReadXL {<br>    /** Excel文件的存放位置。注意是反斜线*/<br>    public static String fileToBeRead = “D:\test1.xls”;<br>    public static void main(String argv[]) {<br>        try {<br>            // 创建对Excel工作簿文件的引用<br>            HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(fileToBeRead));<br>            // 创建对工作表的引用。<br>            // 本例是按名引用（让我们假定那张表有着缺省名”Sheet1”）<br>            HSSFSheet sheet = workbook.getSheet(“Sheet1”);<br>            // 也可用getSheetAt(int index)按索引引用，<br>            // 在Excel文档中，第一张工作表的缺省索引是0，<br>            // 其语句为：HSSFSheet sheet = workbook.getSheetAt(0);<br>            // 读取左上端单元<br>            HSSFRow row = sheet.getRow(0);<br>            HSSFCell cell = row.getCell((short)0);<br>            // 输出单元内容，cell.getStringCellValue()就是取所在单元的值<br>            System.out.println(“左上端单元是： “ + cell.getStringCellValue());<br>        } catch (Exception e) {<br>            System.out.println(“已运行xlRead() : “ + e);<br>        }<br>    }<br>}<br>————————————————<br>版权声明：本文为CSDN博主「wunianisme」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29645505/article/details/90050519">https://blog.csdn.net/qq_29645505/article/details/90050519</a></p>
+        <h5 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h5><p>remote procedure call 远程过程调用</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/rpc/" data-id="cktkwnoxu000r3kudfzdkf92c" data-title="rpc" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/rpc/" data-id="cktl5989x000hk4udatc79oh1" data-title="rpc" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hosts文件的作用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:30:57.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/">hosts文件的作用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h6 id="1-什么是host文件"><a href="#1-什么是host文件" class="headerlink" title="1.什么是host文件"></a>1.什么是host文件</h6><p>host文件是一个没有扩展名的系统文件，其基本作用就是将一些常用的网址域名与其对应的ip地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统再会将网址提交DNS域名解析服务器进行IP地址的解析。</p>
+<h6 id="2-host文件的位置（排除是否隐藏文件的可能性）"><a href="#2-host文件的位置（排除是否隐藏文件的可能性）" class="headerlink" title="2.host文件的位置（排除是否隐藏文件的可能性）"></a>2.host文件的位置（排除是否隐藏文件的可能性）</h6><p>C:\Windows\System32\drivers\etc</p>
+<h6 id="3-host文件的几个主要作用"><a href="#3-host文件的几个主要作用" class="headerlink" title="3.host文件的几个主要作用"></a>3.host文件的几个主要作用</h6><ul>
+<li>加快域名解析</li>
+</ul>
+<p>详情见链接</p>
+<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/6079ad0e6099fb28ff86db0c.html">https://jingyan.baidu.com/article/6079ad0e6099fb28ff86db0c.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/" data-id="cktl5989w000fk4ud80ecbsyz" data-title="hosts文件的作用" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Token" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/15/Token/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:30:40.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/15/Token/">Token</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h5><p>http请求什么情况下需要携带token？</p>
+<p>http是一种无状态的协议，他无法识别是谁访问应用。所以使用token作为客户端和服务端之间的密钥来作为身份识别。</p>
+<p>token在http请求中相当于用户身份的唯一标识，根据token信息可以找到用户身份的所有信息，因此请求中携带token是接口需要确定用户身份。</p>
+<h5 id="2、token"><a href="#2、token" class="headerlink" title="2、token"></a>2、token</h5><ul>
+<li><p>什么是token？</p>
+<p><code>token</code> 是客户端频繁向服务器端请求数据，服务器频繁的去数据库查询用户名和密码进行对比，判断用户名和密码正确与否，并作出相应的提示，在这样的背景下，<code>token</code> 便应运而生了</p>
+</li>
+<li><p>token的作用</p>
+<p>token 的目的是为了减轻服务器的压力，减少频繁的查询数据库。</p>
+</li>
+</ul>
+<p>在前端请求后台的 API 接口的时候，为了安全性，一般需要再用户登录成功之后才能发送其他请求。</p>
+<p>因此，在用户登录成功之后，后台会返回一个 token 给前端，这个时候我们就需要把 token 暂时保存在本地，每次发送请求的时候需要在 header 里边带上 token（无需再次带上请求名和密码），这个时候本地的 token 和后台数据库中的 token 进行一个验证，如果两者一致，则请求成功，否则失败。</p>
+<ul>
+<li><p>使用token的两种方式</p>
+<ul>
+<li><p>使用设备号/设备mac地址作为token（推荐）</p>
+<p>客户端：客户端在登录的时候获取设备的设备号串号 / mac 地址，并将其作为参数传递到服务器端。</p>
+<p>服务器：服务器接收到该参数之后，使用一个变量接收同时将其作为 token 保存数据库，并将该 token 设置在 session 中，客户端每次请求的时候都要统一拦截，并将客户端传递的 token 和服务器 session 中的 token 对比，如果相同则放下，不同则拒绝。</p>
+<ul>
+<li><p>优点：客户端不需要重新登录，只要登录一次后就能一直使用。</p>
+</li>
+<li><p>缺点：客户端需要带设备号/mac地址作为参数传递</p>
+</li>
+</ul>
+</li>
+<li><p>用 session 值作为 token</p>
+<p>客户端：客户端只需要携带用户名和密码即可登录。</p>
+<p>服务端：客户端接收到用户名和密码后并判断，如果正确就将本地获取 sessionId 作为 token 返回给客户端，客户端以后只需要带上请求数据即可。</p>
+</li>
+</ul>
+</li>
+<li><p>常见问题</p>
+<p>在web项目中，服务端和前端经常需要交互数据，有的时候由于网络相应慢，客户端在提交某些敏感数据（比如按照正常的业务逻辑，此份数据只能保存一份）时，如果前端多次点击提交按钮会导致提交多份数据，这种情况我们是要防止发生的。</p>
+<ul>
+<li><p>解决方法：</p>
+<p>①前端处理：在提交之后通过js立即将按钮隐藏或者置为不可用。</p>
+<p>②后端处理：对于每次提交到后台的数据必须校验，也就是通过前端携带的令牌（一串唯一字符串）与后端校验来判断当前数据是否有效。</p>
+</li>
+<li><p>总结：</p>
+<p>第一种方法相对来说比较简单，但是安全系数不高，第二种方法从根本上解决了问题，所以我推荐第二种方法。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/15/Token/" data-id="cktl5989v000ek4ud2lid3twp" data-title="Token" class="article-share-link">Share</a>
       
       
       
@@ -844,15 +747,15 @@
           </li>
         
           <li>
-            <a href="/2021/09/15/Git/">Git</a>
-          </li>
-        
-          <li>
             <a href="/2021/09/15/Maven/">Maven</a>
           </li>
         
           <li>
             <a href="/2021/09/15/kuboard/">kuboard</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Zookeeper/">Zookeeper</a>
           </li>
         
       </ul>

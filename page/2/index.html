@@ -71,155 +71,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hikaricp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/09/15/hikaricp/" class="article-date">
-  <time class="dt-published" datetime="2021-09-15T02:31:42.000Z" itemprop="datePublished">2021-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/15/hikaricp/">hikaricp</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>数据库连接池</p>
-<p>三层架构：controller、service、dao</p>
-<p>domain–JavaBean–通常与数据库表一一对应</p>
-<p>model–javaBean</p>
-<p>properties文件中过时的配置不用管是吗？</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/hikaricp/" data-id="cktkwnoxo000i3kudh1a2ac89" data-title="hikaricp" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hosts文件的作用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/" class="article-date">
-  <time class="dt-published" datetime="2021-09-15T02:30:57.000Z" itemprop="datePublished">2021-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/">hosts文件的作用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>1.什么是host文件</p>
-<p>host文件是一个没有扩展名的系统文件，其基本作用就是将一些常用的网址域名与其对应的ip地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统再会将网址提交DNS域名解析服务器进行IP地址的解析。</p>
-<p>2.host文件的位置（排除是否隐藏文件的可能性）</p>
-<p>C:\Windows\System32\drivers\etc</p>
-<p>3.host文件的几个主要作用</p>
-<ul>
-<li>加快域名解析</li>
-</ul>
-<p>详情见链接</p>
-<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/6079ad0e6099fb28ff86db0c.html">https://jingyan.baidu.com/article/6079ad0e6099fb28ff86db0c.html</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/" data-id="cktkwnoxo000j3kudhy147w2i" data-title="hosts文件的作用" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Token" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/09/15/Token/" class="article-date">
-  <time class="dt-published" datetime="2021-09-15T02:30:40.000Z" itemprop="datePublished">2021-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/15/Token/">Token</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>http请求什么情况下需要携带token？</p>
-<p>http是一种无状态的协议，他无法识别是谁访问应用。所以使用token作为客户端和服务端之间的密钥来作为身份识别。</p>
-<p>token在http请求中相当于用户身份的唯一标识，根据token信息可以找到用户身份的所有信息，因此请求中携带token是接口需要确定用户身份。</p>
-<p>token</p>
-<p><code>token</code> 是客户端频繁向服务器端请求数据，服务器频繁的去数据库查询用户名和密码进行对比，判断用户名和密码正确与否，并作出相应的提示，在这样的背景下，<code>token</code> 便应运而生了</p>
-<p>token 的目的是为了减轻服务器的压力，减少频繁的查询数据库。</p>
-<p>在前端请求后台的 API 接口的时候，为了安全性，一般需要再用户登录成功之后才能发送其他请求。</p>
-<p>因此，在用户登录成功之后，后台会返回一个 token 给前端，这个时候我们就需要把 token 暂时保存在本地，每次发送请求的时候需要在 header 里边带上 token（无需再次带上请求名和密码），这个时候本地的 token 和后台数据库中的 token 进行一个验证，如果两者一致，则请求成功，否则失败。</p>
-<p>使用设备号/设备mac地址作为token（推荐）</p>
-<p>客户端：客户端在登录的时候获取设备的设备号串号 / mac 地址，并将其作为参数传递到服务器端。</p>
-<p>服务器：服务器接收到该参数之后，使用一个变量接收同时将其作为 token 保存数据库，并将该 token 设置在 session 中，客户端每次请求的时候都要统一拦截，并将客户端传递的 token 和服务器 session 中的 token 对比，如果相同则放下，不同则拒绝。</p>
-<p>优点：客户端不需要重新登录，只要登录一次后就能一直使用。</p>
-<p>缺点：客户端需要带设备号/mac地址作为参数传递</p>
-<p>二、用 session 值作为 token</p>
-<p>客户端：客户端只需要携带用户名和密码即可登录。</p>
-<p>服务端：客户端接收到用户名和密码后并判断，如果正确就将本地获取 sessionId 作为 token 返回给客户端，客户端以后只需要带上请求数据即可。</p>
-<p>在web项目中，服务端和前端经常需要交互数据，有的时候由于网络相应慢，客户端在提交某些敏感数据（比如按照正常的业务逻辑，此份数据只能保存一份）时，如果前端多次点击提交按钮会导致提交多份数据，这种情况我们是要防止发生的。</p>
-<h3 id="2-解决方法："><a href="#2-解决方法：" class="headerlink" title="2.解决方法："></a>2.解决方法：</h3><p>①前端处理：在提交之后通过js立即将按钮隐藏或者置为不可用。</p>
-<p>②后端处理：对于每次提交到后台的数据必须校验，也就是通过前端携带的令牌（一串唯一字符串）与后端校验来判断当前数据是否有效。</p>
-<h3 id="3-总结："><a href="#3-总结：" class="headerlink" title="3.总结："></a>3.总结：</h3><p>第一种方法相对来说比较简单，但是安全系数不高，第二种方法从根本上解决了问题，所以我推荐第二种方法。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/Token/" data-id="cktkwnoxl000d3kud6uvw1fwu" data-title="Token" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-PageInfo详解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/09/15/PageInfo%E8%AF%A6%E8%A7%A3/" class="article-date">
@@ -243,20 +94,13 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>分页工具类</p>
-<p> //创建一个PageInfo对象,传入泛型类<br>      PageInfo<Goods> pageInfo = new PageInfo<Goods>();<br>      /*<br>      封装pageInfo数据 :<br>          第一个参数为list集合的数据<br>          第二个参数为当前页<br>          第三个参数为每页显示数据条数<br>      */<br>      pageInfo.setPageInfo(data,currentPage,12);</p>
-<p>实体类po、vo、entity、dto</p>
-<p>PO主要是用于实现持久层的数据存储。<br>VO则主要用于逻辑层和表示层之间数据处理封装。</p>
-<p>PO字段跟数据库的表的列之间一一对应，而VO则根据业务需求，封装特定字段信息。<br>PO对象跟VO对象可以是多对多关系。</p>
-<p>entity中每个字段与数据库相对应</p>
-<p>dto中的每个字段与前台页面相对应</p>
-<p>vo类似与桥梁，在entity和dto之间进行转换</p>
-<p>PO对象跟VO对象之间的数据传递主要在逻辑层进行。</p>
-<p>jsonObject类：JSONObject-lib包是一个beans,collections,maps,java arrays和xml和JSON互相转换的包</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个PageInfo对象,传入泛型类</span></span><br><span class="line">     PageInfo&lt;Goods&gt; pageInfo = <span class="keyword">new</span> PageInfo&lt;Goods&gt;();</span><br><span class="line">     <span class="comment">/* </span></span><br><span class="line"><span class="comment">     封装pageInfo数据 :</span></span><br><span class="line"><span class="comment">    	 第一个参数为list集合的数据</span></span><br><span class="line"><span class="comment">    	 第二个参数为当前页</span></span><br><span class="line"><span class="comment">    	 第三个参数为每页显示数据条数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">     pageInfo.setPageInfo(data,currentPage,<span class="number">12</span>);</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/PageInfo%E8%AF%A6%E8%A7%A3/" data-id="cktkwnoxi000a3kudfao9ezda" data-title="PageInfo详解" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/PageInfo%E8%AF%A6%E8%A7%A3/" data-id="cktl5989r0009k4udd7ygckdk" data-title="PageInfo详解" class="article-share-link">Share</a>
       
       
       
@@ -290,11 +134,28 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p>三层架构：controller、service、dao</p>
+<ul>
+<li><p>domain–JavaBean–通常与数据库表一一对应</p>
+</li>
+<li><p>model–javaBean</p>
+</li>
+</ul>
+<p>实体类po、vo、entity、dto</p>
+<ul>
+<li>PO主要是用于实现持久层的数据存储。</li>
+<li>VO则主要用于逻辑层和表示层之间数据处理封装。</li>
+</ul>
+<p>PO字段跟数据库的表的列之间一一对应，而VO则根据业务需求，封装特定字段信息。<br>PO对象跟VO对象可以是多对多关系。</p>
+<p>entity中每个字段与数据库相对应</p>
+<p>dto中的每个字段与前台页面相对应</p>
+<p>vo类似与桥梁，在entity和dto之间进行转换</p>
+<p>PO对象跟VO对象之间的数据传递主要在逻辑层进行。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/java%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/" data-id="cktkwnoxq000l3kud6ct23n7t" data-title="java后端分层架构" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/java%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/" data-id="cktl5989v000dk4ud3fpq2bmc" data-title="java后端分层架构" class="article-share-link">Share</a>
       
       
       
@@ -341,7 +202,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BC%A0%E5%8F%82/" data-id="cktkwnoxs000p3kud9uen9jkm" data-title="前后端传参" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BC%A0%E5%8F%82/" data-id="cktl5989y000kk4uda61aacvg" data-title="前后端传参" class="article-share-link">Share</a>
       
       
       
@@ -375,14 +236,12 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="mybatis中example的用法"><a href="#mybatis中example的用法" class="headerlink" title="mybatis中example的用法"></a>mybatis中example的用法</h1><p>Example类指定如何构建一个动态的where子句</p>
+        <h5 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h5><p>Example是mybatis提供的一个类</p>
+<p>Example类指定如何构建一个动态的where子句</p>
 <p>Example类可以用来生成一个几乎无限的where子句</p>
 <p>Criteria是Example中的静态内部类</p>
-<p>example是mybatis提供的一个类</p>
-<p>使用说明：</p>
-<p>//new一个Example对象</p>
-<p>Example example=new Example();</p>
-<p>Example.Criteria criteria =example.createCriteria();</p>
+<h5 id="2、使用说明"><a href="#2、使用说明" class="headerlink" title="2、使用说明"></a>2、使用说明</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//new一个Example对象</span></span><br><span class="line"></span><br><span class="line">Example example=<span class="keyword">new</span> Example(A.class);</span><br><span class="line"></span><br><span class="line">Example.Criteria criteria =example.createCriteria();</span><br></pre></td></tr></table></figure>
+
 <table>
 <thead>
 <tr>
@@ -459,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/13/Mybatis%E4%B8%ADexample%E7%9A%84%E7%94%A8%E6%B3%95/" data-id="cktkwnoxj000b3kud7su2c7q3" data-title="Mybatis中example的用法" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/13/Mybatis%E4%B8%ADexample%E7%9A%84%E7%94%A8%E6%B3%95/" data-id="cktl5989p0006k4ud4vme8r3f" data-title="Mybatis中example的用法" class="article-share-link">Share</a>
       
       
       
@@ -493,7 +352,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="java中日志的使用"><a href="#java中日志的使用" class="headerlink" title="java中日志的使用"></a>java中日志的使用</h1><p>@Slf4j是用作日志输出的，一般会在项目每个类的开头加入该注解，如果不写下面这段代码，并且想用log</p>
+        <p>@Slf4j是用作日志输出的，一般会在项目每个类的开头加入该注解，如果不写下面这段代码，并且想用log</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Logger logger = LoggerFactory.getLogger(当前类名.class);</span><br></pre></td></tr></table></figure>
 
 <p>这样方法中就可以直接使用日志打印了</p>
@@ -503,7 +362,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/13/Java%E4%B8%AD%E6%97%A5%E5%BF%97%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="cktkwnoxg00063kudd06abhov" data-title="Java中日志的使用" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/13/Java%E4%B8%AD%E6%97%A5%E5%BF%97%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="cktl5989n0004k4udbnve6psq" data-title="Java中日志的使用" class="article-share-link">Share</a>
       
       
       
@@ -537,7 +396,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h5 id="jumpserver"><a href="#jumpserver" class="headerlink" title="jumpserver"></a>jumpserver</h5><p>堡垒机，也叫做运维安全审计系统，它的核心功能是 4A：</p>
+        <p>堡垒机，也叫做运维安全审计系统，它的核心功能是 4A：</p>
 <ol>
 <li>身份验证 Authentication</li>
 <li>账号管理 Account</li>
@@ -549,7 +408,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/13/JumpServer/" data-id="cktkwnoxf00053kud824fhvfr" data-title="JumpServer" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/13/JumpServer/" data-id="cktl5989n0003k4ud89xq3nh5" data-title="JumpServer" class="article-share-link">Share</a>
       
       
       
@@ -583,12 +442,344 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="mysql的默认排序规则"><a href="#mysql的默认排序规则" class="headerlink" title="mysql的默认排序规则"></a>mysql的默认排序规则</h1><p>mysql的查询结果会受到查询列、order by 、索引的影响，而且内部没有默认的排序规则，如有需要请正确使用order by</p>
+        <p>mysql的查询结果会受到查询列、order by 、索引的影响，而且内部没有默认的排序规则，如有需要请正确使用order by</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/13/mysql%E7%9A%84%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99/" data-id="cktkwnoxp000k3kud5bmva6yl" data-title="mysql的默认排序规则" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/13/mysql%E7%9A%84%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99/" data-id="cktl5989x000ik4udh0y21tim" data-title="mysql的默认排序规则" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Nosql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Nosql/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:12:18.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/Nosql/">Nosql</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="1-传统架构"><a href="#1-传统架构" class="headerlink" title="1.传统架构"></a>1.传统架构</h5><p>app—dal—mysql</p>
+<h5 id="2-传统架构的数据存储瓶颈："><a href="#2-传统架构的数据存储瓶颈：" class="headerlink" title="2.传统架构的数据存储瓶颈："></a>2.传统架构的数据存储瓶颈：</h5><p>1.数据量的总大小，一个机器内存放不下</p>
+<p>2.数据的索引（B+Tree），一个机器内存放不下</p>
+<p>3.访问量（读写混合）一个实例不能承受</p>
+<h5 id="3-数据库进化史"><a href="#3-数据库进化史" class="headerlink" title="3.数据库进化史"></a>3.数据库进化史</h5><p>1.单机mysql</p>
+<p>2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql</p>
+<p>3.mysql主从复制读写分离—–app–dal–cache–（m（write）–s（read））</p>
+<p>4.分表分库+水平拆分+mysql集群—-app–dal–cache–（多个ms–集群）</p>
+<p>5.mysql的扩展性瓶颈—客户–linux–nginx（负载均衡、反向代理）–tomcat集群–mysql集群–缓存集群–图片视频类资源</p>
+<h5 id="3-nosql"><a href="#3-nosql" class="headerlink" title="3.nosql"></a>3.nosql</h5><h6 id="not-only-sql–非关系型数据库"><a href="#not-only-sql–非关系型数据库" class="headerlink" title="not only sql–非关系型数据库"></a>not only sql–非关系型数据库</h6><p>这些类型的数据存储不需要固定的模式，无需多于操作久可横向扩展</p>
+<p>KV、Cache、Persistance</p>
+<p>大数据时代的3V：海量：volume；多样：variety；实时：velocity</p>
+<p>互联网需求的3高：高并发、高可靠、高性能</p>
+<h5 id="4-实例分析：淘宝网站商品相关信息"><a href="#4-实例分析：淘宝网站商品相关信息" class="headerlink" title="4.实例分析：淘宝网站商品相关信息"></a>4.实例分析：淘宝网站商品相关信息</h5><p>1.商品基本信息–mysql/oracle</p>
+<p>2.商品描述、详情、评价信息（多文字类的）–mongodb</p>
+<p>3.商品的图片–其他（分布式系统文件：例如：google：GFS；淘宝：TFS）</p>
+<p>4.商品的关键字–搜索引擎（Isearch）</p>
+<p>5.商品的波段性的热点高频信息–内存数据库（Tair、Redis、Memcache）</p>
+<p>6.商品的交易、价格计算、积分累计–第三方（支付宝之类）</p>
+<p>针对数据类型多样性及多数据源等一系列问题，阿里提供了一套统一数据源</p>
+<h5 id="5-Nosql数据库的四大分类"><a href="#5-Nosql数据库的四大分类" class="headerlink" title="5.Nosql数据库的四大分类"></a>5.Nosql数据库的四大分类</h5><ul>
+<li>KV键值对–redis</li>
+<li>文档型数据库（bson格式较多）–mongodb</li>
+<li>列存储数据库–（分布式文件系统）cassandra、hbase</li>
+<li>图关系数据库–（放的不是图形而是构建关系图谱，如社交网络）Neo4J、InfoGrid</li>
+</ul>
+<h5 id="6-Nosql数据库中的CAP原理CAP-BASE"><a href="#6-Nosql数据库中的CAP原理CAP-BASE" class="headerlink" title="6.Nosql数据库中的CAP原理CAP+BASE"></a>6.Nosql数据库中的CAP原理CAP+BASE</h5><p>1.传统的ACID</p>
+<p>Atomicity:原子性；Consisitency：一致性；Isolation：独立性；Durability：持久性</p>
+<p>2.Nosql的CAP</p>
+<p>Consistency：强一致性；Availability：可用性；Partition tolerance：分区容错性</p>
+<p>CAP理论就是说在分布式系统中，最多只能实现两点，由于网络硬件会出现延迟丢包等一些列问题，因此分区容忍性是一定要实现的，所以只能在一致性和可用性之间进行权衡</p>
+<p>CA：传统的Oracle数据库</p>
+<p>AP：大多数网站架构的选择（Cassandra）</p>
+<p>CP：Redis、Mongodb</p>
+<p>BASE就是为了解决关系数据库强一致性引起的问题而引起可用性降低而提出的解决方案</p>
+<p>Base：基本可用（Basically Available）软状态（Soft state）最终一致（Eventually consistent）</p>
+<p>其思想是让系统放松对某一时刻数据一致性的要求来换取系统整体伸缩性和性能上的改观。</p>
+<h5 id="7-redis："><a href="#7-redis：" class="headerlink" title="7.redis："></a>7.redis：</h5><ul>
+<li>Redis：remote dictionary server（远程字典服务）</li>
+<li>三个特点：支持数据持久化；支持数据备份（master-slave）；支持五种数据类型（String、list、set、map、zset）</li>
+</ul>
+<h5 id="8-redis五种数据类型的操作"><a href="#8-redis五种数据类型的操作" class="headerlink" title="8.redis五种数据类型的操作"></a>8.redis五种数据类型的操作</h5><ul>
+<li><p>String</p>
+<ul>
+<li><p>set name “value”</p>
+</li>
+<li><p>get name</p>
+</li>
+<li><p>mset name1 “value1” name2 “value2”</p>
+</li>
+<li><p>mget name1 name2</p>
+</li>
+<li><p>del name</p>
+</li>
+</ul>
+</li>
+<li><p>hash</p>
+<ul>
+<li><p>hset hash1 key1 “value1”</p>
+</li>
+<li><p>hmset hash2 key2 “value2” key3 “value3”</p>
+</li>
+<li><p>hget hash1 key1</p>
+</li>
+<li><p>hmget hash2 key2 key3</p>
+</li>
+<li><p>hgetall hash2</p>
+</li>
+</ul>
+</li>
+<li><p>list</p>
+<ul>
+<li><p>lpush mylist aaaa    //头插法（左插）</p>
+</li>
+<li><p> rpush mylist bbbb    //尾插法（右插）</p>
+</li>
+<li><p> lrange mylist 0 10    //查询0到10的值</p>
+</li>
+</ul>
+</li>
+<li><p>set（无序set）</p>
+<ul>
+<li><p> sadd myset aaaa bbbb cccc </p>
+</li>
+<li><p>smembers myset</p>
+</li>
+<li><p>如果插入信息为重复信息则第二次插入无效</p>
+</li>
+</ul>
+</li>
+<li><p>Zset（有序set，按照score数值从小到大排序）</p>
+<ul>
+<li>zadd Zset名称 score数值（用于排序） 添加元素<br>例：zadd zset 0 aaaa</li>
+<li>zadd zset 1 bbbb</li>
+<li>zadd zset 2 cccc或：zadd zset 0 aaaa 1 bbbb 2 cccc  // 可以同时设多个不同元素信息，其中的score数值可以重复</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zrangebyscore zset 0 100  //查询score数值0~100含100的所有元素数据</span><br></pre></td></tr></table></figure>
+
+<p>注：zrange zset 0 100  //查询的是按照下标从0到100含100的所有元素数据</p>
+</li>
+<li><p>通用操作：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">del key名称   <span class="comment">//删除key的值,可以同时删除多个Key</span></span><br><span class="line">keys *   <span class="comment">//查询redis中所有的key名称信息</span></span><br><span class="line">keys my*   <span class="comment">//查询以my开头的key名称信息</span></span><br><span class="line">type key名称    <span class="comment">//查询Key的数据类型</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Nosql/" data-id="cktl5989q0008k4ud9onkfkql" data-title="Nosql" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Java8新特性" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:11:55.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/">Java8新特性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="1、lambda表达式–函数式编程"><a href="#1、lambda表达式–函数式编程" class="headerlink" title="1、lambda表达式–函数式编程"></a>1、lambda表达式–函数式编程</h5><h5 id="2、StreamAPI–流"><a href="#2、StreamAPI–流" class="headerlink" title="2、StreamAPI–流"></a>2、StreamAPI–流</h5><p>主要用来对集合进行各种便利的聚合操作或者批量数据操作</p>
+<ul>
+<li><p>流的创建</p>
+<ul>
+<li><p>集合创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List &lt;String&gt; list = Arrays.asList(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>);</span><br><span class="line">list.stream();</span><br></pre></td></tr></table></figure></li>
+<li><p>数组创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String [] strArray = <span class="keyword">new</span> String[]&#123;<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>&#125;;</span><br><span class="line">Stream.of(strArray);</span><br></pre></td></tr></table></figure></li>
+<li><p>可变参数创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream.of(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>根据范围创建数值流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>,<span class="number">100</span>);<span class="comment">//不包含最后一个数</span></span><br><span class="line">IntStream.rangeClosed(<span class="number">0</span>,<span class="number">99</span>);<span class="comment">//包含最后一个数</span></span><br></pre></td></tr></table></figure></li>
+<li><p>BufferReader.lines()创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">new</span> File(<span class="string">&quot;&quot;</span>);</span><br><span class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(file)));</span><br><span class="line">br.lines().forEach(System.out::println);</span><br><span class="line">br.close();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>流操作（两种操作：intermediate、terminal）</p>
+<ul>
+<li>intermediate：一个流可以后面跟随零个或多个 intermediate 操作。其目的主要是打开流，做出某种程度的数据映射/过滤，然后返回一个新的流，交给下一个操作使用。这类操作都是惰性化的（lazy），就是说，仅仅调用到这类方法，并没有真正开始流的遍历。</li>
+<li>terminal：一个流只能有一个 terminal 操作，当这个操作执行后，流就被使用“光”了，无法再被操作。所以这必定是流的最后一个操作。Terminal 操作的执行，才会真正开始流的遍历，并且会生成一个结果，或者一个 side effect。</li>
+<li>除此以外，还有一种叫做short-circuiting的操作<ul>
+<li>对于一个 intermediate 操作，如果它接受的是一个无限大（infinite/unbounded）的 Stream，但返回一个有限的新 Stream。</li>
+<li>对于一个 terminal 操作，如果它接受的是一个无限大的 Stream，但能在有限的时间计算出结果。</li>
+</ul>
+</li>
+<li>常见流操作的归类<ul>
+<li>intermidiate：map(mapToInt、flatMap等)、filter、distinct、sorted、peek、limit、skip、parallel、sequential、unordered</li>
+<li>terminal：forEach、forEachOrderd、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator</li>
+<li>Short-circuiting：anyMatch、allMatch、noneMatch、findFirst、findAny、limit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>常见流操作详解</p>
+<ul>
+<li><p>forEach：forEach就是遍历并执行某个操作，甚至对于List等实现了Collection接口的类可以不创建stream而直接使用forEach。</p>
+</li>
+<li><p>map：用来将一个集合映射为另一个集合。还有一个叫做flatMap的操作，这个操作在映射的基础上又做了一层扁平化处理。</p>
+</li>
+<li><p>filter：实现了过滤的功能</p>
+</li>
+<li><p>sorted：表示排序</p>
+</li>
+<li><p>distinct：表示去重</p>
+</li>
+<li><p>collect：在流操作中，我们往往需求是从一个List得到另一个List，而不是直接通过forEach来打印。那么这个时候就需要使用到collect了</p>
+</li>
+<li><p>并行流：除了普通的stream之外还有parallelStream，区别比较直观，就是stream是单线程执行，parallelStream为多线程执行。parallelStream的创建及使用基本与stream类似，不过由于是并行执行，parallelStream并不保证结果顺序，同样由于这个特性，如果能使用findAny就尽量不要使用findFirst。</p>
+<p>使用parallelStream时需要注意的一点是，多个parallelStream之间默认使用的是同一个线程池，所以IO操作尽量不要放进parallelStream中，否则会阻塞其他parallelStream</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3、optional"><a href="#3、optional" class="headerlink" title="3、optional"></a>3、optional</h5><p>optional的引入是为了解决空指针异常的问题</p>
+<ul>
+<li><p>Optional的基本操作</p>
+<ul>
+<li><p>创建Optional</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Optional.empty();<span class="comment">//创建一个空Optional</span></span><br><span class="line">Optional.of(T value);<span class="comment">//不接受null，会报NullPointerException异常</span></span><br><span class="line">Optional.ofNullable(T value);<span class="comment">//可以接受null</span></span><br></pre></td></tr></table></figure></li>
+<li><p>获取结果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">get();<span class="comment">//返回里面的值，如果值为null，则抛出异常</span></span><br><span class="line">orElse(T other);<span class="comment">//有则返回值，null则返回other</span></span><br><span class="line">orElseGet(Supplier other);<span class="comment">//有则返回值，null则由提供的lambda表达式生成值</span></span><br><span class="line">orElseThrow(Supplier exceptionSupplier);<span class="comment">//有则返回值，null则抛出异常</span></span><br></pre></td></tr></table></figure></li>
+<li><p>判断是否为空</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isPresent();<span class="comment">//判断是否为空</span></span><br></pre></td></tr></table></figure></li>
+<li><p>链式方法</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="4、Supplier"><a href="#4、Supplier" class="headerlink" title="4、Supplier"></a>4、Supplier</h5><p>supplier接口是配合lambda表达式和函数式接口编程(FunctionInterface,以下简称FI)组合使用的一个接口，对外表现为双冒号”::”,顺便说下”-&gt;”符号对应的是Function接口中的Reply方法例如;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Supplier&lt;Person&gt; personSupplier = Person::<span class="keyword">new</span>;</span><br><span class="line">personSupplier.get();<span class="comment">//调用构造方法</span></span><br><span class="line">personSupplier.get();<span class="comment">//每次返回的都是不同的对象</span></span><br><span class="line">Arrays.asList(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>).forEach(e-&gt;System.out.println(e));</span><br></pre></td></tr></table></figure>
+
+<p>Supplier<T>就是用来创建对象的，相当于new。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/" data-id="cktl5989k0001k4udhvq4ao7s" data-title="Java8新特性" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Spring注解使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Spring%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:11:29.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/Spring%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8/">Spring注解使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h6 id="EnableDiscoveryClient"><a href="#EnableDiscoveryClient" class="headerlink" title="@EnableDiscoveryClient"></a>@EnableDiscoveryClient</h6><p>要想将一个微服务注册到Eureka Server（或其他服务发现组件，例如Zookeeper、Consul等），Eureka 2.0闭源之后，Consul慢慢会成为主流。须在启动类上添加注解<code>@EnableDiscoveryClient</code> 或<code>@EnableEurekaClient</code></p>
+<h6 id="valid和-validated"><a href="#valid和-validated" class="headerlink" title="@valid和@validated"></a>@valid和@validated</h6><ul>
+<li>区别：<ul>
+<li>分组</li>
+<li>注解的地方：@valid可以注解在成员属性（字段）上，但是@validate不行</li>
+<li>由于@validate不能作用在成员属性上，因此不能做嵌套校验</li>
+<li>@valid只能作用在controller上，@validate可以用在被其他spring管理的类上</li>
+<li>@validate如果要开启方法验证，注解应该打在类上，而不是方法参数上</li>
+</ul>
+</li>
+</ul>
+<h6 id="java中事务注解的使用"><a href="#java中事务注解的使用" class="headerlink" title="java中事务注解的使用"></a>java中事务注解的使用</h6><p>@Transactional只能被应用到public方法上,对于其它非public的方法,如果标记了@Transactional也不会报错,但方法没有事务功能.<br>默认情况下,一个有事务方法, 遇到RuntimeException 时会回滚 . 遇到 受检查的异常 是不会回滚 的. 要想所有异常都回滚,要加上 @Transactional( rollbackFor={Exception.class,其它异常}) </p>
+<h6 id="controller和-restController"><a href="#controller和-restController" class="headerlink" title="@controller和@restController"></a>@controller和@restController</h6><p>返回json内容：@controller+@responsebody=@restcontroller（无法返回jsp、html页面，且视图解析器无法解析jsp、html页面）</p>
+<p>解析jsp、html页面，并跳转到相应的页面：@controller</p>
+<h6 id="autowired"><a href="#autowired" class="headerlink" title="@autowired"></a>@autowired</h6><p>可以对类成员变量、方法、构造函数进行标注，完成自动装配的工作。通过此注解的使用来消除set、gei方法</p>
+<p>注入service服务对象</p>
+<h6 id="requestmapping"><a href="#requestmapping" class="headerlink" title="@requestmapping"></a>@requestmapping</h6><p>用来请求映射，通过它来指定controller可以处理哪些url请求</p>
+<h6 id="requestparam-value-””-defaultvalue-””-required-true-false"><a href="#requestparam-value-””-defaultvalue-””-required-true-false" class="headerlink" title="@requestparam(value=””,defaultvalue=””,required=true/false)"></a>@requestparam(value=””,defaultvalue=””,required=true/false)</h6><p>将指定参数绑定到你控制器的方法参数上（是springmvc中接收普通参数的注解）</p>
+<p>value：参数名</p>
+<p>required:是否包含该参数，默认为true，表示该请求路径中必须包含该参数，如果不包含就报错。</p>
+<p>defaultvalue：默认参数值，如果设置了该值，required=true将失效，自动为false，如果没有传参数，就是用默认值</p>
+<h6 id="Column注解"><a href="#Column注解" class="headerlink" title="@Column注解"></a>@Column注解</h6><p>用来标识实体类中属性与数据表中字段的对应关系</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Column(name = &quot;login_mobile&quot;)</span><br><span class="line">private String loginMobile;</span><br></pre></td></tr></table></figure>
+
+<h6 id="jsonfield"><a href="#jsonfield" class="headerlink" title="@jsonfield"></a>@jsonfield</h6><p>@JSONField注解可以用在方法（method），属性（field）以及方法中的参数（parameter）上。JSONField中的name属性用来指定JSON串中key的名称。</p>
+<p>最近做项目中，使用了json格式在服务器之间进行数据传输。但是发现json格式数据不符合JAVA中的变量定义规则，并且难以理解，因此需要在后台中做二次处理，将数据处理成我们系统中定义的格式。</p>
+<p>思路：</p>
+<p>​    \1. 定义需要返回的bean,bean中定义需要返回的数据</p>
+<p>​    \2. 获取到需要处理的JSON字符串</p>
+<p>​    \3. 将JSON字符串转换为bean, 再将转换后的bean返回给客户端。</p>
+<p>由于json中的key与bean中的<strong>属性不能匹配</strong>，因此在转换过程中出现了部分属性为null的情况。经过查看官方文档，发现可以使用@JSONField进行解释，但是并没有详细的使用说明。</p>
+<h6 id="Table"><a href="#Table" class="headerlink" title="@Table"></a>@Table</h6><p>spring @Table注解  作用是 ： 声明此对象映射到数据库的数据表，通过它可以为实体指定表(talbe)</p>
+<h6 id="id和-GeneratedValue"><a href="#id和-GeneratedValue" class="headerlink" title="@id和@GeneratedValue"></a>@id和@GeneratedValue</h6><ul>
+<li>@Id 标注用于声明一个实体类的属性映射为数据库的主键列。该属性通常置于属性声明语句之前，可与声明语句同行，也可写在单独行上。<br>@Id标注也可置于属性的getter方法之前。</li>
+<li>@GeneratedValue 用于标注主键的生成策略，通过strategy 属性指定。默认情况下，JPA 自动选择一个最适合底层数据库的主键生成策略：SqlServer对应identity，MySQL 对应 auto increment。<br>在javax.persistence.GenerationType中定义了以下几种可供选择的策略：<br>–IDENTITY：采用数据库ID自增长的方式来自增主键字段，Oracle 不支持这种方式；<br>–AUTO： JPA自动选择合适的策略，是默认选项；<br>–SEQUENCE：通过序列产生主键，通过@SequenceGenerator 注解指定序列名，MySql不支持这种方式<br>–TABLE：通过表产生主键，框架借由表模拟序列产生主键，使用该策略可以使应用更易于数据库移植。</li>
+</ul>
+<h6 id="transient"><a href="#transient" class="headerlink" title="@transient"></a>@transient</h6><p>实体类中使用了@Table注解后，想要添加表中不存在的字段，就要使用@Transient这个注解了。</p>
+<h6 id="requestBody"><a href="#requestBody" class="headerlink" title="@requestBody"></a>@requestBody</h6><p>主要用来接收<strong>前端传递给后端</strong>的<strong>json字符串中的数据的</strong>(请求体中的数据的)；</p>
+<p>GET方式无请求体，所以使用@RequestBody接收数据时，前端不能使用GET方式提交数据，而是用POST方式进行提交。</p>
+<p>在后端的同一个接收方法里，@RequestBody与@RequestParam()可以同时使用，@RequestBody最多只能有一个，而@RequestParam()可以有多个。</p>
+<p>简言之：</p>
+<p>一个请求——》只有一个@RequestBody；</p>
+<p>一个请求——》可以有多个@RequestParam。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Spring%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8/" data-id="cktl5989s000ak4ud50tw8zs9" data-title="Spring注解使用" class="article-share-link">Share</a>
       
       
       
@@ -644,15 +835,15 @@
           </li>
         
           <li>
-            <a href="/2021/09/15/Git/">Git</a>
-          </li>
-        
-          <li>
             <a href="/2021/09/15/Maven/">Maven</a>
           </li>
         
           <li>
             <a href="/2021/09/15/kuboard/">kuboard</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Zookeeper/">Zookeeper</a>
           </li>
         
       </ul>
