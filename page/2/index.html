@@ -71,10 +71,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-跨域问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hikaricp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" class="article-date">
-  <time class="dt-published" datetime="2021-09-09T11:16:21.000Z" itemprop="datePublished">2021-09-09</time>
+    <a href="/2021/09/15/hikaricp/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:31:42.000Z" itemprop="datePublished">2021-09-15</time>
 </a>
     
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">跨域问题</a>
+      <a class="p-name article-title" href="/2021/09/15/hikaricp/">hikaricp</a>
     </h1>
   
 
@@ -93,23 +93,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><strong>跨域指的是</strong>：协议+域名+ip+端口</p>
-<p><strong>解决方案</strong>：</p>
-<ul>
-<li><p>使用ajax的jsonp</p>
-</li>
-<li><p>使用jQuery的jsonp插件</p>
-</li>
-<li><p>使用cors：仅在后端代码中添加部分处理代码</p>
-</li>
-<li><p>cors高级使用：springmvc中配置拦截器</p>
-</li>
-</ul>
+        <p>数据库连接池</p>
+<p>三层架构：controller、service、dao</p>
+<p>domain–JavaBean–通常与数据库表一一对应</p>
+<p>model–javaBean</p>
+<p>properties文件中过时的配置不用管是吗？</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" data-id="cktibll46000br0ud3vhv77ct" data-title="跨域问题" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/15/hikaricp/" data-id="cktkwkk2v000h4oud8uteb64d" data-title="hikaricp" class="article-share-link">Share</a>
       
       
       
@@ -121,10 +114,10 @@
 
 
   
-    <article id="post-工具使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hosts文件的作用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="article-date">
-  <time class="dt-published" datetime="2021-09-09T10:25:41.000Z" itemprop="datePublished">2021-09-09</time>
+    <a href="/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:30:57.000Z" itemprop="datePublished">2021-09-15</time>
 </a>
     
   </div>
@@ -135,7 +128,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">工具使用</a>
+      <a class="p-name article-title" href="/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/">hosts文件的作用</a>
     </h1>
   
 
@@ -143,420 +136,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="一-typora"><a href="#一-typora" class="headerlink" title="一.typora"></a>一.typora</h1><h4 id="标题、加粗、斜体等"><a href="#标题、加粗、斜体等" class="headerlink" title="标题、加粗、斜体等"></a>标题、加粗、斜体等</h4><p>ctrl+数字键（六级标题）</p>
-<p>ctrl+B(加粗)</p>
-<p>ctrl+l(斜体)</p>
-<p>ctrl+u(下划线)</p>
-<p>前后加两个=（高亮）</p>
-<p>前后加两个~（删除线）</p>
-<blockquote>
-<p>引用&gt;</p>
-</blockquote>
-<ul>
-<li>列表-<ul>
-<li>列表-</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li><p>有序</p>
-<ol>
-<li>有序</li>
-<li>有序</li>
-</ol>
-<p>分割线***</p>
-<hr>
-<p><a target="_blank" rel="noopener" href="http://www.baidu.com/">百度官网</a></p>
-<p>超链接（[]）</p>
-<p>图片（![]）</p>
-<p>ctrl+t(表格)</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>代办事项</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 已完成（- [x]）</li>
-<li><input disabled="" type="checkbox"> 代办（-[]）</li>
-</ul>
-</li>
-</ol>
-<h1 id="二-idea"><a href="#二-idea" class="headerlink" title="二.idea"></a>二.idea</h1><h4 id="1-快捷键"><a href="#1-快捷键" class="headerlink" title="1.快捷键"></a>1.快捷键</h4><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>介绍</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ctrl+alt+L</td>
-<td>格式化代码</td>
-</tr>
-<tr>
-<td>ctrl+f</td>
-<td>在当前文件进行文本查找</td>
-</tr>
-<tr>
-<td>ctrl+r</td>
-<td>在当前文件进行文本替换</td>
-</tr>
-<tr>
-<td>ctrl+y</td>
-<td>删除光标所在行/删除选中行</td>
-</tr>
-<tr>
-<td>ctrl+n</td>
-<td>根据输入的类名查找类文件</td>
-</tr>
-<tr>
-<td>ctrl+h</td>
-<td>显示当前类的层次结构</td>
-</tr>
-<tr>
-<td>ctrl+o</td>
-<td>选择可重写的方法</td>
-</tr>
-<tr>
-<td>ctrl+l</td>
-<td>选择可继承的方法</td>
-</tr>
-<tr>
-<td>ctrl++</td>
-<td>展开代码</td>
-</tr>
-<tr>
-<td>ctrl+-</td>
-<td>折叠代码</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>ctrl+j</td>
-<td>自动生成代码模板</td>
-</tr>
-<tr>
-<td>alt+insert</td>
-<td>生成构造方法、get、set方法</td>
-</tr>
-<tr>
-<td>ctrl+shift+回车</td>
-<td>补全结尾</td>
-</tr>
-<tr>
-<td>ctrl+alt+l</td>
-<td>代码格式化</td>
-</tr>
-<tr>
-<td>ctrl+alt+i</td>
-<td>缩进</td>
-</tr>
-<tr>
-<td>ctrl+e</td>
-<td>最近修改了那些代码</td>
-</tr>
-<tr>
-<td>ctrl+p</td>
-<td>方法参数提示</td>
-</tr>
-<tr>
-<td>ctrl+alt+t</td>
-<td>异常捕获</td>
-</tr>
-<tr>
-<td>ctrl+shift+n</td>
-<td>查找文件</td>
-</tr>
-<tr>
-<td>ctrl+/</td>
-<td>添加单行注释//</td>
-</tr>
-<tr>
-<td>ctrl+shift+/</td>
-<td>注释选中的代码块</td>
-</tr>
-<tr>
-<td>/**+回车</td>
-<td>添加方法注释</td>
-</tr>
-</tbody></table>
-<p>idea中设置快捷键</p>
-<p>file–&gt;settings–&gt;keymap</p>
-<h1 id="三-git"><a href="#三-git" class="headerlink" title="三.git"></a>三.git</h1><h6 id="1-版本控制：管理对文件、目录或工程等内容的修改历史（版本迭代）。"><a href="#1-版本控制：管理对文件、目录或工程等内容的修改历史（版本迭代）。" class="headerlink" title="1.版本控制：管理对文件、目录或工程等内容的修改历史（版本迭代）。"></a>1.版本控制：管理对文件、目录或工程等内容的修改历史（版本迭代）。</h6><h6 id="2-常见的版本控制工具：git、svn、cvs等。"><a href="#2-常见的版本控制工具：git、svn、cvs等。" class="headerlink" title="2.常见的版本控制工具：git、svn、cvs等。"></a>2.常见的版本控制工具：git、svn、cvs等。</h6><h6 id="3-版本控制分类"><a href="#3-版本控制分类" class="headerlink" title="3.版本控制分类"></a>3.版本控制分类</h6><blockquote>
-<p>本地版本控制</p>
-</blockquote>
-<p>记录文件的每次更新,可以对每个版本做一个快照,或是记录补丁文件,适合个人用.</p>
-<blockquote>
-<p>集中版本控制-svn(中央服务器挂了怎么办-单点故障)</p>
-</blockquote>
-<p>所有的版本数据都保存在服务器上,协同开发者从服务器上同步更新或上传自己的修改.</p>
-<p>用户本地只有自己以前同步的版本,如果不联网,用户看不见历史版本,也无法切换版本验证问题.若服务器损坏,就会丢失所有的数据,可以定期备份.</p>
-<blockquote>
-<p>分布式版本控制-git</p>
-</blockquote>
-<p>所有版本信息仓库全部同步到本地的每个用户,这样就可以在本地查看所有历史版本,可以离线在本地提交,只需要在联网时push到相应的服务器或其他用户哪里.由于每个用户那里保存的都是所有版本的数据,只要有一个用户的设备没有问题,就可以恢复所有的数据,但是这增加了本地存储空间的占用.</p>
-<p>每个人都拥有的全部的代码!–&gt;安全隐患!</p>
-<p>不会因为服务器损坏或者网络的问题,造成不可工作的情况!</p>
-<h6 id="4-git-vs-svn"><a href="#4-git-vs-svn" class="headerlink" title="4.git vs svn"></a>4.git vs svn</h6><p>svn是集中式版本控制系统,版本库是集中放在中央服务器的,而工作的时候用的都是自己的电脑,所以首先要求从中央服务器得到最新的版本,然后工作,完成工作,再把自己的工作推送到中央服务器,集中式版本控制系统是必须联网才能工作,对网络带宽要求较高.</p>
-<p>git是分布式版本控制系统,没有中央服务器,每个人的电脑就是一个完整的版本库,工作的时候不需要联网了,因为版本都在自己的电脑上.协同方法是这样的,a和b同时更改了e文件,只需把各自的修改推送给对方,就可以互相看到对方的修改了.git可以直接看到更新了那些代码和文件!</p>
-<blockquote>
-<p>git是目前世界上最先进的分布式版本控制系统.</p>
-</blockquote>
-<h6 id="5-git下载安装及环境配置"><a href="#5-git下载安装及环境配置" class="headerlink" title="5.git下载安装及环境配置"></a>5.git下载安装及环境配置</h6><p>所有东西下载慢的话就找镜像下载</p>
-<p>镜像地址:淘宝镜像下载!<a target="_blank" rel="noopener" href="http://npm.taobao.org/mirrors/git-for-windows/">http://npm.taobao.org/mirrors/git-for-windows/</a></p>
-<blockquote>
-<p>先卸载–直接反安装即可</p>
-</blockquote>
-<p>先删除git相关环境变量配置（path）</p>
-<p>直接卸载git相关</p>
-<blockquote>
-<p>下载git–无脑安装下一步就好</p>
-</blockquote>
-<ul>
-<li>安装路径自己选择</li>
-<li>所有均选择默认值</li>
-<li>默认文本编辑器根据自己的软件选择</li>
-<li>安装完毕之后就可以直接使用</li>
-</ul>
-<blockquote>
-<p>启动git</p>
-</blockquote>
-<p>安装成功后，菜单中会有git选项，任意文件夹右击也可以看到git选项</p>
-<ul>
-<li>Git Bash：Unix与Linux风格的命令行，使用最多，推荐最多。eg：clear</li>
-<li>Git CMD：windows风格的命令行。eg：cls</li>
-<li>Git GUI：图形界面的git，不建议初学者使用，尽量先熟悉常用命令。</li>
-</ul>
-<h6 id="6-基本常用Linux命令"><a href="#6-基本常用Linux命令" class="headerlink" title="6.基本常用Linux命令"></a>6.基本常用Linux命令</h6><ul>
-<li><p>cd：改变目录</p>
-</li>
-<li><p>cd..：退回到上一级目录</p>
-</li>
-<li><p>pwd：显示当前所在的目录路径</p>
-</li>
-<li><p>ll/ls：列出当前目录中的所有文件</p>
-</li>
-<li><p>touch：新建一个文件，eg：touch index.js</p>
-</li>
-<li><p>rm：删除一个文件，eg：rm index.js</p>
-</li>
-<li><p>mkdir：创建一个目录，就是创建一个文件夹</p>
-</li>
-<li><p>rm -r：删除一个文件夹，eg：rm -r src 删除src目录</p>
-<p><strong>rm -rf /：格式化系统，切勿在linux系统中进行尝试，linux中一切皆文件，此操作会删除电脑中的全部文件！</strong></p>
-</li>
-<li><p>mv：移动文件，eg：mv index.html src,src是目标文件夹，index.html是目标文件</p>
-</li>
-<li><p>reset：重新初始化终端/清屏</p>
-</li>
-<li><p>clear：清屏</p>
-</li>
-<li><p>history：查看历史命令</p>
-</li>
-<li><p>help：帮助</p>
-</li>
-<li><p>exit：推出</p>
-</li>
-<li><p>#：表示注释</p>
-</li>
-</ul>
-<h6 id="7-git配置"><a href="#7-git配置" class="headerlink" title="7.git配置"></a>7.git配置</h6><p>所有的配置文件其实都保存在本地！</p>
-<ul>
-<li>查看配置 git config -l</li>
-<li>查看系统配置 git config –system –list</li>
-<li>查看本地配置 git config –global –list</li>
-</ul>
-<p>系统配置：Git\etc\gitconfig ：git安装目录下的gitconfig   –system系统级</p>
-<p>用户配置：c:\user\thinkbook\.gitconfig</p>
-<p><strong>安装git后必须设置global配置，否则代码无法提交成功</strong></p>
-<p>eg：user.name “dan.zhou”；user.emal “<a href="mailto:&#122;&#x68;&#x6f;&#117;&#x64;&#97;&#110;&#64;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#x6d;">&#122;&#x68;&#x6f;&#117;&#x64;&#97;&#110;&#64;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#x6d;</a>“</p>
-<p><strong>git是否需要配置环境变量？</strong></p>
-<p>配置环境变量的目的是为了全局使用git，目前右键可实现此目的，因此不配置也可以。安装时git会自动默认配置环境变量。</p>
-<h1 id="四-maven"><a href="#四-maven" class="headerlink" title="四.maven"></a>四.maven</h1><p>Maven：一个项目管理工具，包含了一个项目对象模型（pom）、一组标准集合、一个项目生命周期、一个依赖管理系统</p>
-<p>​       管理项目的构建、报告和文档的项目管理工具软件</p>
-<p>Maven标准构建文件：project.xml和maven.xml</p>
-<p>Maven生命周期：运行mvn install 执行一系列有序步骤，</p>
-<h1 id="五-restful风格"><a href="#五-restful风格" class="headerlink" title="五.restful风格"></a>五.restful风格</h1><h1 id="六-RAP"><a href="#六-RAP" class="headerlink" title="六.RAP"></a>六.RAP</h1><p>rap-接口文档管理工具</p>
-<p>RAP通过GUI工具帮助WEB工程师更高效的管理接口文档，同时通过分析接口结构自动生成Mock数据、校验真实接口的正确性，使接口文档成为开发流程中的强依赖。有了结构化的API数据，RAP可以做的更多，而我们可以避免更多重复劳动。</p>
-<p><img src="C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\1628215476775.png" alt="1628215476775"></p>
-<h1 id="七-kuboard"><a href="#七-kuboard" class="headerlink" title="七.kuboard"></a>七.kuboard</h1><p>Kubernetes 容器编排</p>
-<p>Kuboard 通过三层界面来管理 Kubernetes 以及部署在其上的微服务应用</p>
-<h1 id="八-Jumpserver"><a href="#八-Jumpserver" class="headerlink" title="八.Jumpserver"></a>八.Jumpserver</h1><p>开源堡垒机，又称跳板机</p>
-<p>堡垒机，也叫做运维安全审计系统，核心功能是4A</p>
-<ol>
-<li>身份验证 Authentication</li>
-<li>账号管理 Account</li>
-<li>授权控制 Authorization</li>
-<li>安全审计 Audit</li>
-</ol>
-<p>总结：堡垒机用来控制那些人可以登录那些资产（事先防范和事中控制），以及录像记录登陆资产后做了什么事情（事后朔源）</p>
-<h1 id="九-Jenkins"><a href="#九-Jenkins" class="headerlink" title="九.Jenkins"></a>九.Jenkins</h1><p>jenkins用于监控持续重复的工作</p>
-<p>Jenkins是一个开源的、提供友好操作界面的持续集成(CI)工具</p>
-<p>Jenkins是一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6/8105369">开源软件</a>项目，是基于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Java/85979">Java</a>开发的一种<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/6250744">持续集成</a>工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件项目可以进行持续集成 </p>
-<h4 id="CI-CD是什么？"><a href="#CI-CD是什么？" class="headerlink" title="CI/CD是什么？"></a>CI/CD是什么？</h4><p> CI(Continuous integration，中文意思是持续集成)是一种软件开发时间。持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。根据测试结果，我们可以确定新代码和原有代码能否正确地集成在一起。借用网络图片对CI加以理解。</p>
-<p><img src="C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\1628216893856.png" alt="1628216893856"></p>
-<p>  CD(Continuous Delivery， 中文意思持续交付)是在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境(类生产环境)中。比如，我们完成单元测试后，可以把代码部署到连接数据库的Staging环境中更多的测试。如果代码没有问题，可以继续手动部署到生产环境。下图反应的是CI/CD 的大概工作模式。<br><img src="C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\1628216918680.png" alt="1628216918680"></p>
-<h1 id="十-酷学院视频学习"><a href="#十-酷学院视频学习" class="headerlink" title="十.酷学院视频学习"></a>十.酷学院视频学习</h1><p>1.nodejs-eggjs</p>
-<p>nodejs具有非阻塞，事件驱动io的特性</p>
-<p>传统web服务，一次请求刷新整个页面，请求不连续请求一次服务器响应一次<br>ajax异步请求，局部请求刷新<br>nodejs：使用户一直与服务器保持一个有效连接，即让用户和服务器之间保持长轮询（long polling）</p>
-<p>2.mysql高效应用</p>
-<p>索引会引起更新数据慢，导致查询锁死</p>
-<p>3.性能测试</p>
-<p>压测<br>java+jmeter<br>python+locust</p>
-<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h1 id="zookeeper"><a href="#zookeeper" class="headerlink" title="zookeeper"></a>zookeeper</h1><blockquote>
-<p>zookeeper下载（下载后解压即可）：</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 编译后的包，应下载使用编译后的包，否则会报错，找不到或无法加载主类 </span><br><span class="line">apache-zookeeper-<span class="number">3.6</span><span class="number">.3</span>-bin.tar.gz</span><br><span class="line"> -- 未经编译的包</span><br><span class="line"> apache-zookeeper-<span class="number">3.6</span><span class="number">.3</span>.tar.gz </span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>zookeeper的配置：</p>
-</blockquote>
-<p>将conf中的zoo_sample.cfg复制一份，重命名为zoo.cfg,添加如下配置</p>
-<p>dataDir=E:/apache-zookeeper-3.6.3-bin/data<br>dataLogData=E:/apache-zookeeper-3.6.3-bin/log</p>
-<blockquote>
-<p>如果启动zookeeper出现闪退</p>
-</blockquote>
-<p>编辑zkServer.cmd,最后一行添加pause</p>
-<blockquote>
-<p>如果启动zookeeper出现ZooKeeper audit is disabled</p>
-</blockquote>
-<p>编辑zkServer.cmd,再call中添加 “-Dzookeeper.audit.enable=true”</p>
-<blockquote>
-<p>安装Zookeeper时出现unable to start adminserver,existing abnormally</p>
-</blockquote>
-<p>可能是由于8080端口被占用，在zoo.cfg中添加admin.serverPort=”未被占用的端口号”；或者重新启动；</p>
-<h1 id="jedis"><a href="#jedis" class="headerlink" title="jedis"></a>jedis</h1><p>redis的java客户端</p>
-<ul>
-<li><p>优点</p>
-</li>
-<li><p>支持全面的 Redis 操作特性（可以理解为API比较全面）</p>
-</li>
-<li><p>缺点：</p>
-<p>使用阻塞的 I/O，且其方法调用都是同步的，程序流需要等到 sockets 处理完 I/O 才能执行，不支持异步；</p>
-<p> Jedis 客户端实例不是线程安全的，所以需要通过连接池来使用 Jedis。</p>
-</li>
-</ul>
-<h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><p>快速简洁的博客框架；</p>
-<p>直接在github page平台上托管我们的博客，无需定期维护。</p>
-<h1 id="项目中的问题"><a href="#项目中的问题" class="headerlink" title="项目中的问题"></a>项目中的问题</h1><blockquote>
-<p>项目中的settings.xml文件、maven中的settings.xml文件、本地的local repository是否需要保持一致。</p>
-</blockquote>
-<blockquote>
-<p>项目中的.idea文件</p>
-</blockquote>
-<blockquote>
-<p>项目中的.m2文件</p>
-</blockquote>
-<blockquote>
-<p>使用idea启动项目，后台报：outofmemoryerror：Java heap space</p>
-</blockquote>
-<p>通过在idea中设置相关参数</p>
-<p>1.run-》edit configurations-》vm options</p>
-<p>2.file-》settings-》heap</p>
-<blockquote>
-<p>Error:java: OutOfMemoryError: insufficient memory</p>
-</blockquote>
-<p>file-&gt;invalidate caches</p>
-<blockquote>
-<p>Error running ‘App’: Command line is too long. Shorten command line for App or also for Spring Boot default configuration.</p>
-</blockquote>
-<p>找到.idea文件下的workspace.xml文件，在component标签下添加</p>
-<property name="dynamic.classpath" value="true" />
-
-<blockquote>
-<p>Error:java: Compilation failed: internal java compiler error</p>
-</blockquote>
-<p>导致这个错误的原因主要是因为jdk版本问题，此处有两个原因，一个是编译版本不匹配，一个是当前项目jdk版本不支持</p>
-<p>File -&gt;Project Structure-&gt;Project Settings -&gt;Project或使用快捷键Ctrl+Alt+shift+S打开项目的jdk配置：</p>
-<p>查看此两处是否与目标jdk一致。</p>
-<blockquote>
-<p>Error starting ApplicationContext. To display the conditions report re-run your application with ‘debug’ enabled.</p>
-</blockquote>
-<blockquote>
-<p>Invocation of init method failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool</p>
-</blockquote>
-<p>1.properties文件中的jedis配置有问题</p>
-<p>2.未开启redis服务器</p>
-<blockquote>
-<p>java.net.ConnectException: Connection refused: no further information</p>
-</blockquote>
-<p>zookeeper连接不到导致</p>
-<p>1.排查本地配置是否写的远程配置</p>
-<p>2.核查本地zookeeper配置文件配置是否正确</p>
-<p>3.核查是否为springboot集成redis–核查redis的配置文件</p>
-<blockquote>
-<p>Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection timed out: connect</p>
-</blockquote>
-<p>原因：防火墙未开启指定端口导致</p>
-<p>目标ip可能ping不通</p>
-<p>redis连接超时</p>
-<p>首先确保自己的server真正运行起来了</p>
-<p>然后关闭防火墙，再重启服务</p>
-<p>1.查看配置host和port</p>
-<p>2.确保server正常运行</p>
-<p>3.确保防火墙为关闭状态</p>
-<p>4.代码中的socket有问题</p>
-<p>1.依赖重复的问题</p>
-<p>2.pom.xml中插件无法下载的问题</p>
-<h1 id="rpc"><a href="#rpc" class="headerlink" title="rpc"></a>rpc</h1><p>remote procedure call 远程过程调用</p>
-<p>Apache POI是什么？<br>Apache POI是Apache软件基金会的开放源码函式库，POI提供API给Java程序对Microsoft Office格式档案读和写的功能。</p>
-<p>基本功能<br>HSSF<br>提供读写Microsoft Excel格式档案的功能。<br>XSSF<br>提供读写Microsoft Excel OOXML格式档案的功能。<br>HWPF<br>提供读写Microsoft Word格式档案的功能。<br>HSLF<br>提供读写Microsoft PowerPoint格式档案的功能。<br>HDGF<br>提供读写Microsoft Visio格式档案的功能。</p>
-<p>演示范例<br>读取Word文档</p>
-<p>import java.io. * ;<br>import org.apache.poi.hwpf.extractor.WordExtractor;<br>import org.apache.poi.hssf.usermodel.HSSFWorkbook;<br>import org.apache.poi.hssf.usermodel.HSSFSheet;<br>import org.apache.poi.hssf.usermodel.HSSFRow;<br>import org.apache.poi.hssf.usermodel.HSSFCell;<br>public class TestPoi {<br>    public TestPoi() {}<br>    public static void main(String args[])throws Exception{<br>        FileInputStream in = new FileInputStream(“D:\a.doc”);<br>        WordExtractor extractor = new WordExtractor();<br>        String str = extractor.extractText(in);<br>        //System.out.println(“the result length is”+str.length());<br>        System.out.println(str);<br>    }<br>}<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>读取Excel文档</p>
-<p>import org.apache.poi.hssf.usermodel.HSSFWorkbook;<br>import org.apache.poi.hssf.usermodel.HSSFSheet;<br>import org.apache.poi.hssf.usermodel.HSSFRow;<br>import org.apache.poi.hssf.usermodel.HSSFCell;<br>import java.io.FileInputStream;<br>public class ReadXL {<br>    /** Excel文件的存放位置。注意是反斜线*/<br>    public static String fileToBeRead = “D:\test1.xls”;<br>    public static void main(String argv[]) {<br>        try {<br>            // 创建对Excel工作簿文件的引用<br>            HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(fileToBeRead));<br>            // 创建对工作表的引用。<br>            // 本例是按名引用（让我们假定那张表有着缺省名”Sheet1”）<br>            HSSFSheet sheet = workbook.getSheet(“Sheet1”);<br>            // 也可用getSheetAt(int index)按索引引用，<br>            // 在Excel文档中，第一张工作表的缺省索引是0，<br>            // 其语句为：HSSFSheet sheet = workbook.getSheetAt(0);<br>            // 读取左上端单元<br>            HSSFRow row = sheet.getRow(0);<br>            HSSFCell cell = row.getCell((short)0);<br>            // 输出单元内容，cell.getStringCellValue()就是取所在单元的值<br>            System.out.println(“左上端单元是： “ + cell.getStringCellValue());<br>        } catch (Exception e) {<br>            System.out.println(“已运行xlRead() : “ + e);<br>        }<br>    }<br>}<br>————————————————<br>版权声明：本文为CSDN博主「wunianisme」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29645505/article/details/90050519">https://blog.csdn.net/qq_29645505/article/details/90050519</a></p>
-<h1 id="hikaricp"><a href="#hikaricp" class="headerlink" title="hikaricp"></a>hikaricp</h1><p>数据库连接池</p>
-<p>三层架构：controller、service、dao</p>
-<p>domain–JavaBean–通常与数据库表一一对应</p>
-<p>model–javaBean</p>
-<p>properties文件中过时的配置不用管是吗？</p>
-<p>springboot中注解的使用</p>
-<p>1.@controller和@restController</p>
-<p>返回json内容：@controller+@responsebody=@restcontroller（无法返回jsp、html页面，且视图解析器无法解析jsp、html页面）</p>
-<p>解析jsp、html页面，并跳转到相应的页面：@controller</p>
-<p>2.@autowired：可以对类成员变量、方法、构造函数进行标注，完成自动装配的工作。通过此注解的使用来消除set、gei方法</p>
-<p>注入service服务对象</p>
-<p>3.@requestmapping：用来请求映射，通过它来指定controller可以处理哪些url请求</p>
-<p>4.@requestparam(value=””,defaultvalue=””,required=true/false)</p>
-<p>将指定参数绑定到你控制器的方法参数上（是springmvc中接收普通参数的注解）</p>
-<p>value：参数名</p>
-<p>required:是否包含该参数，默认为true，表示该请求路径中必须包含该参数，如果不包含就报错。</p>
-<p>defaultvalue：默认参数值，如果设置了该值，required=true将失效，自动为false，如果没有传参数，就是用默认值</p>
-<p>5.@Column注解</p>
-<p>用来标识实体类中属性与数据表中字段的对应关系</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Column(name = &quot;login_mobile&quot;)</span><br><span class="line">private String loginMobile;</span><br></pre></td></tr></table></figure>
-
-<p>6.@jsonfield</p>
-<p>@JSONField注解可以用在方法（method），属性（field）以及方法中的参数（parameter）上。JSONField中的name属性用来指定JSON串中key的名称。</p>
-<p>最近做项目中，使用了json格式在服务器之间进行数据传输。但是发现json格式数据不符合JAVA中的变量定义规则，并且难以理解，因此需要在后台中做二次处理，将数据处理成我们系统中定义的格式。</p>
-<p>思路：</p>
-<p>​    \1. 定义需要返回的bean,bean中定义需要返回的数据</p>
-<p>​    \2. 获取到需要处理的JSON字符串</p>
-<p>​    \3. 将JSON字符串转换为bean, 再将转换后的bean返回给客户端。</p>
-<p>由于json中的key与bean中的<strong>属性不能匹配</strong>，因此在转换过程中出现了部分属性为null的情况。经过查看官方文档，发现可以使用@JSONField进行解释，但是并没有详细的使用说明。</p>
-<p>7.@Table</p>
-<p>spring @Table注解  作用是 ： 声明此对象映射到数据库的数据表，通过它可以为实体指定表(talbe)</p>
-<p>8.@id和@GeneratedValue</p>
-<p>@Id：<br>@Id 标注用于声明一个实体类的属性映射为数据库的主键列。该属性通常置于属性声明语句之前，可与声明语句同行，也可写在单独行上。<br>@Id标注也可置于属性的getter方法之前。</p>
-<p>@GeneratedValue：<br>@GeneratedValue 用于标注主键的生成策略，通过strategy 属性指定。默认情况下，JPA 自动选择一个最适合底层数据库的主键生成策略：SqlServer对应identity，MySQL 对应 auto increment。<br>在javax.persistence.GenerationType中定义了以下几种可供选择的策略：<br>–IDENTITY：采用数据库ID自增长的方式来自增主键字段，Oracle 不支持这种方式；<br>–AUTO： JPA自动选择合适的策略，是默认选项；<br>–SEQUENCE：通过序列产生主键，通过@SequenceGenerator 注解指定序列名，MySql不支持这种方式<br>–TABLE：通过表产生主键，框架借由表模拟序列产生主键，使用该策略可以使应用更易于数据库移植。</p>
-<p>9.@transient</p>
-<p>实体类中使用了@Table注解后，想要添加表中不存在的字段，就要使用@Transient这个注解了。</p>
-<p>10.@requestBody</p>
-<p>主要用来接收<strong>前端传递给后端</strong>的<strong>json字符串中的数据的</strong>(请求体中的数据的)；</p>
-<p>GET方式无请求体，所以使用@RequestBody接收数据时，前端不能使用GET方式提交数据，而是用POST方式进行提交。</p>
-<p>在后端的同一个接收方法里，@RequestBody与@RequestParam()可以同时使用，@RequestBody最多只能有一个，而@RequestParam()可以有多个。</p>
-<p>简言之：</p>
-<p>一个请求——》只有一个@RequestBody；</p>
-<p>一个请求——》可以有多个@RequestParam。</p>
-<h1 id="host文件的作用"><a href="#host文件的作用" class="headerlink" title="host文件的作用"></a>host文件的作用</h1><p>1.什么是host文件</p>
+        <p>1.什么是host文件</p>
 <p>host文件是一个没有扩展名的系统文件，其基本作用就是将一些常用的网址域名与其对应的ip地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统再会将网址提交DNS域名解析服务器进行IP地址的解析。</p>
 <p>2.host文件的位置（排除是否隐藏文件的可能性）</p>
 <p>C:\Windows\System32\drivers\etc</p>
@@ -566,7 +146,45 @@
 </ul>
 <p>详情见链接</p>
 <p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/6079ad0e6099fb28ff86db0c.html">https://jingyan.baidu.com/article/6079ad0e6099fb28ff86db0c.html</a></p>
-<h1 id="token"><a href="#token" class="headerlink" title="token"></a>token</h1><p>http请求什么情况下需要携带token？</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/" data-id="cktkwkk2v000i4oud995japc6" data-title="hosts文件的作用" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Token" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/15/Token/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:30:40.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/15/Token/">Token</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>http请求什么情况下需要携带token？</p>
 <p>http是一种无状态的协议，他无法识别是谁访问应用。所以使用token作为客户端和服务端之间的密钥来作为身份识别。</p>
 <p>token在http请求中相当于用户身份的唯一标识，根据token信息可以找到用户身份的所有信息，因此请求中携带token是接口需要确定用户身份。</p>
 <p>token</p>
@@ -586,12 +204,181 @@
 <h3 id="2-解决方法："><a href="#2-解决方法：" class="headerlink" title="2.解决方法："></a>2.解决方法：</h3><p>①前端处理：在提交之后通过js立即将按钮隐藏或者置为不可用。</p>
 <p>②后端处理：对于每次提交到后台的数据必须校验，也就是通过前端携带的令牌（一串唯一字符串）与后端校验来判断当前数据是否有效。</p>
 <h3 id="3-总结："><a href="#3-总结：" class="headerlink" title="3.总结："></a>3.总结：</h3><p>第一种方法相对来说比较简单，但是安全系数不高，第二种方法从根本上解决了问题，所以我推荐第二种方法。</p>
-<h1 id="什么是跨域问题"><a href="#什么是跨域问题" class="headerlink" title="什么是跨域问题"></a>什么是跨域问题</h1><p>浏览器从一个域名的网页去请求另一个域名的资源。域名、端口、协议任一不同，都是跨域问题。</p>
-<p>1.端口和协议不同，只能通过后台来解决</p>
-<p>2.localhost和127.0.0.1虽然都指向本机，但也属于跨域问题。</p>
-<p>如何解决跨域问题</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tjcjava/article/details/76468225">https://blog.csdn.net/tjcjava/article/details/76468225</a></p>
-<h1 id="example"><a href="#example" class="headerlink" title="example"></a>example</h1><p>example是mybatis提供的一个类</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/15/Token/" data-id="cktkwkk2t000e4oudf73m77i3" data-title="Token" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-PageInfo详解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/15/PageInfo%E8%AF%A6%E8%A7%A3/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:30:21.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/15/PageInfo%E8%AF%A6%E8%A7%A3/">PageInfo详解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>分页工具类</p>
+<p> //创建一个PageInfo对象,传入泛型类<br>      PageInfo<Goods> pageInfo = new PageInfo<Goods>();<br>      /*<br>      封装pageInfo数据 :<br>          第一个参数为list集合的数据<br>          第二个参数为当前页<br>          第三个参数为每页显示数据条数<br>      */<br>      pageInfo.setPageInfo(data,currentPage,12);</p>
+<p>实体类po、vo、entity、dto</p>
+<p>PO主要是用于实现持久层的数据存储。<br>VO则主要用于逻辑层和表示层之间数据处理封装。</p>
+<p>PO字段跟数据库的表的列之间一一对应，而VO则根据业务需求，封装特定字段信息。<br>PO对象跟VO对象可以是多对多关系。</p>
+<p>entity中每个字段与数据库相对应</p>
+<p>dto中的每个字段与前台页面相对应</p>
+<p>vo类似与桥梁，在entity和dto之间进行转换</p>
+<p>PO对象跟VO对象之间的数据传递主要在逻辑层进行。</p>
+<p>jsonObject类：JSONObject-lib包是一个beans,collections,maps,java arrays和xml和JSON互相转换的包</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/15/PageInfo%E8%AF%A6%E8%A7%A3/" data-id="cktkwkk2s000d4oud8nse86rx" data-title="PageInfo详解" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-java后端分层架构" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/15/java%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:29:56.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/15/java%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/">java后端分层架构</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/15/java%E5%90%8E%E7%AB%AF%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/" data-id="cktkwkk2x000l4oudbufj9zi7" data-title="java后端分层架构" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-前后端传参" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BC%A0%E5%8F%82/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:28:30.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BC%A0%E5%8F%82/">前后端传参</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>前端给后端传参数</p>
+<p>get：在url后面，用&amp;隔开</p>
+<p>post：</p>
+<ul>
+<li>键值对</li>
+<li>list</li>
+<li>map或实体类，即json格式</li>
+<li>@requestbody或list<Object></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BC%A0%E5%8F%82/" data-id="cktkwkk2z000q4oud1r5f0gnl" data-title="前后端传参" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Mybatis中example的用法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Mybatis%E4%B8%ADexample%E7%9A%84%E7%94%A8%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:22:19.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/Mybatis%E4%B8%ADexample%E7%9A%84%E7%94%A8%E6%B3%95/">Mybatis中example的用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="mybatis中example的用法"><a href="#mybatis中example的用法" class="headerlink" title="mybatis中example的用法"></a>mybatis中example的用法</h1><p>Example类指定如何构建一个动态的where子句</p>
+<p>Example类可以用来生成一个几乎无限的where子句</p>
+<p>Criteria是Example中的静态内部类</p>
+<p>example是mybatis提供的一个类</p>
 <p>使用说明：</p>
 <p>//new一个Example对象</p>
 <p>Example example=new Example();</p>
@@ -668,274 +455,11 @@
 <td>添加xxx字段值不在value1和value2之间条件</td>
 </tr>
 </tbody></table>
-<h1 id="pageinfo类"><a href="#pageinfo类" class="headerlink" title="pageinfo类"></a>pageinfo类</h1><p>分页工具类</p>
-<p> //创建一个PageInfo对象,传入泛型类<br>      PageInfo<Goods> pageInfo = new PageInfo<Goods>();<br>      /*<br>      封装pageInfo数据 :<br>          第一个参数为list集合的数据<br>          第二个参数为当前页<br>          第三个参数为每页显示数据条数<br>      */<br>      pageInfo.setPageInfo(data,currentPage,12);</p>
-<p>实体类po、vo、entity、dto</p>
-<p>PO主要是用于实现持久层的数据存储。<br>VO则主要用于逻辑层和表示层之间数据处理封装。</p>
-<p>PO字段跟数据库的表的列之间一一对应，而VO则根据业务需求，封装特定字段信息。<br>PO对象跟VO对象可以是多对多关系。</p>
-<p>entity中每个字段与数据库相对应</p>
-<p>dto中的每个字段与前台页面相对应</p>
-<p>vo类似与桥梁，在entity和dto之间进行转换</p>
-<p>PO对象跟VO对象之间的数据传递主要在逻辑层进行。</p>
-<p>jsonObject类：JSONObject-lib包是一个beans,collections,maps,java arrays和xml和JSON互相转换的包</p>
-<h1 id="assert"><a href="#assert" class="headerlink" title="assert"></a>assert</h1><p>1、assert &lt;boolean表达式&gt;</p>
-<p>如果&lt;boolean表达式&gt;为true，则程序继续执行。</p>
-<p>如果为false，则程序抛出AssertionError，并终止执行。</p>
-<p>2、assert &lt;boolean表达式&gt; : &lt;错误信息表达式&gt;</p>
-<p>如果&lt;boolean表达式&gt;为true，则程序继续执行。</p>
-<p>如果为false，则程序抛出java.lang.AssertionError，并输入&lt;错误信息表达式&gt;。</p>
-<p>assert关键字用法简单，但是使用assert往往会让你陷入越来越深的陷阱中。应避免使用。笔者经过研究，总结了以下原因：</p>
-<p>1、assert关键字需要在运行时候显式开启才能生效，否则你的断言就没有任何意义。而现在主流的Java IDE工具默认都没有开启-ea断言检查功能。这就意味着你如果使用IDE工具编码，调试运行时候会有一定的麻烦。并且，对于Java Web应用，程序代码都是部署在容器里面，你没法直接去控制程序的运行，如果一定要开启-ea的开关，则需要更改Web容器的运行配置参数。这对程序的移 植和部署都带来很大的不便。</p>
-<p>2、用assert代替if是陷阱之二。assert的判断和if语句差不多，但两者的作用有着本质的区别：assert关键字本意上是为测试 调试程序时使用的，但如果不小心用assert来控制了程序的业务流程，那在测试调试结束后去掉assert关键字就意味着修改了程序的正常的逻辑。</p>
-<p>3、assert断言失败将面临程序的退出。这在一个生产环境下的应用是绝不能容忍的。一般都是通过异常处理来解决程序中潜在的错误。但是使用断言就很危险，一旦失败系统就挂了。</p>
-<p>前端给后端传参数</p>
-<p>get：在url后面，用&amp;隔开</p>
-<p>post：</p>
-<ul>
-<li>键值对</li>
-<li>list</li>
-<li>map或实体类，即json格式</li>
-<li>@requestbody或list<Object></li>
-</ul>
-<h1 id="mybatis中example的用法"><a href="#mybatis中example的用法" class="headerlink" title="mybatis中example的用法"></a>mybatis中example的用法</h1><p>Example类指定如何构建一个动态的where子句</p>
-<p>Example类可以用来生成一个几乎无限的where子句</p>
-<p>Criteria是Example中的静态内部类</p>
-<h1 id="java中日志的使用"><a href="#java中日志的使用" class="headerlink" title="java中日志的使用"></a>java中日志的使用</h1><p>@Slf4j是用作日志输出的，一般会在项目每个类的开头加入该注解，如果不写下面这段代码，并且想用log</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Logger logger = LoggerFactory.getLogger(当前类名.class);</span><br></pre></td></tr></table></figure>
-
-<p>这样方法中就可以直接使用日志打印了</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">log.info(<span class="string">&quot;aaaaa&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="nosql"><a href="#nosql" class="headerlink" title="nosql"></a>nosql</h1><h5 id="1-传统架构：app—dal—mysql"><a href="#1-传统架构：app—dal—mysql" class="headerlink" title="1.传统架构：app—dal—mysql"></a>1.传统架构：app—dal—mysql</h5><h5 id="2-传统架构的数据存储瓶颈："><a href="#2-传统架构的数据存储瓶颈：" class="headerlink" title="2.传统架构的数据存储瓶颈："></a>2.传统架构的数据存储瓶颈：</h5><p>1.数据量的总大小，一个机器内存放不下</p>
-<p>2.数据的索引（B+Tree），一个机器内存放不下</p>
-<p>3.访问量（读写混合）一个实例不能承受</p>
-<h5 id="3-数据库进化史"><a href="#3-数据库进化史" class="headerlink" title="3.数据库进化史"></a>3.数据库进化史</h5><p>1.单机mysql</p>
-<p>2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql</p>
-<p>3.mysql主从复制读写分离—–app–dal–cache–（m（write）–s（read））</p>
-<p>4.分表分库+水平拆分+mysql集群—-app–dal–cache–（多个ms–集群）</p>
-<p>5.mysql的扩展性瓶颈—客户–linux–nginx（负载均衡、反向代理）–tomcat集群–mysql集群–缓存集群–图片视频类资源</p>
-<h5 id="3-nosql–not-only-sql–非关系型数据库"><a href="#3-nosql–not-only-sql–非关系型数据库" class="headerlink" title="3.nosql–not only sql–非关系型数据库"></a>3.nosql–not only sql–非关系型数据库</h5><p>这些类型的数据存储不需要固定的模式，无需多于操作久可横向扩展</p>
-<p>KV、Cache、Persistance</p>
-<p>大数据时代的3V：海量：volume；多样：variety；实时：velocity</p>
-<p>互联网需求的3高：高并发、高可靠、高性能</p>
-<h5 id="4-实例分析：淘宝网站商品相关信息"><a href="#4-实例分析：淘宝网站商品相关信息" class="headerlink" title="4.实例分析：淘宝网站商品相关信息"></a>4.实例分析：淘宝网站商品相关信息</h5><p>1.商品基本信息–mysql/oracle</p>
-<p>2.商品描述、详情、评价信息（多文字类的）–mongodb</p>
-<p>3.商品的图片–其他（分布式系统文件：例如：google：GFS；淘宝：TFS）</p>
-<p>4.商品的关键字–搜索引擎（Isearch）</p>
-<p>5.商品的波段性的热点高频信息–内存数据库（Tair、Redis、Memcache）</p>
-<p>6.商品的交易、价格计算、积分累计–第三方（支付宝之类）</p>
-<p>针对数据类型多样性及多数据源等一系列问题，阿里提供了一套统一数据源</p>
-<h5 id="5-Nosql数据库的四大分类"><a href="#5-Nosql数据库的四大分类" class="headerlink" title="5.Nosql数据库的四大分类"></a>5.Nosql数据库的四大分类</h5><ul>
-<li>KV键值对–redis</li>
-<li>文档型数据库（bson格式较多）–mongodb</li>
-<li>列存储数据库–（分布式文件系统）cassandra、hbase</li>
-<li>图关系数据库–（放的不是图形而是构建关系图谱，如社交网络）Neo4J、InfoGrid</li>
-</ul>
-<h5 id="6-Nosql数据库中的CAP原理CAP-BASE"><a href="#6-Nosql数据库中的CAP原理CAP-BASE" class="headerlink" title="6.Nosql数据库中的CAP原理CAP+BASE"></a>6.Nosql数据库中的CAP原理CAP+BASE</h5><p>1.传统的ACID</p>
-<p>Atomicity:原子性；Consisitency：一致性；Isolation：独立性；Durability：持久性</p>
-<p>2.Nosql的CAP</p>
-<p>Consistency：强一致性；Availability：可用性；Partition tolerance：分区容错性</p>
-<p>CAP理论就是说在分布式系统中，最多只能实现两点，由于网络硬件会出现延迟丢包等一些列问题，因此分区容忍性是一定要实现的，所以只能在一致性和可用性之间进行权衡</p>
-<p>CA：传统的Oracle数据库</p>
-<p>AP：大多数网站架构的选择（Cassandra）</p>
-<p>CP：Redis、Mongodb</p>
-<p>BASE就是为了解决关系数据库强一致性引起的问题而引起可用性降低而提出的解决方案</p>
-<p>Base：基本可用（Basically Available）软状态（Soft state）最终一致（Eventually consistent）</p>
-<p>其思想是让系统放松对某一时刻数据一致性的要求来换取系统整体伸缩性和性能上的改观。</p>
-<h5 id="7-redis："><a href="#7-redis：" class="headerlink" title="7.redis："></a>7.redis：</h5><ul>
-<li>Redis：remote dictionary server（远程字典服务）</li>
-<li>三个特点：支持数据持久化；支持数据备份（master-slave）；支持五种数据类型（String、list、set、map、zset）</li>
-</ul>
-<p>Dos下redis五种数据类型的操作</p>
-<p><strong>String</strong></p>
-<p>set name “value”</p>
-<p>get name</p>
-<p>mset name1 “value1” name2 “value2”</p>
-<p>mget name1 name2</p>
-<p>del name</p>
-<p><strong>hash</strong></p>
-<p>hset hash1 key1 “value1”</p>
-<p>hmset hash2 key2 “value2” key3 “value3”</p>
-<p>hget hash1 key1</p>
-<p>hmget hash2 key2 key3</p>
-<p>hgetall hash2</p>
-<p><strong>list</strong></p>
-<p> lpush mylist aaaa    //头插法（左插）</p>
-<p> rpush mylist bbbb    //尾插法（右插）</p>
-<p> lrange mylist 0 10    //查询0到10的值</p>
-<p><strong>set（无序set）</strong></p>
-<p> sadd myset aaaa bbbb cccc </p>
-<p>smembers myset</p>
-<p>#如果插入信息为重复信息则第二次插入无效</p>
-<p><strong>Zset（有序set，按照score数值从小到大排序）</strong></p>
-<p>  zadd Zset名称 score数值（用于排序） 添加元素<br>例：zadd zset 0 aaaa<br>    zadd zset 1 bbbb<br>    zadd zset 2 cccc<br>或：zadd zset 0 aaaa 1 bbbb 2 cccc  // 可以同时设多个不同元素信息，其中的score数值可以重复</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zrangebyscore zset 0 100  //查询score数值0~100含100的所有元素数据</span><br></pre></td></tr></table></figure>
-
-<p>注：zrange zset 0 100  //查询的是按照下标从0到100含100的所有元素数据</p>
-<p><strong>通用操作</strong>：<br>del key名称   //删除key的值,可以同时删除多个Key<br>keys *   //查询redis中所有的key名称信息<br>keys my*   //查询以my开头的key名称信息<br>type key名称    //查询Key的数据类型</p>
-<p>oracle中建议所有sql均大写</p>
-<p>mysql建议所有sql均小写</p>
-<p>java中事务注解的使用</p>
-<p>@Transactional只能被应用到public方法上,对于其它非public的方法,如果标记了@Transactional也不会报错,但方法没有事务功能.<br>默认情况下,一个有事务方法, 遇到RuntimeException 时会回滚 . 遇到 受检查的异常 是不会回滚 的. 要想所有异常都回滚,要加上 @Transactional( rollbackFor={Exception.class,其它异常}) </p>
-<h1 id="java8新特性"><a href="#java8新特性" class="headerlink" title="java8新特性"></a>java8新特性</h1><ol>
-<li>lambda表达式–函数式编程</li>
-<li>StreamAPI–流–主要用来对集合进行各种便利的聚合操作或者批量数据操作</li>
-</ol>
-<ul>
-<li><p>流的创建</p>
-<ul>
-<li><p>集合创建流</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List &lt;String&gt; list = Arrays.asList(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>);</span><br><span class="line">list.stream();</span><br></pre></td></tr></table></figure></li>
-<li><p>数组创建流</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String [] strArray = <span class="keyword">new</span> String[]&#123;<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>&#125;;</span><br><span class="line">Stream.of(strArray);</span><br></pre></td></tr></table></figure></li>
-<li><p>可变参数创建流</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream.of(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>);</span><br></pre></td></tr></table></figure></li>
-<li><p>根据范围创建数值流</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>,<span class="number">100</span>);<span class="comment">//不包含最后一个数</span></span><br><span class="line">IntStream.rangeClosed(<span class="number">0</span>,<span class="number">99</span>);<span class="comment">//包含最后一个数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li><p>BufferReader.lines()创建流</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">new</span> File(<span class="string">&quot;&quot;</span>);</span><br><span class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(file)));</span><br><span class="line">br.lines().forEach(System.out::println);</span><br><span class="line">br.close();</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>流操作（两种操作：intermediate、terminal）</p>
-<ul>
-<li>intermediate：一个流可以后面跟随零个或多个 intermediate 操作。其目的主要是打开流，做出某种程度的数据映射/过滤，然后返回一个新的流，交给下一个操作使用。这类操作都是惰性化的（lazy），就是说，仅仅调用到这类方法，并没有真正开始流的遍历。</li>
-<li>terminal：一个流只能有一个 terminal 操作，当这个操作执行后，流就被使用“光”了，无法再被操作。所以这必定是流的最后一个操作。Terminal 操作的执行，才会真正开始流的遍历，并且会生成一个结果，或者一个 side effect。</li>
-<li>除此以外，还有一种叫做short-circuiting的操作<ul>
-<li>对于一个 intermediate 操作，如果它接受的是一个无限大（infinite/unbounded）的 Stream，但返回一个有限的新 Stream。</li>
-<li>对于一个 terminal 操作，如果它接受的是一个无限大的 Stream，但能在有限的时间计算出结果。</li>
-</ul>
-</li>
-<li>常见流操作的归类<ul>
-<li>intermidiate：map(mapToInt、flatMap等)、filter、distinct、sorted、peek、limit、skip、parallel、sequential、unordered</li>
-<li>terminal：forEach、forEachOrderd、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator</li>
-<li>Short-circuiting：anyMatch、allMatch、noneMatch、findFirst、findAny、limit</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>常见流操作详解</p>
-<ul>
-<li><p>forEach：forEach就是遍历并执行某个操作，甚至对于List等实现了Collection接口的类可以不创建stream而直接使用forEach。</p>
-</li>
-<li><p>map：用来将一个集合映射为另一个集合。还有一个叫做flatMap的操作，这个操作在映射的基础上又做了一层扁平化处理。</p>
-</li>
-<li><p>filter：实现了过滤的功能</p>
-</li>
-<li><p>sorted：表示排序</p>
-</li>
-<li><p>distinct：表示去重</p>
-</li>
-<li><p>collect：在流操作中，我们往往需求是从一个List得到另一个List，而不是直接通过forEach来打印。那么这个时候就需要使用到collect了</p>
-</li>
-<li><p>并行流：除了普通的stream之外还有parallelStream，区别比较直观，就是stream是单线程执行，parallelStream为多线程执行。parallelStream的创建及使用基本与stream类似，不过由于是并行执行，parallelStream并不保证结果顺序，同样由于这个特性，如果能使用findAny就尽量不要使用findFirst。</p>
-<p>使用parallelStream时需要注意的一点是，多个parallelStream之间默认使用的是同一个线程池，所以IO操作尽量不要放进parallelStream中，否则会阻塞其他parallelStream</p>
-</li>
-</ul>
-</li>
-</ul>
-<ol start="3">
-<li>optional—optional的引入是为了解决空指针异常的问题</li>
-</ol>
-<ul>
-<li><p>Optional的基本操作</p>
-<ul>
-<li><p>创建Optional</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Optional.empty();<span class="comment">//创建一个空Optional</span></span><br><span class="line">Optional.of(T value);<span class="comment">//不接受null，会报NullPointerException异常</span></span><br><span class="line">Optional.ofNullable(T value);<span class="comment">//可以接受null</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li><p>获取结果</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">get();<span class="comment">//返回里面的值，如果值为null，则抛出异常</span></span><br><span class="line">orElse(T other);<span class="comment">//有则返回值，null则返回other</span></span><br><span class="line">orElseGet(Supplier other);<span class="comment">//有则返回值，null则由提供的lambda表达式生成值</span></span><br><span class="line">orElseThrow(Supplier exceptionSupplier);<span class="comment">//有则返回值，null则抛出异常</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li><p>判断是否为空</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">isPresent();<span class="comment">//判断是否为空</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li><p>链式方法</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>4.Supplier</p>
-<p>supplier接口是配合lambda表达式和函数式接口编程(FunctionInterface,以下简称FI)组合使用的一个接口，对外表现为双冒号”::”,顺便说下”-&gt;”符号对应的是Function接口中的Reply方法例如;</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Supplier&lt;Person&gt; personSupplier = Person::<span class="keyword">new</span>;</span><br><span class="line">personSupplier.get();<span class="comment">//调用构造方法</span></span><br><span class="line">personSupplier.get();<span class="comment">//每次返回的都是不同的对象</span></span><br><span class="line">Arrays.asList(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>).forEach(e-&gt;System.out.println(e));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>Supplier<T>就是用来创建对象的，相当于new。</p>
-<h1 id="valid和-validated"><a href="#valid和-validated" class="headerlink" title="@valid和@validated"></a>@valid和@validated</h1><ul>
-<li>区别：<ul>
-<li>分组</li>
-<li>注解的地方：@valid可以注解在成员属性（字段）上，但是@validate不行</li>
-<li>由于@validate不能作用在成员属性上，因此不能做嵌套校验</li>
-<li>@valid只能作用在controller上，@validate可以用在被其他spring管理的类上</li>
-<li>@validate如果要开启方法验证，注解应该打在类上，而不是方法参数上</li>
-</ul>
-</li>
-</ul>
-<h5 id="jumpserver"><a href="#jumpserver" class="headerlink" title="jumpserver"></a>jumpserver</h5><p>堡垒机，也叫做运维安全审计系统，它的核心功能是 4A：</p>
-<ol>
-<li>身份验证 Authentication</li>
-<li>账号管理 Account</li>
-<li>授权控制 Authorization</li>
-<li>安全审计 Audit</li>
-</ol>
-<p>简单总结一句话：堡垒机是用来控制哪些人可以登录哪些资产（事先防范和事中控制），以及录像记录登录资产后做了什么事情（事后溯源）。</p>
-<h1 id="mysql的默认排序规则"><a href="#mysql的默认排序规则" class="headerlink" title="mysql的默认排序规则"></a>mysql的默认排序规则</h1><p>mysql的查询结果会受到查询列、order by 、索引的影响，而且内部没有默认的排序规则，如有需要请正确使用order by</p>
-<h1 id="Mockito-Junit-5"><a href="#Mockito-Junit-5" class="headerlink" title="Mockito+Junit 5"></a>Mockito+Junit 5</h1><p>单元测试的基本原则</p>
-<ul>
-<li>宏观层面：AIR原则<ul>
-<li>automatic：全自动执行，输出结果无需人工检查，而是通过断言验证</li>
-<li>Independent:为了保证单元测试稳定可靠且便于维护，单元测试用例之间决不能互相调用</li>
-<li>Repeatable :单元测试通常会被放到持续集成中，每次有代码check in时单元测试都会被执行。如果单测对外部环境（网络、服务、中间件等）有依赖，容易导致持续集成机制的不可用</li>
-</ul>
-</li>
-<li>微观层面：BCDE原则（编写单元测试代码遵守BCDE原则）<ul>
-<li>Border：边界值测试，包括循环边界、特殊取值、特殊时间点、数据顺序等</li>
-<li>Correct：根据输入得出预期结果</li>
-<li>Design：与设计文档结合，编写单测用例</li>
-<li>Error： 单测的目的是为了证明程序有错。为了发现代码中潜在的错误， 我们需要在编写测试用例时有一些强制的错误输入（如非法数据、异常流程、非业务允许输入等）来得到预期的错误结果</li>
-</ul>
-</li>
-</ul>
-<p>junit5单测底层框架</p>
-<p>参考文档:<a target="_blank" rel="noopener" href="https://junit.org/junit5/docs/current/user-guide">https://junit.org/junit5/docs/current/user-guide</a></p>
-<p>junit5注解说明</p>
-<p><a target="_blank" rel="noopener" href="https://coolvision.yuque.com/dsbs/gc361c/yv095e?inner=xlWPK">https://coolvision.yuque.com/dsbs/gc361c/yv095e?inner=xlWPK</a></p>
-<p>断言的使用</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Assertions.assertThat(name).isEqualTo(<span class="string">&quot;aaaa&quot;</span>);</span><br><span class="line">Assert.assertEquals(<span class="string">&quot;aaaa&quot;</span>,name);</span><br><span class="line">when(coolMenusManagementService.checkModuleActionKeyword(any(), any())).thenReturn(<span class="keyword">true</span>);</span><br><span class="line">when(enterpriseService.produceSuperToken(any(),any())).thenReturn(baseOut);</span><br><span class="line">Mockito.doNothing().when(enterpriseService).sendNoticeByDingTalk();</span><br><span class="line">given(multiterminalLoginService.getEnterpriseAdmin(<span class="string">&quot;&quot;</span>)).willReturn(t);</span><br><span class="line">assertNull(dynamicDataSourceCache.getIfPresent(<span class="string">&quot;expire&quot;</span>));</span><br><span class="line">Mockito.anyString()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>@EnableDiscoveryClient</p>
-<p>要想将一个微服务注册到Eureka Server（或其他服务发现组件，例如Zookeeper、Consul等），Eureka 2.0闭源之后，Consul慢慢会成为主流。须在启动类上添加注解<code>@EnableDiscoveryClient</code> 或<code>@EnableEurekaClient</code></p>
-<h1 id="lower-case-table-names参数问题"><a href="#lower-case-table-names参数问题" class="headerlink" title="lower_case_table_names参数问题"></a>lower_case_table_names参数问题</h1><p>1、参数含义：<br>lower_case_table_names： 此参数不可以动态修改，必须重启数据库<br>lower_case_table_names = 1  表名存储在磁盘是小写的，但是比较的时候是不区分大小写<br>lower_case_table_names=0  表名存储为给定的大小和比较是区分大小写的<br>lower_case_table_names=2, 表名存储为给定的大小写但是比较的时候是小写的</p>
-<p>2、修改  参数lower_case_table_names 产生的问题</p>
-<p>mysql&gt; show variables like ‘lower_case_table_names’;<br>+————————+——-+<br>| Variable_name          | Value |<br>+————————+——-+<br>| lower_case_table_names | 0     |<br>+————————+——-+<br>1 row in set (0.00 sec)</p>
-<p>在mysql系统中原来的参数是lower_case_table_names=0 ，就是存储的时候区分大小写，创建了表Tt  tT </p>
-<p>mysql&gt;  create table Tt(id int);<br>Query OK, 0 rows affected (0.10 sec)</p>
-<p>mysql&gt;  create table tT(id int);<br>Query OK, 0 rows affected (0.03 sec)</p>
-<p>mysql&gt; show tables;<br>+—————-+<br>| Tables_in_test |<br>+—————-+<br>| Tt             |<br>| tT             |<br>+—————-+<br>2 rows in set (0.00 sec)</p>
-<p>修改参数 /etc/my.cnf 中设置 lower_case_table_names = 1</p>
-<p>mysql&gt; show  variables like ‘lower_case_table_names’;<br>+————————+——-+<br>| Variable_name          | Value |<br>+————————+——-+<br>| lower_case_table_names | 1     |<br>+————————+——-+<br>1 row in set (0.00 sec)</p>
-<p>重启数据库<br>然后查看数据库</p>
-<p>mysql&gt; select * From tT;<br>ERROR 1146 (42S02): Table ‘test.tt’ doesn’t exist</p>
-<p>mysql&gt; select * From tT;<br>ERROR 1146 (42S02): Table ‘test.tt’ doesn’t exist</p>
-<p>你可以发现当修改lower_case_table_names = 1后，之前创建的表名都不识别了</p>
-<p>—创建表后，你可以发现表名不区分大小写<br>mysql&gt; create table Tt(id int);<br>Query OK, 0 rows affected (0.23 sec)</p>
-<p>mysql&gt; show tables;<br>+————-+<br>| Tables_in_t |<br>+————-+<br>| tt          |<br>+————-+<br>1 row in set (0.00 sec)<br>从此可以看出lower_case_table_names = 1，创建表名，不区分大小写</p>
-<p>结论：不能随意修改数据库的大小写，否则表名会认不出来<br>lower_case_table_names 参数的修改是非动态的，必须重启数据库</p>
-<p>3、如何修改大小写格式</p>
-<p>如果原来所建立库及表都是对大小写敏感的，想要转换为对大小写不敏感，主要需要进行如下3步：<br>    1.将数据库数据通过mysqldump导出;<br>    2.在my.cnf中更改lower_case_tables_name = 1，并重启mysql数据库。<br>    3.将导出的数据导入mysql数据库中。</p>
-<h1 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h1><p>跨域指的是：协议+域名+ip+端口</p>
-<p>解决方案：</p>
-<p>使用ajax的jsonp</p>
-<p>使用jQuery的jsonp插件</p>
-<p>使用cors：仅在后端代码中添加部分处理代码</p>
-<p>cors高级使用：springmvc中配置拦截器</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" data-id="cktibll49000dr0ud8e9m8tvx" data-title="工具使用" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/13/Mybatis%E4%B8%ADexample%E7%9A%84%E7%94%A8%E6%B3%95/" data-id="cktkwkk2p000a4oudaho33alh" data-title="Mybatis中example的用法" class="article-share-link">Share</a>
       
       
       
@@ -947,10 +471,10 @@
 
 
   
-    <article id="post-工具" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-Java中日志的使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/09/09/%E5%B7%A5%E5%85%B7/" class="article-date">
-  <time class="dt-published" datetime="2021-09-09T10:18:36.000Z" itemprop="datePublished">2021-09-09</time>
+    <a href="/2021/09/13/Java%E4%B8%AD%E6%97%A5%E5%BF%97%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:20:48.000Z" itemprop="datePublished">2021-09-13</time>
 </a>
     
   </div>
@@ -961,7 +485,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/09/09/%E5%B7%A5%E5%85%B7/">工具</a>
+      <a class="p-name article-title" href="/2021/09/13/Java%E4%B8%AD%E6%97%A5%E5%BF%97%E7%9A%84%E4%BD%BF%E7%94%A8/">Java中日志的使用</a>
     </h1>
   
 
@@ -969,17 +493,17 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="一-typora"><a href="#一-typora" class="headerlink" title="一.typora"></a>一.typora</h1><h4 id="标题、加粗、斜体等"><a href="#标题、加粗、斜体等" class="headerlink" title="标题、加粗、斜体等"></a>标题、加粗、斜体等</h4><p>ctrl+数字键（六级标题）</p>
-<p>ctrl+B(加粗)</p>
-<p>ctrl+l(斜体)</p>
-<p>ctrl+u(下划线)</p>
-<p>前后加两个=（高亮）</p>
-<p>前后加两个~（删除线）</p>
+        <h1 id="java中日志的使用"><a href="#java中日志的使用" class="headerlink" title="java中日志的使用"></a>java中日志的使用</h1><p>@Slf4j是用作日志输出的，一般会在项目每个类的开头加入该注解，如果不写下面这段代码，并且想用log</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Logger logger = LoggerFactory.getLogger(当前类名.class);</span><br></pre></td></tr></table></figure>
+
+<p>这样方法中就可以直接使用日志打印了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">log.info(<span class="string">&quot;aaaaa&quot;</span>);</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/09/%E5%B7%A5%E5%85%B7/" data-id="cktibll44000ar0udhjfw7lnb" data-title="工具" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/13/Java%E4%B8%AD%E6%97%A5%E5%BF%97%E7%9A%84%E4%BD%BF%E7%94%A8/" data-id="cktkwkk2l00034oud8g97hejs" data-title="Java中日志的使用" class="article-share-link">Share</a>
       
       
       
@@ -991,31 +515,80 @@
 
 
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-JumpServer" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/09/09/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-09-09T09:10:48.936Z" itemprop="datePublished">2021-09-09</time>
+    <a href="/2021/09/13/JumpServer/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:18:11.000Z" itemprop="datePublished">2021-09-13</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/JumpServer/">JumpServer</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>你好啊</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>**More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server**</a></p>
+        <h5 id="jumpserver"><a href="#jumpserver" class="headerlink" title="jumpserver"></a>jumpserver</h5><p>堡垒机，也叫做运维安全审计系统，它的核心功能是 4A：</p>
+<ol>
+<li>身份验证 Authentication</li>
+<li>账号管理 Account</li>
+<li>授权控制 Authorization</li>
+<li>安全审计 Audit</li>
+</ol>
+<p>简单总结一句话：堡垒机是用来控制哪些人可以登录哪些资产（事先防范和事中控制），以及录像记录登录资产后做了什么事情（事后溯源）。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/09/09/hello-world/" data-id="cktibll47000cr0ud77egeewq" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/09/13/JumpServer/" data-id="cktkwkk2n00074oudc2ie2xne" data-title="JumpServer" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-mysql的默认排序规则" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/mysql%E7%9A%84%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:16:36.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/mysql%E7%9A%84%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99/">mysql的默认排序规则</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="mysql的默认排序规则"><a href="#mysql的默认排序规则" class="headerlink" title="mysql的默认排序规则"></a>mysql的默认排序规则</h1><p>mysql的查询结果会受到查询列、order by 、索引的影响，而且内部没有默认的排序规则，如有需要请正确使用order by</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/mysql%E7%9A%84%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99/" data-id="cktkwkk2y000n4oud93ni3h72" data-title="mysql的默认排序规则" class="article-share-link">Share</a>
       
       
       
@@ -1031,7 +604,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -1063,23 +636,23 @@
       <ul>
         
           <li>
-            <a href="/2021/09/13/Mybatis%E4%B8%ADexample%E7%9A%84%E7%94%A8%E6%B3%95/">Mybatis中example的用法</a>
+            <a href="/2021/09/15/Typora/">Typora</a>
           </li>
         
           <li>
-            <a href="/2021/09/13/Java%E4%B8%AD%E6%97%A5%E5%BF%97%E7%9A%84%E4%BD%BF%E7%94%A8/">Java中日志的使用</a>
+            <a href="/2021/09/15/Idea%E5%BF%AB%E6%8D%B7%E9%94%AE/">Idea快捷键</a>
           </li>
         
           <li>
-            <a href="/2021/09/13/JumpServer/">JumpServer</a>
+            <a href="/2021/09/15/Git/">Git</a>
           </li>
         
           <li>
-            <a href="/2021/09/13/mysql%E7%9A%84%E9%BB%98%E8%AE%A4%E6%8E%92%E5%BA%8F%E8%A7%84%E5%88%99/">mysql的默认排序规则</a>
+            <a href="/2021/09/15/Maven/">Maven</a>
           </li>
         
           <li>
-            <a href="/2021/09/13/Nosql/">Nosql</a>
+            <a href="/2021/09/15/kuboard/">kuboard</a>
           </li>
         
       </ul>

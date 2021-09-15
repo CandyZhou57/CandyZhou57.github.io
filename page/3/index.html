@@ -4,23 +4,15 @@
   <meta charset="utf-8">
   
   
-  <title>工具使用 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="一.typora标题、加粗、斜体等ctrl+数字键（六级标题） ctrl+B(加粗) ctrl+l(斜体) ctrl+u(下划线) 前后加两个&#x3D;（高亮） 前后加两个~（删除线）  引用&gt;   列表- 列表-     有序  有序 有序  分割线***  百度官网 超链接（[]） 图片（![]） ctrl+t(表格)             代办事项   已完成（- [x]）  代办（-[]）">
-<meta property="og:type" content="article">
-<meta property="og:title" content="工具使用">
-<meta property="og:url" content="http://example.com/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一.typora标题、加粗、斜体等ctrl+数字键（六级标题） ctrl+B(加粗) ctrl+l(斜体) ctrl+u(下划线) 前后加两个&#x3D;（高亮） 前后加两个~（删除线）  引用&gt;   列表- 列表-     有序  有序 有序  分割线***  百度官网 超链接（[]） 图片（![]） ctrl+t(表格)             代办事项   已完成（- [x]）  代办（-[]）">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:/Users/HUAWEI/AppData/Roaming/Typora/typora-user-images/1628215476775.png">
-<meta property="og:image" content="c:/Users/HUAWEI/AppData/Roaming/Typora/typora-user-images/1628216893856.png">
-<meta property="og:image" content="c:/Users/HUAWEI/AppData/Roaming/Typora/typora-user-images/1628216918680.png">
-<meta property="article:published_time" content="2021-09-09T10:25:41.000Z">
-<meta property="article:modified_time" content="2021-09-09T10:26:29.498Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/HUAWEI/AppData/Roaming/Typora/typora-user-images/1628215476775.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -77,7 +69,591 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-工具使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main">
+  
+    <article id="post-Nosql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Nosql/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:12:18.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/Nosql/">Nosql</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="nosql"><a href="#nosql" class="headerlink" title="nosql"></a>nosql</h1><h5 id="1-传统架构：app—dal—mysql"><a href="#1-传统架构：app—dal—mysql" class="headerlink" title="1.传统架构：app—dal—mysql"></a>1.传统架构：app—dal—mysql</h5><h5 id="2-传统架构的数据存储瓶颈："><a href="#2-传统架构的数据存储瓶颈：" class="headerlink" title="2.传统架构的数据存储瓶颈："></a>2.传统架构的数据存储瓶颈：</h5><p>1.数据量的总大小，一个机器内存放不下</p>
+<p>2.数据的索引（B+Tree），一个机器内存放不下</p>
+<p>3.访问量（读写混合）一个实例不能承受</p>
+<h5 id="3-数据库进化史"><a href="#3-数据库进化史" class="headerlink" title="3.数据库进化史"></a>3.数据库进化史</h5><p>1.单机mysql</p>
+<p>2.memcached（缓存）+mysql+垂直拆分——–app–dal–cache–mysql</p>
+<p>3.mysql主从复制读写分离—–app–dal–cache–（m（write）–s（read））</p>
+<p>4.分表分库+水平拆分+mysql集群—-app–dal–cache–（多个ms–集群）</p>
+<p>5.mysql的扩展性瓶颈—客户–linux–nginx（负载均衡、反向代理）–tomcat集群–mysql集群–缓存集群–图片视频类资源</p>
+<h5 id="3-nosql–not-only-sql–非关系型数据库"><a href="#3-nosql–not-only-sql–非关系型数据库" class="headerlink" title="3.nosql–not only sql–非关系型数据库"></a>3.nosql–not only sql–非关系型数据库</h5><p>这些类型的数据存储不需要固定的模式，无需多于操作久可横向扩展</p>
+<p>KV、Cache、Persistance</p>
+<p>大数据时代的3V：海量：volume；多样：variety；实时：velocity</p>
+<p>互联网需求的3高：高并发、高可靠、高性能</p>
+<h5 id="4-实例分析：淘宝网站商品相关信息"><a href="#4-实例分析：淘宝网站商品相关信息" class="headerlink" title="4.实例分析：淘宝网站商品相关信息"></a>4.实例分析：淘宝网站商品相关信息</h5><p>1.商品基本信息–mysql/oracle</p>
+<p>2.商品描述、详情、评价信息（多文字类的）–mongodb</p>
+<p>3.商品的图片–其他（分布式系统文件：例如：google：GFS；淘宝：TFS）</p>
+<p>4.商品的关键字–搜索引擎（Isearch）</p>
+<p>5.商品的波段性的热点高频信息–内存数据库（Tair、Redis、Memcache）</p>
+<p>6.商品的交易、价格计算、积分累计–第三方（支付宝之类）</p>
+<p>针对数据类型多样性及多数据源等一系列问题，阿里提供了一套统一数据源</p>
+<h5 id="5-Nosql数据库的四大分类"><a href="#5-Nosql数据库的四大分类" class="headerlink" title="5.Nosql数据库的四大分类"></a>5.Nosql数据库的四大分类</h5><ul>
+<li>KV键值对–redis</li>
+<li>文档型数据库（bson格式较多）–mongodb</li>
+<li>列存储数据库–（分布式文件系统）cassandra、hbase</li>
+<li>图关系数据库–（放的不是图形而是构建关系图谱，如社交网络）Neo4J、InfoGrid</li>
+</ul>
+<h5 id="6-Nosql数据库中的CAP原理CAP-BASE"><a href="#6-Nosql数据库中的CAP原理CAP-BASE" class="headerlink" title="6.Nosql数据库中的CAP原理CAP+BASE"></a>6.Nosql数据库中的CAP原理CAP+BASE</h5><p>1.传统的ACID</p>
+<p>Atomicity:原子性；Consisitency：一致性；Isolation：独立性；Durability：持久性</p>
+<p>2.Nosql的CAP</p>
+<p>Consistency：强一致性；Availability：可用性；Partition tolerance：分区容错性</p>
+<p>CAP理论就是说在分布式系统中，最多只能实现两点，由于网络硬件会出现延迟丢包等一些列问题，因此分区容忍性是一定要实现的，所以只能在一致性和可用性之间进行权衡</p>
+<p>CA：传统的Oracle数据库</p>
+<p>AP：大多数网站架构的选择（Cassandra）</p>
+<p>CP：Redis、Mongodb</p>
+<p>BASE就是为了解决关系数据库强一致性引起的问题而引起可用性降低而提出的解决方案</p>
+<p>Base：基本可用（Basically Available）软状态（Soft state）最终一致（Eventually consistent）</p>
+<p>其思想是让系统放松对某一时刻数据一致性的要求来换取系统整体伸缩性和性能上的改观。</p>
+<h5 id="7-redis："><a href="#7-redis：" class="headerlink" title="7.redis："></a>7.redis：</h5><ul>
+<li>Redis：remote dictionary server（远程字典服务）</li>
+<li>三个特点：支持数据持久化；支持数据备份（master-slave）；支持五种数据类型（String、list、set、map、zset）</li>
+</ul>
+<p>Dos下redis五种数据类型的操作</p>
+<p><strong>String</strong></p>
+<p>set name “value”</p>
+<p>get name</p>
+<p>mset name1 “value1” name2 “value2”</p>
+<p>mget name1 name2</p>
+<p>del name</p>
+<p><strong>hash</strong></p>
+<p>hset hash1 key1 “value1”</p>
+<p>hmset hash2 key2 “value2” key3 “value3”</p>
+<p>hget hash1 key1</p>
+<p>hmget hash2 key2 key3</p>
+<p>hgetall hash2</p>
+<p><strong>list</strong></p>
+<p> lpush mylist aaaa    //头插法（左插）</p>
+<p> rpush mylist bbbb    //尾插法（右插）</p>
+<p> lrange mylist 0 10    //查询0到10的值</p>
+<p><strong>set（无序set）</strong></p>
+<p> sadd myset aaaa bbbb cccc </p>
+<p>smembers myset</p>
+<p>#如果插入信息为重复信息则第二次插入无效</p>
+<p><strong>Zset（有序set，按照score数值从小到大排序）</strong></p>
+<p>  zadd Zset名称 score数值（用于排序） 添加元素<br>例：zadd zset 0 aaaa<br>    zadd zset 1 bbbb<br>    zadd zset 2 cccc<br>或：zadd zset 0 aaaa 1 bbbb 2 cccc  // 可以同时设多个不同元素信息，其中的score数值可以重复</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zrangebyscore zset 0 100  //查询score数值0~100含100的所有元素数据</span><br></pre></td></tr></table></figure>
+
+<p>注：zrange zset 0 100  //查询的是按照下标从0到100含100的所有元素数据</p>
+<p><strong>通用操作</strong>：<br>del key名称   //删除key的值,可以同时删除多个Key<br>keys *   //查询redis中所有的key名称信息<br>keys my*   //查询以my开头的key名称信息<br>type key名称    //查询Key的数据类型</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Nosql/" data-id="cktkwkk2r000b4oudg2sc40qi" data-title="Nosql" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Java8新特性" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:11:55.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/">Java8新特性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="java8新特性"><a href="#java8新特性" class="headerlink" title="java8新特性"></a>java8新特性</h1><ol>
+<li>lambda表达式–函数式编程</li>
+<li>StreamAPI–流–主要用来对集合进行各种便利的聚合操作或者批量数据操作</li>
+</ol>
+<ul>
+<li><p>流的创建</p>
+<ul>
+<li><p>集合创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List &lt;String&gt; list = Arrays.asList(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>);</span><br><span class="line">list.stream();</span><br></pre></td></tr></table></figure></li>
+<li><p>数组创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String [] strArray = <span class="keyword">new</span> String[]&#123;<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>&#125;;</span><br><span class="line">Stream.of(strArray);</span><br></pre></td></tr></table></figure></li>
+<li><p>可变参数创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream.of(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;word&quot;</span>,<span class="string">&quot;la&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>根据范围创建数值流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IntStream.range(<span class="number">0</span>,<span class="number">100</span>);<span class="comment">//不包含最后一个数</span></span><br><span class="line">IntStream.rangeClosed(<span class="number">0</span>,<span class="number">99</span>);<span class="comment">//包含最后一个数</span></span><br></pre></td></tr></table></figure></li>
+<li><p>BufferReader.lines()创建流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">new</span> File(<span class="string">&quot;&quot;</span>);</span><br><span class="line">BufferedReader br = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(file)));</span><br><span class="line">br.lines().forEach(System.out::println);</span><br><span class="line">br.close();</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>流操作（两种操作：intermediate、terminal）</p>
+<ul>
+<li>intermediate：一个流可以后面跟随零个或多个 intermediate 操作。其目的主要是打开流，做出某种程度的数据映射/过滤，然后返回一个新的流，交给下一个操作使用。这类操作都是惰性化的（lazy），就是说，仅仅调用到这类方法，并没有真正开始流的遍历。</li>
+<li>terminal：一个流只能有一个 terminal 操作，当这个操作执行后，流就被使用“光”了，无法再被操作。所以这必定是流的最后一个操作。Terminal 操作的执行，才会真正开始流的遍历，并且会生成一个结果，或者一个 side effect。</li>
+<li>除此以外，还有一种叫做short-circuiting的操作<ul>
+<li>对于一个 intermediate 操作，如果它接受的是一个无限大（infinite/unbounded）的 Stream，但返回一个有限的新 Stream。</li>
+<li>对于一个 terminal 操作，如果它接受的是一个无限大的 Stream，但能在有限的时间计算出结果。</li>
+</ul>
+</li>
+<li>常见流操作的归类<ul>
+<li>intermidiate：map(mapToInt、flatMap等)、filter、distinct、sorted、peek、limit、skip、parallel、sequential、unordered</li>
+<li>terminal：forEach、forEachOrderd、toArray、reduce、collect、min、max、count、anyMatch、allMatch、noneMatch、findFirst、findAny、iterator</li>
+<li>Short-circuiting：anyMatch、allMatch、noneMatch、findFirst、findAny、limit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>常见流操作详解</p>
+<ul>
+<li><p>forEach：forEach就是遍历并执行某个操作，甚至对于List等实现了Collection接口的类可以不创建stream而直接使用forEach。</p>
+</li>
+<li><p>map：用来将一个集合映射为另一个集合。还有一个叫做flatMap的操作，这个操作在映射的基础上又做了一层扁平化处理。</p>
+</li>
+<li><p>filter：实现了过滤的功能</p>
+</li>
+<li><p>sorted：表示排序</p>
+</li>
+<li><p>distinct：表示去重</p>
+</li>
+<li><p>collect：在流操作中，我们往往需求是从一个List得到另一个List，而不是直接通过forEach来打印。那么这个时候就需要使用到collect了</p>
+</li>
+<li><p>并行流：除了普通的stream之外还有parallelStream，区别比较直观，就是stream是单线程执行，parallelStream为多线程执行。parallelStream的创建及使用基本与stream类似，不过由于是并行执行，parallelStream并不保证结果顺序，同样由于这个特性，如果能使用findAny就尽量不要使用findFirst。</p>
+<p>使用parallelStream时需要注意的一点是，多个parallelStream之间默认使用的是同一个线程池，所以IO操作尽量不要放进parallelStream中，否则会阻塞其他parallelStream</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>optional—optional的引入是为了解决空指针异常的问题</li>
+</ol>
+<ul>
+<li><p>Optional的基本操作</p>
+<ul>
+<li><p>创建Optional</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Optional.empty();<span class="comment">//创建一个空Optional</span></span><br><span class="line">Optional.of(T value);<span class="comment">//不接受null，会报NullPointerException异常</span></span><br><span class="line">Optional.ofNullable(T value);<span class="comment">//可以接受null</span></span><br></pre></td></tr></table></figure></li>
+<li><p>获取结果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">get();<span class="comment">//返回里面的值，如果值为null，则抛出异常</span></span><br><span class="line">orElse(T other);<span class="comment">//有则返回值，null则返回other</span></span><br><span class="line">orElseGet(Supplier other);<span class="comment">//有则返回值，null则由提供的lambda表达式生成值</span></span><br><span class="line">orElseThrow(Supplier exceptionSupplier);<span class="comment">//有则返回值，null则抛出异常</span></span><br></pre></td></tr></table></figure></li>
+<li><p>判断是否为空</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isPresent();<span class="comment">//判断是否为空</span></span><br></pre></td></tr></table></figure></li>
+<li><p>链式方法</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>4.Supplier</p>
+<p>supplier接口是配合lambda表达式和函数式接口编程(FunctionInterface,以下简称FI)组合使用的一个接口，对外表现为双冒号”::”,顺便说下”-&gt;”符号对应的是Function接口中的Reply方法例如;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Supplier&lt;Person&gt; personSupplier = Person::<span class="keyword">new</span>;</span><br><span class="line">personSupplier.get();<span class="comment">//调用构造方法</span></span><br><span class="line">personSupplier.get();<span class="comment">//每次返回的都是不同的对象</span></span><br><span class="line">Arrays.asList(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>).forEach(e-&gt;System.out.println(e));</span><br></pre></td></tr></table></figure>
+
+<p>Supplier<T>就是用来创建对象的，相当于new。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Java8%E6%96%B0%E7%89%B9%E6%80%A7/" data-id="cktkwkk2m00054oud7h3v6run" data-title="Java8新特性" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Spring注解使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Spring%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:11:29.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/Spring%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8/">Spring注解使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>@EnableDiscoveryClient</p>
+<p>要想将一个微服务注册到Eureka Server（或其他服务发现组件，例如Zookeeper、Consul等），Eureka 2.0闭源之后，Consul慢慢会成为主流。须在启动类上添加注解<code>@EnableDiscoveryClient</code> 或<code>@EnableEurekaClient</code></p>
+<h1 id="valid和-validated"><a href="#valid和-validated" class="headerlink" title="@valid和@validated"></a>@valid和@validated</h1><ul>
+<li>区别：<ul>
+<li>分组</li>
+<li>注解的地方：@valid可以注解在成员属性（字段）上，但是@validate不行</li>
+<li>由于@validate不能作用在成员属性上，因此不能做嵌套校验</li>
+<li>@valid只能作用在controller上，@validate可以用在被其他spring管理的类上</li>
+<li>@validate如果要开启方法验证，注解应该打在类上，而不是方法参数上</li>
+</ul>
+</li>
+</ul>
+<p>java中事务注解的使用</p>
+<p>@Transactional只能被应用到public方法上,对于其它非public的方法,如果标记了@Transactional也不会报错,但方法没有事务功能.<br>默认情况下,一个有事务方法, 遇到RuntimeException 时会回滚 . 遇到 受检查的异常 是不会回滚 的. 要想所有异常都回滚,要加上 @Transactional( rollbackFor={Exception.class,其它异常}) </p>
+<p>1.@controller和@restController</p>
+<p>返回json内容：@controller+@responsebody=@restcontroller（无法返回jsp、html页面，且视图解析器无法解析jsp、html页面）</p>
+<p>解析jsp、html页面，并跳转到相应的页面：@controller</p>
+<p>2.@autowired：可以对类成员变量、方法、构造函数进行标注，完成自动装配的工作。通过此注解的使用来消除set、gei方法</p>
+<p>注入service服务对象</p>
+<p>3.@requestmapping：用来请求映射，通过它来指定controller可以处理哪些url请求</p>
+<p>4.@requestparam(value=””,defaultvalue=””,required=true/false)</p>
+<p>将指定参数绑定到你控制器的方法参数上（是springmvc中接收普通参数的注解）</p>
+<p>value：参数名</p>
+<p>required:是否包含该参数，默认为true，表示该请求路径中必须包含该参数，如果不包含就报错。</p>
+<p>defaultvalue：默认参数值，如果设置了该值，required=true将失效，自动为false，如果没有传参数，就是用默认值</p>
+<p>5.@Column注解</p>
+<p>用来标识实体类中属性与数据表中字段的对应关系</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Column(name = &quot;login_mobile&quot;)</span><br><span class="line">private String loginMobile;</span><br></pre></td></tr></table></figure>
+
+<p>6.@jsonfield</p>
+<p>@JSONField注解可以用在方法（method），属性（field）以及方法中的参数（parameter）上。JSONField中的name属性用来指定JSON串中key的名称。</p>
+<p>最近做项目中，使用了json格式在服务器之间进行数据传输。但是发现json格式数据不符合JAVA中的变量定义规则，并且难以理解，因此需要在后台中做二次处理，将数据处理成我们系统中定义的格式。</p>
+<p>思路：</p>
+<p>​    \1. 定义需要返回的bean,bean中定义需要返回的数据</p>
+<p>​    \2. 获取到需要处理的JSON字符串</p>
+<p>​    \3. 将JSON字符串转换为bean, 再将转换后的bean返回给客户端。</p>
+<p>由于json中的key与bean中的<strong>属性不能匹配</strong>，因此在转换过程中出现了部分属性为null的情况。经过查看官方文档，发现可以使用@JSONField进行解释，但是并没有详细的使用说明。</p>
+<p>7.@Table</p>
+<p>spring @Table注解  作用是 ： 声明此对象映射到数据库的数据表，通过它可以为实体指定表(talbe)</p>
+<p>8.@id和@GeneratedValue</p>
+<p>@Id：<br>@Id 标注用于声明一个实体类的属性映射为数据库的主键列。该属性通常置于属性声明语句之前，可与声明语句同行，也可写在单独行上。<br>@Id标注也可置于属性的getter方法之前。</p>
+<p>@GeneratedValue：<br>@GeneratedValue 用于标注主键的生成策略，通过strategy 属性指定。默认情况下，JPA 自动选择一个最适合底层数据库的主键生成策略：SqlServer对应identity，MySQL 对应 auto increment。<br>在javax.persistence.GenerationType中定义了以下几种可供选择的策略：<br>–IDENTITY：采用数据库ID自增长的方式来自增主键字段，Oracle 不支持这种方式；<br>–AUTO： JPA自动选择合适的策略，是默认选项；<br>–SEQUENCE：通过序列产生主键，通过@SequenceGenerator 注解指定序列名，MySql不支持这种方式<br>–TABLE：通过表产生主键，框架借由表模拟序列产生主键，使用该策略可以使应用更易于数据库移植。</p>
+<p>9.@transient</p>
+<p>实体类中使用了@Table注解后，想要添加表中不存在的字段，就要使用@Transient这个注解了。</p>
+<p>10.@requestBody</p>
+<p>主要用来接收<strong>前端传递给后端</strong>的<strong>json字符串中的数据的</strong>(请求体中的数据的)；</p>
+<p>GET方式无请求体，所以使用@RequestBody接收数据时，前端不能使用GET方式提交数据，而是用POST方式进行提交。</p>
+<p>在后端的同一个接收方法里，@RequestBody与@RequestParam()可以同时使用，@RequestBody最多只能有一个，而@RequestParam()可以有多个。</p>
+<p>简言之：</p>
+<p>一个请求——》只有一个@RequestBody；</p>
+<p>一个请求——》可以有多个@RequestParam。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Spring%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8/" data-id="cktkwkk2r000c4oudd40b2l2l" data-title="Spring注解使用" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Hexo常用命令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:10:59.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Hexo常用命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>快速简洁的博客框架；</p>
+<p>直接在github page平台上托管我们的博客，无需定期维护。</p>
+<p>hexo  d</p>
+<p>hexo  g</p>
+<p>hexo  n</p>
+<h3 id="1、hexo-init"><a href="#1、hexo-init" class="headerlink" title="1、hexo init"></a>1、hexo init</h3><p><code>hexo init</code> 命令用于初始化本地文件夹为网站的根目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>folder</code> 可选参数，用以指定初始化目录的路径，若无指定则默认为当前目录</li>
+</ul>
+<h3 id="2、hexo-new"><a href="#2、hexo-new" class="headerlink" title="2、hexo new"></a>2、hexo new</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new` 命令用于新建文章，一般可以简写为 `hexo n</span><br><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>layout</code> 可选参数，用以指定文章类型，若无指定则默认由配置文件中的 default_layout 选项决定</li>
+<li><code>title</code> 必填参数，用以指定文章标题，如果参数值中含有空格，则需要使用双引号包围</li>
+</ul>
+<h3 id="3、hexo-generate"><a href="#3、hexo-generate" class="headerlink" title="3、hexo generate"></a>3、hexo generate</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate` 命令用于生成静态文件，一般可以简写为 `hexo g</span><br><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>-d</code> 选项，指定生成后部署，与 <code>hexo d -g</code> 等价</li>
+</ul>
+<p>详细信息请参考：<a target="_blank" rel="noopener" href="https://hexo.io/docs/generating">https://hexo.io/docs/generating</a></p>
+<h3 id="4、hexo-server"><a href="#4、hexo-server" class="headerlink" title="4、hexo server"></a>4、hexo server</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo server` 命令用于启动本地服务器，一般可以简写为 `hexo s</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>-p</code> 选项，指定服务器端口，默认为 4000</li>
+<li><code>-i</code> 选项，指定服务器 IP 地址，默认为 0.0.0.0</li>
+<li><code>-s</code> 选项，静态模式 ，仅提供 public 文件夹中的文件并禁用文件监视</li>
+</ul>
+<p><strong>说明</strong> ：运行服务器前需要安装 hexo-server 插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+
+<p>详细信息请参考：<a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">https://hexo.io/docs/server.html</a></p>
+<h3 id="5、hexo-deploy"><a href="#5、hexo-deploy" class="headerlink" title="5、hexo deploy"></a>5、hexo deploy</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy` 命令用于部署网站，一般可以简写为 `hexo d</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>-g</code> 选项，指定生成后部署，与 <code>hexo g -d</code> 等价</li>
+</ul>
+<p><strong>说明</strong> ：部署前需要修改 _config.yml 配置文件，下面以 git 为例进行说明</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: &lt;repository url&gt;</span><br><span class="line">	branch:	master</span><br><span class="line">	message: 自定义提交消息，默认为Site updated: &#123;&#123; now(&#x27;YYYY-MM-DD HH:mm:ss&#x27;) &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>详细信息请参考：<a target="_blank" rel="noopener" href="https://hexo.io/docs/deployment.html">https://hexo.io/docs/deployment.html</a></p>
+<h3 id="6、hexo-clean"><a href="#6、hexo-clean" class="headerlink" title="6、hexo clean"></a>6、hexo clean</h3><p><code>hexo clean</code> 命令用于清理缓存文件，是一个比较常用的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+
+<p><strong>网站显示异常时可尝试此操作</strong></p>
+<h3 id="7、Option"><a href="#7、Option" class="headerlink" title="7、Option"></a>7、Option</h3><h4 id="（1）hexo-–safe"><a href="#（1）hexo-–safe" class="headerlink" title="（1）hexo –safe"></a>（1）hexo –safe</h4><p><code>hexo --safe</code> 表示安全模式，用于禁用加载插件和脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --safe</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装新插件时遇到问题可尝试此操作</strong></p>
+<h4 id="（2）hexo-–debug"><a href="#（2）hexo-–debug" class="headerlink" title="（2）hexo –debug"></a>（2）hexo –debug</h4><p><code>hexo --debug</code> 表示调试模式，用于将消息详细记录到终端和 <code>debug.log</code> 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --debug</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="cktkwkk2i00014oud1a1s6i9x" data-title="Hexo常用命令" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Mockito-Junit5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/13/Mockito-Junit5/" class="article-date">
+  <time class="dt-published" datetime="2021-09-13T07:10:27.000Z" itemprop="datePublished">2021-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/13/Mockito-Junit5/">Mockito+Junit5</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Mockito-Junit-5"><a href="#Mockito-Junit-5" class="headerlink" title="Mockito+Junit 5"></a>Mockito+Junit 5</h1><p>单元测试的基本原则</p>
+<ul>
+<li>宏观层面：AIR原则<ul>
+<li>automatic：全自动执行，输出结果无需人工检查，而是通过断言验证</li>
+<li>Independent:为了保证单元测试稳定可靠且便于维护，单元测试用例之间决不能互相调用</li>
+<li>Repeatable :单元测试通常会被放到持续集成中，每次有代码check in时单元测试都会被执行。如果单测对外部环境（网络、服务、中间件等）有依赖，容易导致持续集成机制的不可用</li>
+</ul>
+</li>
+<li>微观层面：BCDE原则（编写单元测试代码遵守BCDE原则）<ul>
+<li>Border：边界值测试，包括循环边界、特殊取值、特殊时间点、数据顺序等</li>
+<li>Correct：根据输入得出预期结果</li>
+<li>Design：与设计文档结合，编写单测用例</li>
+<li>Error： 单测的目的是为了证明程序有错。为了发现代码中潜在的错误， 我们需要在编写测试用例时有一些强制的错误输入（如非法数据、异常流程、非业务允许输入等）来得到预期的错误结果</li>
+</ul>
+</li>
+</ul>
+<p>junit5单测底层框架</p>
+<p>参考文档:<a target="_blank" rel="noopener" href="https://junit.org/junit5/docs/current/user-guide">https://junit.org/junit5/docs/current/user-guide</a></p>
+<p>junit5注解说明</p>
+<p><a target="_blank" rel="noopener" href="https://coolvision.yuque.com/dsbs/gc361c/yv095e?inner=xlWPK">https://coolvision.yuque.com/dsbs/gc361c/yv095e?inner=xlWPK</a></p>
+<p>断言的使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Assertions.assertThat(name).isEqualTo(<span class="string">&quot;aaaa&quot;</span>);</span><br><span class="line">Assert.assertEquals(<span class="string">&quot;aaaa&quot;</span>,name);</span><br><span class="line">when(coolMenusManagementService.checkModuleActionKeyword(any(), any())).thenReturn(<span class="keyword">true</span>);</span><br><span class="line">when(enterpriseService.produceSuperToken(any(),any())).thenReturn(baseOut);</span><br><span class="line">Mockito.doNothing().when(enterpriseService).sendNoticeByDingTalk();</span><br><span class="line">given(multiterminalLoginService.getEnterpriseAdmin(<span class="string">&quot;&quot;</span>)).willReturn(t);</span><br><span class="line">assertNull(dynamicDataSourceCache.getIfPresent(<span class="string">&quot;expire&quot;</span>));</span><br><span class="line">Mockito.anyString()</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="assert"><a href="#assert" class="headerlink" title="assert"></a>assert</h1><p>1、assert &lt;boolean表达式&gt;</p>
+<p>如果&lt;boolean表达式&gt;为true，则程序继续执行。</p>
+<p>如果为false，则程序抛出AssertionError，并终止执行。</p>
+<p>2、assert &lt;boolean表达式&gt; : &lt;错误信息表达式&gt;</p>
+<p>如果&lt;boolean表达式&gt;为true，则程序继续执行。</p>
+<p>如果为false，则程序抛出java.lang.AssertionError，并输入&lt;错误信息表达式&gt;。</p>
+<p>assert关键字用法简单，但是使用assert往往会让你陷入越来越深的陷阱中。应避免使用。笔者经过研究，总结了以下原因：</p>
+<p>1、assert关键字需要在运行时候显式开启才能生效，否则你的断言就没有任何意义。而现在主流的Java IDE工具默认都没有开启-ea断言检查功能。这就意味着你如果使用IDE工具编码，调试运行时候会有一定的麻烦。并且，对于Java Web应用，程序代码都是部署在容器里面，你没法直接去控制程序的运行，如果一定要开启-ea的开关，则需要更改Web容器的运行配置参数。这对程序的移 植和部署都带来很大的不便。</p>
+<p>2、用assert代替if是陷阱之二。assert的判断和if语句差不多，但两者的作用有着本质的区别：assert关键字本意上是为测试 调试程序时使用的，但如果不小心用assert来控制了程序的业务流程，那在测试调试结束后去掉assert关键字就意味着修改了程序的正常的逻辑。</p>
+<p>3、assert断言失败将面临程序的退出。这在一个生产环境下的应用是绝不能容忍的。一般都是通过异常处理来解决程序中潜在的错误。但是使用断言就很危险，一旦失败系统就挂了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/13/Mockito-Junit5/" data-id="cktkwkk2p00094oudgbabg1a6" data-title="Mockito+Junit5" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-mysql参数问题lower-case-table-names" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/09/mysql%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98lower-case-table-names/" class="article-date">
+  <time class="dt-published" datetime="2021-09-09T11:19:29.000Z" itemprop="datePublished">2021-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/09/mysql%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98lower-case-table-names/">mysql参数问题lower_case_table_names</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="1、参数含义："><a href="#1、参数含义：" class="headerlink" title="1、参数含义："></a>1、参数含义：</h4><p>lower_case_table_names： 此参数不可以动态修改，必须重启数据库<br>lower_case_table_names = 1  表名存储在磁盘是小写的，但是比较的时候是不区分大小写<br>lower_case_table_names=0  表名存储为给定的大小和比较是区分大小写的<br>lower_case_table_names=2, 表名存储为给定的大小写但是比较的时候是小写的</p>
+<h4 id="2、修改-参数lower-case-table-names-产生的问题"><a href="#2、修改-参数lower-case-table-names-产生的问题" class="headerlink" title="2、修改  参数lower_case_table_names 产生的问题"></a>2、修改  参数lower_case_table_names 产生的问题</h4><p>mysql&gt; show variables like ‘lower_case_table_names’;<br>+————————+——-+<br>| Variable_name          | Value |<br>+————————+——-+<br>| lower_case_table_names | 0     |<br>+————————+——-+<br>1 row in set (0.00 sec)</p>
+<p>在mysql系统中原来的参数是lower_case_table_names=0 ，就是存储的时候区分大小写，创建了表Tt  tT </p>
+<p>mysql&gt;  create table Tt(id int);<br>Query OK, 0 rows affected (0.10 sec)</p>
+<p>mysql&gt;  create table tT(id int);<br>Query OK, 0 rows affected (0.03 sec)</p>
+<p>mysql&gt; show tables;<br>+—————-+<br>| Tables_in_test |<br>+—————-+<br>| Tt             |<br>| tT             |<br>+—————-+<br>2 rows in set (0.00 sec)</p>
+<p>修改参数 /etc/my.cnf 中设置 lower_case_table_names = 1</p>
+<p>mysql&gt; show  variables like ‘lower_case_table_names’;<br>+————————+——-+<br>| Variable_name          | Value |<br>+————————+——-+<br>| lower_case_table_names | 1     |<br>+————————+——-+<br>1 row in set (0.00 sec)</p>
+<p>重启数据库<br>然后查看数据库</p>
+<p>mysql&gt; select * From tT;<br>ERROR 1146 (42S02): Table ‘test.tt’ doesn’t exist</p>
+<p>mysql&gt; select * From tT;<br>ERROR 1146 (42S02): Table ‘test.tt’ doesn’t exist</p>
+<p>你可以发现当修改lower_case_table_names = 1后，之前创建的表名都不识别了</p>
+<p>—创建表后，你可以发现表名不区分大小写<br>mysql&gt; create table Tt(id int);<br>Query OK, 0 rows affected (0.23 sec)</p>
+<p>mysql&gt; show tables;<br>+————-+<br>| Tables_in_t |<br>+————-+<br>| tt          |<br>+————-+<br>1 row in set (0.00 sec)<br>从此可以看出lower_case_table_names = 1，创建表名，不区分大小写</p>
+<p>结论：不能随意修改数据库的大小写，否则表名会认不出来<br>lower_case_table_names 参数的修改是非动态的，必须重启数据库</p>
+<h4 id="3、如何修改大小写格式"><a href="#3、如何修改大小写格式" class="headerlink" title="3、如何修改大小写格式"></a>3、如何修改大小写格式</h4><p>如果原来所建立库及表都是对大小写敏感的，想要转换为对大小写不敏感，主要需要进行如下3步：<br>    1.将数据库数据通过mysqldump导出;<br>    2.在my.cnf中更改lower_case_tables_name = 1，并重启mysql数据库。<br>    3.将导出的数据导入mysql数据库中。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/09/mysql%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98lower-case-table-names/" data-id="cktkwkk2y000m4oud8xo332nw" data-title="mysql参数问题lower_case_table_names" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-跨域问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2021-09-09T11:16:21.000Z" itemprop="datePublished">2021-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">跨域问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>跨域指的是</strong>：协议+域名+ip+端口</p>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><p>使用ajax的jsonp</p>
+</li>
+<li><p>使用jQuery的jsonp插件</p>
+</li>
+<li><p>使用cors：仅在后端代码中添加部分处理代码</p>
+</li>
+<li><p>cors高级使用：springmvc中配置拦截器</p>
+</li>
+</ul>
+<p>浏览器从一个域名的网页去请求另一个域名的资源。域名、端口、协议任一不同，都是跨域问题。</p>
+<p>1.端口和协议不同，只能通过后台来解决</p>
+<p>2.localhost和127.0.0.1虽然都指向本机，但也属于跨域问题。</p>
+<p>如何解决跨域问题</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tjcjava/article/details/76468225">https://blog.csdn.net/tjcjava/article/details/76468225</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" data-id="cktkwkk30000s4oud6uslgp23" data-title="跨域问题" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-工具使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="article-date">
   <time class="dt-published" datetime="2021-09-09T10:25:41.000Z" itemprop="datePublished">2021-09-09</time>
@@ -90,8 +666,8 @@
       <header class="article-header">
         
   
-    <h1 class="p-name article-title" itemprop="headline name">
-      工具使用
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/09/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">工具使用</a>
     </h1>
   
 
@@ -898,29 +1474,97 @@
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2021/09/09/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          跨域问题
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2021/09/09/%E5%B7%A5%E5%85%B7/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">工具</div>
-    </a>
-  
-</nav>
+</article>
 
+
+
+  
+    <article id="post-工具" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/09/%E5%B7%A5%E5%85%B7/" class="article-date">
+  <time class="dt-published" datetime="2021-09-09T10:18:36.000Z" itemprop="datePublished">2021-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/09/09/%E5%B7%A5%E5%85%B7/">工具</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="一-typora"><a href="#一-typora" class="headerlink" title="一.typora"></a>一.typora</h1><h4 id="标题、加粗、斜体等"><a href="#标题、加粗、斜体等" class="headerlink" title="标题、加粗、斜体等"></a>标题、加粗、斜体等</h4><p>ctrl+数字键（六级标题）</p>
+<p>ctrl+B(加粗)</p>
+<p>ctrl+l(斜体)</p>
+<p>ctrl+u(下划线)</p>
+<p>前后加两个=（高亮）</p>
+<p>前后加两个~（删除线）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/09/%E5%B7%A5%E5%85%B7/" data-id="cktkwkk2z000p4oud94a959fd" data-title="工具" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
   
 </article>
 
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/09/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2021-09-09T09:10:48.936Z" itemprop="datePublished">2021-09-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>你好啊</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>**More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server**</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/09/hello-world/" data-id="cktkwkk2u000g4oud6fxf9g86" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
 
 </section>
         

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>项目中遇到的问题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="项目中的settings.xml文件、maven中的settings.xml文件、本地的local repository是否需要保持一致。   项目中的.idea文件   项目中的.m2文件   使用idea启动项目，后台报：outofmemoryerror：Java heap space  通过在idea中设置相关参数 1.run-》edit configurations-》vm option">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目中遇到的问题">
+<meta property="og:url" content="http://example.com/2021/09/15/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="项目中的settings.xml文件、maven中的settings.xml文件、本地的local repository是否需要保持一致。   项目中的.idea文件   项目中的.m2文件   使用idea启动项目，后台报：outofmemoryerror：Java heap space  通过在idea中设置相关参数 1.run-》edit configurations-》vm option">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-15T02:32:16.000Z">
+<meta property="article:modified_time" content="2021-09-15T02:40:31.679Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-项目中遇到的问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/15/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:32:16.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      项目中遇到的问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>项目中的settings.xml文件、maven中的settings.xml文件、本地的local repository是否需要保持一致。</p>
+</blockquote>
+<blockquote>
+<p>项目中的.idea文件</p>
+</blockquote>
+<blockquote>
+<p>项目中的.m2文件</p>
+</blockquote>
+<blockquote>
+<p>使用idea启动项目，后台报：outofmemoryerror：Java heap space</p>
+</blockquote>
+<p>通过在idea中设置相关参数</p>
+<p>1.run-》edit configurations-》vm options</p>
+<p>2.file-》settings-》heap</p>
+<blockquote>
+<p>Error:java: OutOfMemoryError: insufficient memory</p>
+</blockquote>
+<p>file-&gt;invalidate caches</p>
+<blockquote>
+<p>Error running ‘App’: Command line is too long. Shorten command line for App or also for Spring Boot default configuration.</p>
+</blockquote>
+<p>找到.idea文件下的workspace.xml文件，在component标签下添加</p>
+<property name="dynamic.classpath" value="true" />
+
+<blockquote>
+<p>Error:java: Compilation failed: internal java compiler error</p>
+</blockquote>
+<p>导致这个错误的原因主要是因为jdk版本问题，此处有两个原因，一个是编译版本不匹配，一个是当前项目jdk版本不支持</p>
+<p>File -&gt;Project Structure-&gt;Project Settings -&gt;Project或使用快捷键Ctrl+Alt+shift+S打开项目的jdk配置：</p>
+<p>查看此两处是否与目标jdk一致。</p>
+<blockquote>
+<p>Error starting ApplicationContext. To display the conditions report re-run your application with ‘debug’ enabled.</p>
+</blockquote>
+<blockquote>
+<p>Invocation of init method failed; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool</p>
+</blockquote>
+<p>1.properties文件中的jedis配置有问题</p>
+<p>2.未开启redis服务器</p>
+<blockquote>
+<p>java.net.ConnectException: Connection refused: no further information</p>
+</blockquote>
+<p>zookeeper连接不到导致</p>
+<p>1.排查本地配置是否写的远程配置</p>
+<p>2.核查本地zookeeper配置文件配置是否正确</p>
+<p>3.核查是否为springboot集成redis–核查redis的配置文件</p>
+<blockquote>
+<p>Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection timed out: connect</p>
+</blockquote>
+<p>原因：防火墙未开启指定端口导致</p>
+<p>目标ip可能ping不通</p>
+<p>redis连接超时</p>
+<p>首先确保自己的server真正运行起来了</p>
+<p>然后关闭防火墙，再重启服务</p>
+<p>1.查看配置host和port</p>
+<p>2.确保server正常运行</p>
+<p>3.确保防火墙为关闭状态</p>
+<p>4.代码中的socket有问题</p>
+<p>1.依赖重复的问题</p>
+<p>2.pom.xml中插件无法下载的问题</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/15/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" data-id="cktkwkk30000r4oud60557ttv" data-title="项目中遇到的问题" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/09/15/Jedis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Jedis
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/15/rpc/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">rpc</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/09/15/Typora/">Typora</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Idea%E5%BF%AB%E6%8D%B7%E9%94%AE/">Idea快捷键</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Git/">Git</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Maven/">Maven</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/kuboard/">kuboard</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

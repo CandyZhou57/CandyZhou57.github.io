@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Token | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="http请求什么情况下需要携带token？ http是一种无状态的协议，他无法识别是谁访问应用。所以使用token作为客户端和服务端之间的密钥来作为身份识别。 token在http请求中相当于用户身份的唯一标识，根据token信息可以找到用户身份的所有信息，因此请求中携带token是接口需要确定用户身份。 token token 是客户端频繁向服务器端请求数据，服务器频繁的去数据库查询用户名和密码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Token">
+<meta property="og:url" content="http://example.com/2021/09/15/Token/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="http请求什么情况下需要携带token？ http是一种无状态的协议，他无法识别是谁访问应用。所以使用token作为客户端和服务端之间的密钥来作为身份识别。 token在http请求中相当于用户身份的唯一标识，根据token信息可以找到用户身份的所有信息，因此请求中携带token是接口需要确定用户身份。 token token 是客户端频繁向服务器端请求数据，服务器频繁的去数据库查询用户名和密码">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-15T02:30:40.000Z">
+<meta property="article:modified_time" content="2021-09-15T02:42:51.320Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Token" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/09/15/Token/" class="article-date">
+  <time class="dt-published" datetime="2021-09-15T02:30:40.000Z" itemprop="datePublished">2021-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Token
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>http请求什么情况下需要携带token？</p>
+<p>http是一种无状态的协议，他无法识别是谁访问应用。所以使用token作为客户端和服务端之间的密钥来作为身份识别。</p>
+<p>token在http请求中相当于用户身份的唯一标识，根据token信息可以找到用户身份的所有信息，因此请求中携带token是接口需要确定用户身份。</p>
+<p>token</p>
+<p><code>token</code> 是客户端频繁向服务器端请求数据，服务器频繁的去数据库查询用户名和密码进行对比，判断用户名和密码正确与否，并作出相应的提示，在这样的背景下，<code>token</code> 便应运而生了</p>
+<p>token 的目的是为了减轻服务器的压力，减少频繁的查询数据库。</p>
+<p>在前端请求后台的 API 接口的时候，为了安全性，一般需要再用户登录成功之后才能发送其他请求。</p>
+<p>因此，在用户登录成功之后，后台会返回一个 token 给前端，这个时候我们就需要把 token 暂时保存在本地，每次发送请求的时候需要在 header 里边带上 token（无需再次带上请求名和密码），这个时候本地的 token 和后台数据库中的 token 进行一个验证，如果两者一致，则请求成功，否则失败。</p>
+<p>使用设备号/设备mac地址作为token（推荐）</p>
+<p>客户端：客户端在登录的时候获取设备的设备号串号 / mac 地址，并将其作为参数传递到服务器端。</p>
+<p>服务器：服务器接收到该参数之后，使用一个变量接收同时将其作为 token 保存数据库，并将该 token 设置在 session 中，客户端每次请求的时候都要统一拦截，并将客户端传递的 token 和服务器 session 中的 token 对比，如果相同则放下，不同则拒绝。</p>
+<p>优点：客户端不需要重新登录，只要登录一次后就能一直使用。</p>
+<p>缺点：客户端需要带设备号/mac地址作为参数传递</p>
+<p>二、用 session 值作为 token</p>
+<p>客户端：客户端只需要携带用户名和密码即可登录。</p>
+<p>服务端：客户端接收到用户名和密码后并判断，如果正确就将本地获取 sessionId 作为 token 返回给客户端，客户端以后只需要带上请求数据即可。</p>
+<p>在web项目中，服务端和前端经常需要交互数据，有的时候由于网络相应慢，客户端在提交某些敏感数据（比如按照正常的业务逻辑，此份数据只能保存一份）时，如果前端多次点击提交按钮会导致提交多份数据，这种情况我们是要防止发生的。</p>
+<h3 id="2-解决方法："><a href="#2-解决方法：" class="headerlink" title="2.解决方法："></a>2.解决方法：</h3><p>①前端处理：在提交之后通过js立即将按钮隐藏或者置为不可用。</p>
+<p>②后端处理：对于每次提交到后台的数据必须校验，也就是通过前端携带的令牌（一串唯一字符串）与后端校验来判断当前数据是否有效。</p>
+<h3 id="3-总结："><a href="#3-总结：" class="headerlink" title="3.总结："></a>3.总结：</h3><p>第一种方法相对来说比较简单，但是安全系数不高，第二种方法从根本上解决了问题，所以我推荐第二种方法。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/09/15/Token/" data-id="cktkwkk2t000e4oudf73m77i3" data-title="Token" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/09/15/hosts%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hosts文件的作用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/09/15/PageInfo%E8%AF%A6%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PageInfo详解</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/09/15/Typora/">Typora</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Idea%E5%BF%AB%E6%8D%B7%E9%94%AE/">Idea快捷键</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Git/">Git</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/Maven/">Maven</a>
+          </li>
+        
+          <li>
+            <a href="/2021/09/15/kuboard/">kuboard</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
